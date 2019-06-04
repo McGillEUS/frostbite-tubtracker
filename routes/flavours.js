@@ -56,6 +56,19 @@ router.put('/editflavour/:id', function(req, res) {
   );
 });
 
+/* PUT to edittub */
+router.put('/edittub/:id', function(req, res) {
+  req.db.get('tubHistory').update(                 // in the flavourlist collection of our database, perform an update of a document
+    { '_id' : req.params.id },                      // find the document in the collection using the document's ID
+    req.body,                                       // update the document with the new information
+    function(err, result){                          // send an error if anything goes wrong
+      res.send(
+        (err === null) ? { msg: '' } : { msg: err }
+      );
+    }
+  );
+});
+
 /* DELETE to deleteflavour */
 router.delete('/deleteflavour/:id', function(req, res) {
   req.db.get('flavourlist').remove({ '_id' : req.params.id }, function(err) {   // in the flavourlist collection of our database, perform a removal of a document

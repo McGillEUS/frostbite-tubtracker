@@ -263,7 +263,7 @@ function deleteFlavour(event) {
 
   // Edit Tub
 function editTub(event) {
-  // TODO
+  // TODO possibly combine this functionality with closeTub?
 };
 
 // Delete Tub
@@ -352,5 +352,43 @@ function openTub() {
 
 // close a tub in tubHistory
 function closeTub() {
-  // TODO
+  // Prevent Link from Firing
+  event.preventDefault();
+
+  var flavourName = $('#flavourInfoFlavour').text();
+
+  /// find the id of the tub of the current flavour that was opened the longest ago
+  $.getJSON( '/flavours/tubHistory', function( data ) {
+
+    var tub = '';
+    var oldestDate = new Date('December 23, 9999 04:21:09');
+
+    $('#flavourInfoPrice').text(tub._id);
+    
+    $.each(data, function(){
+      if (this.flavour == flavourName && this.openDate < oldestDate && this.open == true) {
+        tub = this;
+        oldestDate = tub.openDate;
+      }
+    });
+    if (tub != '') {
+      tub.date_closed = new Date();
+      $.ajax({
+        type: 'PUT',
+        data: tub,
+        url: '/flavours/edittub/' + tub._id,
+        dataType: 'JSON'
+      }).done(function( response ) {
+    
+        // Check for successful (blank) response
+        if (response.msg === '') {
+          populateFlavourHistory(tub.flavour);
+        } else {
+          // If something goes wrong, alert the error message that our service returned
+          alert('Error: ' + response.msg);
+  
+        }
+      });
+    }
+  });
 }
