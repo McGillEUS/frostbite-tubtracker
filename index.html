@@ -20,18 +20,18 @@
         <ol style="list-style-type: none;">
           <li>
             <div class="span3">
-              <input type="file" id="fileLoader" name="files" title="Load File" onchange="angular.element(this).scope().loadFile()" />
+              <input type="file" id="fileLoader" name="files" title="Load File" onchange="angular.element(this).scope().uploadFlavours()" />
               <button class="btn btn-info btn-small" ng-click="openFile($filename)">
-                  <i class="icon-file icon-white"></i> Load JSON rules file
+                  <i class="icon-file icon-white"></i> Load Flavour History
               </button>
             </div>
           </li>
           <li>
             <div class="span3">
-              <button class="btn btn-info btn-small" ng-click="exportFile($filename)" id="create">
-                  <i class="icon-file icon-white"></i>Export JSON rules file
+              <button class="btn btn-info btn-small" ng-click="saveChanges($filename)" id="create">
+                  <i class="icon-file icon-white"></i>Export Flavour History
               </button>
-              <a href="" download="Rules.json" id="filedownload"></a>
+              <a href="" download="tubs.json" id="filedownload"></a>
             </div>
           </li>
         </ol>

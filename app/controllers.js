@@ -74,18 +74,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.edit = false;
     }
 
-/*     var findTub = function() {
-        // return the index if $scope.tubUnderEdit.key is found in currentDisplay, -1 otherwise
-        var i = 0, final = -1;
-        angular.forEach($scope.currentDisplay, function(tub) {
-            if (tub.id == $scope.tubUnderEdit.id) {
-                final = i;
-            }
-            i++;
-        });
-        return final;
-    }; */
-
     var findFlavour = function() {
         // return the index if the flavour is found, -1 otherwise
         var i = 0, final = -1;
@@ -228,5 +216,35 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 $scope.multipleFlavoursExist = true;
             }
         }
+    };
+
+    // TODO change this to a proper server-hosted JSON file
+    $scope.uploadFlavours = function() {
+        var file = document.getElementById("fileLoader").files[0];
+        var fileReader = new FileReader();
+        
+	    fileReader.onload = function(e) {
+            $scope.flavours = angular.fromJson(fileReader.result);
+
+            clearAll();
+            toastr.success("File imported successfully.");
+            $scope.$apply();
+        }
+
+        fileReader.readAsText(file, $scope);
+    };
+
+    // TODO change this from a download link to a proper server-hosted JSON file
+    $scope.saveChanges = function() {
+        var data = new Blob([angular.toJson($scope.flavours, true)], {type: 'text/plain'});
+        var downloadLink = document.getElementById('filedownload');
+        downloadLink.href = window.URL.createObjectURL(data);
+        $timeout(function() {
+            downloadLink.click(); // performs click to start download
+        }, 100);
+    };
+
+    $scope.openFile = function() {
+    	$("#fileLoader").click();
     };
 });
