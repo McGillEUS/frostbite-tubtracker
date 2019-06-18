@@ -41,12 +41,12 @@
     <div class="row">
       <p style="float: left; margin-right: 10px; margin-top: 4px; font-weight: bold">Flavour:</p>
       <div class="span3">
-        <select ng-model="selectedFlavour" ng-options="x.flavour for x in flavours" ng-change="updateSelection()"><select/>
+        <select ng-model="selectedFlavour" ng-options="x.flavour for x in flavours" ng-change="updateSelection()"></select>
           <br>
       </div>
       <div class="span2">
-        <a href="#editCategoryField">
-          <button class="btn btn-warning btn-small" ng-click="editCategory()">
+        <a href="#editFlavourField">
+          <button class="btn btn-warning btn-small" ng-click="editFlavour()">
             <i class="icon-pencil icon-white"></i> Modify Flavour
           </button>
       </a>
@@ -95,22 +95,31 @@
     </div>
 
     <form id="editField" class="row form-inline" name="validateEnteredValues">
-      <input id="itemInput" type="text" ng-model="item.key" placeholder="Key" required>
-      <input type="text" ng-model="item.value" placeholder="Value" required>
-      <button ng-hide="edit" class="btn btn-success" ng-disabled="validateEnteredValues.$invalid" ng-click="addItem()">
+      <input id="itemInput" type="text" ng-model="tubUnderEdit.date_received" placeholder="Date Received" required>
+      <input type="text" ng-model="tubUnderEdit.open" placeholder="Open" required>
+      <input type="text" ng-model="tubUnderEdit.date_opened" placeholder="Date Opened" required>
+      <input type="text" ng-model="tubUnderEdit.date_closed" placeholder="Date Closed" required>
+      <button ng-hide="edit" class="btn btn-success" ng-click="addTub()">
         <i class="icon-plus icon-white"></i> Add
       </button>
-      <button ng-show="edit" class="btn btn-success" ng-disabled="validateEnteredValues.$invalid" ng-click="applyChanges()">
+      <button ng-show="edit" class="btn btn-success" ng-click="applyChanges()">
         <i class="icon-ok icon-white"></i> Save
       </button>
     </form>
 
-    <form id="editCategoryField" class="row form-inline" name="validateEnteredCategory">
-      <input if="categoryInput" type="text" ng-model="category.name" placeholder="Category" required>
-      <button ng-hide="catEdit" class="btn btn-success" ng-disabled="validateEnteredCategory.$invalid" ng-click="addFlavour()">
+    <form id="editFlavourField" class="row form-inline" name="validateEnteredFlavour">
+      <input id="flavourInputFlavour" type="text" ng-model="flavourUnderEdit.flavour" placeholder="Flavour Name" required>
+      <input id="flavourInputSupplier" type="text" ng-model="flavourUnderEdit.supplier" placeholder="Supplier" required>
+      <input id="flavourInputQuantityValue" type="text" ng-model="flavourUnderEdit.quantity.value" placeholder="Quantity (value)" required>
+      <input id="flavourInputQuantityUnit" type="text" ng-model="flavourUnderEdit.quantity.unit" placeholder="Quantity (unit)" required>
+      <input id="flavourInputPriceValue" type="text" ng-model="flavourUnderEdit.price.value" placeholder="Price (value)" required>
+      <input id="flavourInputPriceUnit" type="text" ng-model="flavourUnderEdit.price.unit" placeholder="Price (unit)" required>
+      <input id="flavourInputFormat" type="text" ng-model="flavourUnderEdit.format" placeholder="Format (tub or individual)" required>
+      <input id="flavourInputType" type="text" ng-model="flavourUnderEdit.type" placeholder="Type (ice cream, sorbet, sandwich, drumstick, etc)" required>
+      <button ng-hide="catEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="addFlavour()">
         <i class="icon-plus icon-white"></i> Add
       </button>
-      <button ng-show="catEdit" class="btn btn-success" ng-disabled="validateEnteredCategory.$invalid" ng-click="applyFlavourChanges()">
+      <button ng-show="catEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="applyFlavourChanges()">
         <i class="icon-ok icon-white"></i> Save
       </button>
     </form>

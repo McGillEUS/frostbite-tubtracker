@@ -17,6 +17,7 @@
         "instances" :
         [
             {
+                "id" : 1,
                 "open" : true,
                 "date_received" : "",
                 "date_opened" : "2019-06-17",
@@ -42,6 +43,7 @@
         "instances" :
         [
             {
+                "id" : 2,
                 "open" : false,
                 "date_received" : "",
                 "date_opened" : "",
@@ -67,6 +69,7 @@
         "instances" :
         [
             {
+                "id" : 3,
                 "open" : false,
                 "date_received" : "",
                 "date_opened" : "2019-06-17",

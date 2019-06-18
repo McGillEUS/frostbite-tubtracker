@@ -6,8 +6,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.tubEditOriginal = {};
     $scope.flavourEditOriginal = {};
     $scope.index = 0;
-    var initialKey = "TEMPLATE_KEY";
-    var initialValue = "1234";
+    $scope.nextID = 1;
     $scope.load = { };
     $scope.flavours = [
         {
@@ -86,13 +85,17 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         return final;
     };
 
-    $scope.addItem = function () {
+    $scope.addTub = function () {
         $scope.currentDisplay.push($scope.tubUnderEdit);
 
         // duplicate last element on the list
         var lastIndex = $scope.selectedFlavour.tubs.length;
         var lastItem = jQuery.extend(true, {}, $scope.selectedFlavour.tubs[lastIndex - 1]);
         $scope.selectedFlavour.tubs.push(lastItem);
+
+        // assign the new tub an incremented ID
+        $scope.tubUnderEdit.id = $scope.nextID;
+        $scope.nextID += 1;
 
         // replace content of last element on the list
         $scope.selectedFlavour.tubs[lastIndex] = $scope.tubUnderEdit;
@@ -110,7 +113,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         if (i > -1) {
             // $scope.selectedFlavour = $scope.flavours[i]; // TODO figure out if this is still needed
             toastr.warning("Flavour already exists.");
-            $("#categoryInput").focus();
+            $("#flavourInputFlavour").focus();
         } else {
             $scope.multipleFlavoursExist = true; // we always have at least one flavour, and we just added one, so there must be multiple now
 
@@ -125,13 +128,13 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             // change selected flavour
             $scope.selectedFlavour = $scope.flavours[lastIndex];
 
-            // empty values from new category
+            // empty values from new flavour
             while ($scope.selectedFlavour.tubs.length > 0) {
                 $scope.deleteTub(0);
                 toastr.remove();
             }
 
-            toastr.success("Category added successfully.");
+            toastr.success("Flavour added successfully.");
         }
         $scope.flavourUnderEdit = {};
         $scope.updateSelection();
@@ -152,7 +155,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.edit = true;
     };
 
-    $scope.editCategory = function() {
+    $scope.editFlavour = function() {
         $scope.flavourUnderEdit = $scope.selectedFlavour;
         $scope.flavourEditOriginal = $scope.flavourUnderEdit;
         $scope.flavourEdit = true;
@@ -185,7 +188,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 $scope.selectedFlavour = $scope.flavourUnderEdit;
                 $scope.flavourUnderEdit = {};
                 $scope.flavourEdit = false;
-                toastr.success("Category modified successfully.");
+                toastr.success("Flavour modified successfully.");
             }
         }
     };
@@ -202,7 +205,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.deleteFlavour = function() {
-        if (confirm("Are you sure you want to delete this category?")) {
+        if (confirm("Are you sure you want to delete this flavour?")) {
             $scope.flavourUnderEdit = $scope.selectedFlavour;
             $scope.flavours.splice(findFlavour(), 1);
             $scope.selectedFlavour = $scope.flavours[0];
@@ -211,7 +214,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             clearAll();
 
             if ($scope.flavours.length == 1) {
-                $scope.multipleFlavoursExist = false; // we're down to 1 category, so remove the "Delete Category" button
+                $scope.multipleFlavoursExist = false; // we're down to 1 flavour, so remove the "Delete Flavour" button
             } else {
                 $scope.multipleFlavoursExist = true;
             }
