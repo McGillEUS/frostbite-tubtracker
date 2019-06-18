@@ -15,7 +15,7 @@
           <img src="img/frostbite_favicon.png">
         </div>
         <div class="span5">
-          <h1>Deployment Rules</h1>
+          <h1>Frostbite Tub Tracker</h1>
         </div>
         <ol style="list-style-type: none;">
           <li>
@@ -52,7 +52,7 @@
       </a>
       </div>
       <div class="span2">
-        <button ng-show="multiple" class="btn btn-danger btn-small" ng-click="deleteCategory()">
+        <button ng-show="multiple" class="btn btn-danger btn-small" ng-click="deleteFlavour()">
           <i class="icon-trash icon-white"></i> Delete Flavour
         </button>
       </div>
@@ -65,7 +65,7 @@
       <table id="lista-compras" class="table table-striped">
         <thead>
           <tr>
-            <th>Flavour</th>
+            <th>Tub ID</th>
             <th>Date Received</th>
             <th>Opened Status</th>
             <th>Date Opened</th>
@@ -74,11 +74,11 @@
         </thead>
         <tbody>
           <tr ng-repeat="tub in currentDisplay | filter:search">
-            <td><strong>{{ tub.key }}</strong></td>
-            <td>{{ tub.value }}</td>
-            <td>{{ tub.key }}</td>
-            <td>{{ tub.key }}</td>
-            <td>{{ tub.key }}</td>
+            <td><strong>{{ tub.id }}</strong></td>
+            <td>{{ tub.date_received }}</td>
+            <td>{{ tub.open }}</td>
+            <td>{{ tub.date_opened }}</td>
+            <td>{{ tub.date_closed }}</td>
             <td>
               <a href="#editField">
                 <button class="btn btn-warning btn-small" ng-click="editTub($index)">
@@ -107,10 +107,10 @@
 
     <form id="editCategoryField" class="row form-inline" name="validateEnteredCategory">
       <input if="categoryInput" type="text" ng-model="category.name" placeholder="Category" required>
-      <button ng-hide="catEdit" class="btn btn-success" ng-disabled="validateEnteredCategory.$invalid" ng-click="addCategory()">
+      <button ng-hide="catEdit" class="btn btn-success" ng-disabled="validateEnteredCategory.$invalid" ng-click="addFlavour()">
         <i class="icon-plus icon-white"></i> Add
       </button>
-      <button ng-show="catEdit" class="btn btn-success" ng-disabled="validateEnteredCategory.$invalid" ng-click="applyCategoryChanges()">
+      <button ng-show="catEdit" class="btn btn-success" ng-disabled="validateEnteredCategory.$invalid" ng-click="applyFlavourChanges()">
         <i class="icon-ok icon-white"></i> Save
       </button>
     </form>
