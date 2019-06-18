@@ -1,0 +1,77 @@
+[
+    {
+        "flavour" : "Chocolate",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "instances" :
+        [
+            {
+                "open" : true,
+                "date_received" : "",
+                "date_opened" : "2019-06-17",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Mango",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "instances" :
+        [
+            {
+                "open" : false,
+                "date_received" : "",
+                "date_opened" : "",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Oreo Ice Cream Sandwich",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 20.99,
+            "unit" : "CAD"
+        },
+        "format" : "individual",
+        "type" : "sandwich",
+        "instances" :
+        [
+            {
+                "open" : false,
+                "date_received" : "",
+                "date_opened" : "2019-06-17",
+                "date_closed" : "2019-06-19"
+            }
+        ]
+    }
+]

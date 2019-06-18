@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Deployment Rules</title>
+  <title>Tub Tracker</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/toastr.css">
@@ -12,7 +12,7 @@
     <div class="row">
       <div class="page-header">
         <div class="span1">
-          <img src="img/intact.png">
+          <img src="img/frostbite_favicon.png">
         </div>
         <div class="span5">
           <h1>Deployment Rules</h1>
@@ -39,25 +39,25 @@
     </div>
 
     <div class="row">
-      <p style="float: left; margin-right: 10px; margin-top: 4px; font-weight: bold">Category:</p>
+      <p style="float: left; margin-right: 10px; margin-top: 4px; font-weight: bold">Flavour:</p>
       <div class="span3">
-        <select ng-model="selectedCategory" ng-options="y.Name for (x, y) in rules" ng-change="updateSelection()"><select/>
+        <select ng-model="selectedFlavour" ng-options="x.flavour for x in flavours" ng-change="updateSelection()"><select/>
           <br>
       </div>
       <div class="span2">
         <a href="#editCategoryField">
           <button class="btn btn-warning btn-small" ng-click="editCategory()">
-            <i class="icon-pencil icon-white"></i> Modify Category
+            <i class="icon-pencil icon-white"></i> Modify Flavour
           </button>
       </a>
       </div>
       <div class="span2">
         <button ng-show="multiple" class="btn btn-danger btn-small" ng-click="deleteCategory()">
-          <i class="icon-trash icon-white"></i> Delete Category
+          <i class="icon-trash icon-white"></i> Delete Flavour
         </button>
       </div>
       <div class="span3" style="float: right">
-        <input type="search" ng-model="search" placeholder="Search...">
+        <input type="search" ng-model="search" placeholder="Filter...">
       </div>
     </div>
 
@@ -65,18 +65,26 @@
       <table id="lista-compras" class="table table-striped">
         <thead>
           <tr>
-            <th>Key</th>
-            <th>Value</th>
+            <th>Flavour</th>
+            <th>Date Received</th>
+            <th>Opened Status</th>
+            <th>Date Opened</th>
+            <th>Date Closed</th>
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="item in current | filter:search">
-            <td><strong>{{ item.key }}</strong></td>
-            <td>{{ item.value }}</td>
+          <tr ng-repeat="tub in currentDisplay | filter:search">
+            <td><strong>{{ tub.key }}</strong></td>
+            <td>{{ tub.value }}</td>
+            <td>{{ tub.key }}</td>
+            <td>{{ tub.key }}</td>
+            <td>{{ tub.key }}</td>
             <td>
-              <a href="#editField"><button class="btn btn-warning btn-small" ng-click="editItem($index)">
-                <i class="icon-pencil icon-white"></i> Modify
-              </button></a>
+              <a href="#editField">
+                <button class="btn btn-warning btn-small" ng-click="editTub($index)">
+                  <i class="icon-pencil icon-white"></i> Modify
+                </button>
+              </a>
               <button class="btn btn-danger btn-small" ng-click="deleteItem($index)">
                 <i class="icon-trash icon-white"></i> Delete
               </button>

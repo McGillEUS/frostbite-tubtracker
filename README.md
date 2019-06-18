@@ -1,3 +1,3 @@
-Rules manager
+Frostbite Ice Cream
 =================================================
-Application used to manage the content of Rules.json.
+Application used to manage the inventory of Frostbite Ice Cream.

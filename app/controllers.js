@@ -1,32 +1,83 @@
 var app = angular.module('rulesManager', []);
 app.controller('jsonGUIController', function($scope, $timeout) {
 
-    $scope.item = {};
+    $scope.tubUnderEdit = {};
     $scope.category = {};
-    $scope.original = {};
+    $scope.tubEditOriginal = {};
     $scope.originalCategory = "";
     $scope.index = 0;
-    var initialCategory = "Default";
     var initialKey = "TEMPLATE_KEY";
     var initialValue = "1234";
     $scope.load = { };
-    $scope.rules = [
+    $scope.flavours = [
         {
-          "Name" : initialCategory,
-          "Vars" : [
+            "flavour" : "Chocolate",
+            "supplier" : "Nestle",
+            "quantity" : 
+            {
+                "value" : 11.4,
+                "unit" : "L"
+            },
+            "price" :
+            {
+                "value" : 34.99,
+                "unit" : "CAD"
+            },
+            "format" : "tub",
+            "type" : "ice cream",
+            "instances" :
+            [
+                {
+                    "open" : true,
+                    "date_received" : "",
+                    "date_opened" : "2019-06-17",
+                    "date_closed" : ""
+                }
+            ],
+            "Vars" : [
                 {
                     [initialKey] : initialValue
                 },
-           ]
+            ]
+        },
+        {
+            "flavour" : "Mango",
+            "supplier" : "Ripples",
+            "quantity" : 
+            {
+                "value" : 11.4,
+                "unit" : "L"
+            },
+            "price" :
+            {
+                "value" : 44.99,
+                "unit" : "CAD"
+            },
+            "format" : "tub",
+            "type" : "sorbet",
+            "instances" :
+            [
+                {
+                    "open" : false,
+                    "date_received" : "",
+                    "date_opened" : "",
+                    "date_closed" : ""
+                }
+            ],
+            "Vars" : [
+                {
+                    [initialKey] : initialValue
+                },
+            ]
         }
     ];
-    $scope.selectedCategory = $scope.rules[0];
-    $scope.current = [
-        {key: Object.keys($scope.selectedCategory.Vars[$scope.index])[0], value: $scope.selectedCategory.Vars[$scope.index][initialKey]},
+    $scope.selectedFlavour = $scope.flavours[0];
+    $scope.currentDisplay = [
+        {key: Object.keys($scope.selectedFlavour.Vars[$scope.index])[0], value: $scope.selectedFlavour.Vars[$scope.index][initialKey]},
     ];
 
     var clearAll = function() {
-        $scope.item.key = $scope.item.value = '';
+        $scope.tubUnderEdit.key = $scope.tubUnderEdit.value = '';
         $scope.category = {};
         $scope.load = { };
         $scope.catEdit = false;
@@ -34,10 +85,10 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     }
 
     var findItem = function() {
-        // return the index if the item key is found in current, -1 otherwise
+        // return the index if the item key is found in currentDisplay, -1 otherwise
         var i = 0, final = -1;
-        angular.forEach($scope.current, function(item) {
-            if (item.key == $scope.item.key) {
+        angular.forEach($scope.currentDisplay, function(item) {
+            if (item.key == $scope.tubUnderEdit.key) {
                 final = i;
             }
             i++;
@@ -48,7 +99,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     var findCategory = function() {
         // return the index if the category is found, -1 otherwise
         var i = 0, final = -1;
-        angular.forEach($scope.rules, function(item) {
+        angular.forEach($scope.flavours, function(item) {
             if (item.Name == $scope.category.name) {
                 final = i;
             }
@@ -61,18 +112,18 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         if (findItem() > -1) {
             toastr.warning("Key already used.");
         } else {
-            $scope.current.push({key: $scope.item.key, value: $scope.item.value});
+            $scope.currentDisplay.push({key: $scope.tubUnderEdit.key, value: $scope.tubUnderEdit.value});
 
             // duplicate last element on the list
-            var lastIndex = Object.keys($scope.selectedCategory.Vars).length;
-            var lastItem = jQuery.extend(true, {}, $scope.selectedCategory.Vars[lastIndex - 1]);
-            $scope.selectedCategory.Vars.push(lastItem);
+            var lastIndex = Object.keys($scope.selectedFlavour.Vars).length;
+            var lastItem = jQuery.extend(true, {}, $scope.selectedFlavour.Vars[lastIndex - 1]);
+            $scope.selectedFlavour.Vars.push(lastItem);
 
             // replace content of last element on the list
-            $scope.selectedCategory.Vars[lastIndex][$scope.item.key] = $scope.item.value;
+            $scope.selectedFlavour.Vars[lastIndex][$scope.tubUnderEdit.key] = $scope.tubUnderEdit.value;
 
             // remove duplicated element
-            delete $scope.selectedCategory.Vars[lastIndex][Object.keys(lastItem)[0]];
+            delete $scope.selectedFlavour.Vars[lastIndex][Object.keys(lastItem)[0]];
 
             clearAll();
             toastr.success("Item added successfully.");
@@ -82,7 +133,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.addCategory = function () {
         var i = findCategory();
         if (i > -1) {
-            $scope.selectedCategory = $scope.rules[i];
+            $scope.selectedFlavour = $scope.flavours[i];
             // $scope.updateSelection();
             toastr.warning("Category already exists.");
             $("#categoryInput").focus();
@@ -90,18 +141,18 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.multiple = true; // we always have at least one category, and we just added one, so there must be multiple now
 
             // duplicate last category on the list
-            var lastIndex = $scope.rules.length;
-            var lastItem = jQuery.extend(true, {}, $scope.rules[lastIndex - 1]);
-            $scope.rules.push(lastItem);
+            var lastIndex = $scope.flavours.length;
+            var lastItem = jQuery.extend(true, {}, $scope.flavours[lastIndex - 1]);
+            $scope.flavours.push(lastItem);
 
             // replace name of last category on the list
-            $scope.rules[lastIndex].Name = $scope.category.name;
+            $scope.flavours[lastIndex].Name = $scope.category.name;
             
             // change selected category
-            $scope.selectedCategory = $scope.rules[lastIndex];
+            $scope.selectedFlavour = $scope.flavours[lastIndex];
 
             // empty values from new category
-            while ($scope.selectedCategory.Vars.length > 0) {
+            while ($scope.selectedFlavour.Vars.length > 0) {
                 $scope.deleteItem(0);
                 toastr.remove();
             }
@@ -123,18 +174,18 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 $scope.category.name = item.Name;
                 var i = findCategory();
                 if (i > -1) {
-                    // if a category in $scope.load is already in $scope.rules, combine their entries
+                    // if a category in $scope.load is already in $scope.flavours, combine their entries
                     angular.forEach(item.Vars, function(innerItem) {
                         // prioritize the content that is alerady in the GUI
-                        $scope.item.key = Object.keys(innerItem)[0];
+                        $scope.tubUnderEdit.key = Object.keys(innerItem)[0];
                         if (findItem() < 0) {
-                            $scope.rules[i].Vars.push(innerItem);
+                            $scope.flavours[i].Vars.push(innerItem);
                         }
                     });
                     $scope.updateSelection();
                 } else {
-                    // otherwise, add the entire category from $scope.load to $scope.rules
-                    $scope.rules.push(item);
+                    // otherwise, add the entire category from $scope.load to $scope.flavours
+                    $scope.flavours.push(item);
 
                     // we now certainly have at least 2 categories
                     $scope.multiple = true;
@@ -150,7 +201,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     }
 
     $scope.exportFile = function() {
-        var data = new Blob([angular.toJson($scope.rules, true)], {type: 'text/plain'});
+        var data = new Blob([angular.toJson($scope.flavours, true)], {type: 'text/plain'});
         var downloadLink = document.getElementById('filedownload');
         downloadLink.href = window.URL.createObjectURL(data);
         $timeout(function() {
@@ -163,41 +214,41 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.updateSelection = function() {
-        var items = $scope.selectedCategory.Vars;
-        $scope.current = [];
+        var items = $scope.selectedFlavour.Vars;
+        $scope.currentDisplay = [];
 
         angular.forEach(items, function(item) {
-            $scope.current.push({key: Object.keys(item)[0], value: Object.values(item)[0]});
+            $scope.currentDisplay.push({key: Object.keys(item)[0], value: Object.values(item)[0]});
         });
 
         clearAll();
     };
 
-    $scope.editItem = function(index) {
+    $scope.editTub = function(index) {
         $scope.index = index;
-        $scope.item = $scope.current[index];
-        $scope.original = jQuery.extend(true, {}, $scope.item);
+        $scope.tubUnderEdit = $scope.currentDisplay[index];
+        $scope.tubEditOriginal = jQuery.extend(true, {}, $scope.tubUnderEdit);
         $scope.edit = true;
     };
 
     $scope.editCategory = function() {
-        $scope.category.name = $scope.selectedCategory.Name;
+        $scope.category.name = $scope.selectedFlavour.Name;
         $scope.originalCategory = $scope.category.name;
         $scope.catEdit = true;
     };
 
     $scope.applyChanges = function() {
-        if ($scope.original.key == $scope.item.key && $scope.original.value == $scope.item.value) {
+        if ($scope.tubEditOriginal.key == $scope.tubUnderEdit.key && $scope.tubEditOriginal.value == $scope.tubUnderEdit.value) {
             // nothing changed, change nothing
-            $scope.item = $scope.original = {};
+            $scope.tubUnderEdit = $scope.tubEditOriginal = {};
             $scope.edit = false;
             toastr.warning("No changes made.");
-        } else if ($scope.original.key != $scope.item.key) {
+        } else if ($scope.tubEditOriginal.key != $scope.tubUnderEdit.key) {
             // can't use findItem() here because it finds the last instance, not the earlier one
             var dup = false;
             var i = 0;
-            angular.forEach($scope.current, function(item) {
-                if (item.key == $scope.item.key && i != $scope.index) {
+            angular.forEach($scope.currentDisplay, function(item) {
+                if (item.key == $scope.tubUnderEdit.key && i != $scope.index) {
                     dup = true;
                 }
                 i++;
@@ -207,13 +258,13 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 toastr.warning("Key already used.");
                 $("#itemInput").focus();
             } else {
-                $scope.selectedCategory.Vars[$scope.index][$scope.item.key] = $scope.item.value;
-                delete $scope.selectedCategory.Vars[$scope.index][$scope.original.key];
+                $scope.selectedFlavour.Vars[$scope.index][$scope.tubUnderEdit.key] = $scope.tubUnderEdit.value;
+                delete $scope.selectedFlavour.Vars[$scope.index][$scope.tubEditOriginal.key];
                 clearAll();
             }
-        } else if ($scope.original.value != $scope.item.value) {
+        } else if ($scope.original.value != $scope.tubUnderEdit.value) {
             // key did not change but value did change, so just adjust the value
-            $scope.selectedCategory.Vars[$scope.index][$scope.item.key] = $scope.item.value;
+            $scope.selectedFlavour.Vars[$scope.index][$scope.tubUnderEdit.key] = $scope.tubUnderEdit.value;
             clearAll();
         }
     };
@@ -230,7 +281,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 toastr.warning("Category already exists.");
             } else {
                 // perform modification
-                $scope.selectedCategory.Name = $scope.category.name;
+                $scope.selectedFlavour.Name = $scope.category.name;
                 $scope.category = {};
                 $scope.catEdit = false;
                 toastr.success("Category modified successfully.");
@@ -239,24 +290,24 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.deleteItem = function(index){
-        $scope.item = $scope.original = {};
+        $scope.tubUnderEdit = $scope.tubEditOriginal = {};
         $scope.edit = false;
 
-        $scope.current.splice(index, 1);
-        $scope.selectedCategory.Vars.splice(index, 1);
+        $scope.currentDisplay.splice(index, 1);
+        $scope.selectedFlavour.Vars.splice(index, 1);
         toastr.success("Item removed successfully.");
     };
 
     $scope.deleteCategory = function() {
         if (confirm("Are you sure you want to delete this category?")) {
-            $scope.category.name = $scope.selectedCategory.Name;
-            $scope.rules.splice(findCategory(), 1);
-            $scope.selectedCategory = $scope.rules[0];
+            $scope.category.name = $scope.selectedFlavour.Name;
+            $scope.flavours.splice(findCategory(), 1);
+            $scope.selectedFlavour = $scope.flavours[0];
             $scope.updateSelection();
 
             clearAll();
 
-            if ($scope.rules.length == 1) {
+            if ($scope.flavours.length == 1) {
                 $scope.multiple = false; // we're down to 1 category, so remove the "Delete Category" button
             } else {
                 $scope.multiple = true;
