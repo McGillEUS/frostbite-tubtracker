@@ -43,7 +43,6 @@
       <p style="float: left; margin-right: 10px; margin-top: 4px; font-weight: bold">Flavour:</p>
       <div class="span3">
         <select ng-model="selectedFlavour" ng-options="x.flavour for x in flavours" ng-change="updateSelection()"></select>
-          <br>
       </div>
       <div class="span2">
         <a href="#editFlavourField">
@@ -57,39 +56,67 @@
       </div>
     </div>
 
-    <form id="editField" class="row form-inline">
-      <input id="itemInput" type="text" ng-model="tubUnderEdit.date_received" placeholder="Date Received" required>
-      <input type="text" ng-model="tubUnderEdit.open" placeholder="Open" required>
-      <input type="text" ng-model="tubUnderEdit.date_opened" placeholder="Date Opened">
-      <input type="text" ng-model="tubUnderEdit.date_closed" placeholder="Date Closed">
+    <form id="editField" class="row form-inline">    
+      <input id="itemInput" type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_received" ng-click="dateReceivedInput()" placeholder="Date Received" required>
+      <date-picker ng-model="tubUnderEdit.date_received" ng-show="dateReceivedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
+      <select ng-show="add||edit" ng-model="tubUnderEdit.open" required>
+          <option value="">Open Status</option>
+          <option value="false">false</option>
+          <option value="true">true</option>
+      </select>
+      <input type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_opened" ng-click="dateOpenedInput()" placeholder="Date Opened">
+      <date-picker ng-model="tubUnderEdit.date_opened" ng-show="dateOpenedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
+      <input type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_closed" ng-click="dateClosedInput()" placeholder="Date Closed">
+      <date-picker ng-model="tubUnderEdit.date_closed" ng-show="dateClosedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
       <button ng-hide="edit" class="btn btn-success" ng-click="addTub()">
-        <i class="icon-plus icon-white"></i> Add
+        <i class="icon-plus icon-white"></i> Add Tub
       </button>
       <button ng-show="edit" class="btn btn-success" ng-click="applyChanges()">
         <i class="icon-ok icon-white"></i> Save
       </button>
-      <button class="btn btn-danger btn-small" ng-click="deleteTub()">
+      <button class="btn btn-danger btn-small" ng-show="edit" ng-click="deleteTub()">
         <i class="icon-trash icon-white"></i> Delete
       </button>
     </form>
 
     <form id="editFlavourField" class="row form-inline" name="validateEnteredFlavour">
-      <input id="flavourInputFlavour" type="text" ng-model="flavourUnderEdit.flavour" placeholder="Flavour Name" required>
-      <input id="flavourInputSupplier" type="text" ng-model="flavourUnderEdit.supplier" placeholder="Supplier" required>
-      <input id="flavourInputQuantityValue" type="text" ng-model="flavourUnderEdit.quantity.value" placeholder="Quantity (value)" required>
-      <input id="flavourInputQuantityUnit" type="text" ng-model="flavourUnderEdit.quantity.unit" placeholder="Quantity (unit)" required>
-      <input id="flavourInputPriceValue" type="text" ng-model="flavourUnderEdit.price.value" placeholder="Price (value)" required>
-      <input id="flavourInputPriceUnit" type="text" ng-model="flavourUnderEdit.price.unit" placeholder="Price (unit)" required>
-      <input id="flavourInputFormat" type="text" ng-model="flavourUnderEdit.format" placeholder="Format (tub or individual)" required>
-      <input id="flavourInputType" type="text" ng-model="flavourUnderEdit.type" placeholder="Type (ice cream, sorbet, sandwich, drumstick, etc)" required>
-      <button ng-hide="catEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="addFlavour()">
-        <i class="icon-plus icon-white"></i> Add
+      <input id="flavourInputFlavour" type="text" ng-show="flavourAdd||flavourEdit" ng-model="flavourUnderEdit.flavour" placeholder="Flavour Name" required>
+      <select id="flavourInputSupplier" type="text" ng-show="flavourAdd||flavourEdit" ng-model="flavourUnderEdit.supplier" placeholder="Supplier" required>
+          <option value="">Open Status</option>
+          <option value="false">false</option>
+          <option value="true">true</option>
+      </select>
+      <input id="flavourInputQuantityValue" type="text" ng-show="flavourAdd||flavourEdit" ng-model="flavourUnderEdit.quantity.value" placeholder="Quantity (value)" required>
+      <select id="flavourInputQuantityUnit" type="text" ng-show="flavourAdd||flavourEdit" ng-model="flavourUnderEdit.quantity.unit" placeholder="Quantity (unit)" required>
+          <option value="">Quantity Unit</option>
+          <option value="L">L</option>
+          <option value="unit">unit</option>
+      </select>
+      <input id="flavourInputPriceValue" type="text" ng-show="flavourAdd||flavourEdit" ng-model="flavourUnderEdit.price.value" placeholder="Price (value)" required>
+      <select id="flavourInputPriceUnit" type="text" ng-show="flavourAdd||flavourEdit" ng-model="flavourUnderEdit.price.unit" placeholder="Price (unit)" required>
+          <option value="">Price Unit</option>
+          <option value="CAD">CAD</option>
+      </select>
+      <select id="flavourInputFormat" type="text" ng-show="flavourAdd||flavourEdit" ng-model="flavourUnderEdit.format" placeholder="Format (tub or individual)" required>
+          <option value="">Format</option>
+          <option value="tub">tub</option>
+          <option value="individual">individual</option>
+      </select>
+      <select id="flavourInputType" type="text" ng-show="flavourAdd||flavourEdit" ng-model="flavourUnderEdit.type" placeholder="Type (ice cream, sorbet, sandwich, drumstick, etc)" required>
+          <option value="">Type</option>
+          <option value="ice cream">ice cream</option>
+          <option value="sorbet">sorbet</option>
+          <option value="sandwich">sandwich</option>
+          <option value="drumstick">drumstick</option>
+      </select>
+      <button ng-hide="flavourEdit" class="btn btn-success" ng-click="addFlavour()">
+        <i class="icon-plus icon-white"></i> Add Flavour
       </button>
-      <button ng-show="catEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="applyFlavourChanges()">
+      <button ng-show="flavourEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="applyFlavourChanges()">
         <i class="icon-ok icon-white"></i> Save
       </button>
       <div class="span2">
-        <button class="btn btn-danger btn-small" ng-click="deleteFlavour()">
+        <button class="btn btn-danger btn-small" ng-show="flavourEdit" ng-click="deleteFlavour()">
           <i class="icon-trash icon-white"></i> Delete Flavour
         </button>
       </div>
@@ -113,14 +140,14 @@
             <td>{{ tub.date_closed }}</td>
             <td>
               <button class="btn btn-primary btn-small" ng-hide="tub.open||tub.date_closed" ng-click="openTub($index)">
-                <i class="icon-ok icon-white"></i> Open
+                <i class="icon-ok icon-white"></i> Open Tub
               </button>
               <button class="btn btn-primary btn-small" ng-show="tub.open" ng-click="closeTub($index)">
-                <i class="icon-remove icon-white"></i> Close
+                <i class="icon-remove icon-white"></i> Close Tub
               </button>
               <a href="#editField">
                 <button class="btn btn-warning btn-small" ng-click="editTub($index)">
-                  <i class="icon-pencil icon-white"></i> Modify
+                  <i class="icon-pencil icon-white"></i> Modify Tub
                 </button>
               </a>
             </td>
@@ -128,11 +155,6 @@
         </tbody>
       </table>
     </div>
-
-    <date-picker ng-model="date" format-date="formatDate" parse-date="parseDate">
-    </date-picker>
-    
-    <input type="text" ng-model="date">
   </div>
   
   <script src="lib/jquery.min.js"></script>

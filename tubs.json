@@ -56,8 +56,8 @@
         "supplier" : "Nestle",
         "quantity" : 
         {
-            "value" : 11.4,
-            "unit" : "L"
+            "value" : 12,
+            "unit" : "N/A"
         },
         "price" :
         {

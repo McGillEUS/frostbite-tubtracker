@@ -8,6 +8,10 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.index = 0;
     $scope.nextID = 1;
     $scope.load = { };
+    $scope.edit = false;
+    $scope.add = false;
+    $scope.flavourAdd = false;
+    $scope.flavourEdit = false;
     $scope.flavours = [
         {
             "flavour" : "Chocolate",
@@ -66,8 +70,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             "supplier" : "Nestle",
             "quantity" : 
             {
-                "value" : 11.4,
-                "unit" : "L"
+                "value" : 12,
+                "unit" : "unit"
             },
             "price" :
             {
@@ -112,48 +116,71 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.addTub = function () {
-        console.log($scope.tubUnderEdit.id);
-        console.log($scope.tubUnderEdit.date_received);
-        console.log($scope.tubUnderEdit.open);
-        console.log($scope.tubUnderEdit.date_opened);
-        console.log($scope.tubUnderEdit.date_closed);
+        if ($scope.add == false) {
+            // show the tub input fields
+            $scope.add = true;
+        } else {
+            // TODO implement proper data validation
+                // verify that necessary fields are filled
+                // date_received must be a valid date
+                // open must be true or false
+                // if open is true => 
+                    // date_opened must be a valid date
+                    // date_closed must be empty
+                // if open is false => 
+                    // date_closed must be a valid date OR empty
+                        // if valid date => date_open must be a valid date
+                        // if empty => date_open must be empty
 
+            // temporary validation: validate that date_received and opened status are filled
+                // some rickety date validation is provided by the date pickers
+            console.log($scope.tubUnderEdit.open);
+            console.log($scope.tubUnderEdit.date_opened);
+            console.log($scope.tubUnderEdit.date_closed);
+            if ($scope.tubUnderEdit.open == undefined || $scope.tubUnderEdit.date_received == undefined) {
+                toastr.warning("Date received and opened status required.")
+            } else if ($scope.tubUnderEdit.open == "true" && ($scope.tubUnderEdit.date_opened == undefined || $scope.tubUnderEdit.date_opened == "")) {
+                toastr.warning("Open tub needs an opening date.");
+            } else if ($scope.tubUnderEdit.open == "true" && ($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "")) {
+                toastr.warning("Open tub can't have a closing date.");
+            } else if ($scope.tubUnderEdit.open == "false" && ($scope.tubUnderEdit.date_opened != undefined && $scope.tubUnderEdit.date_opened != "")  && ($scope.tubUnderEdit.date_closed == undefined || $scope.tubUnderEdit.date_closed == "")) {
+                toastr.warning("Closed tub needs a closing date.");
+            } else if ($scope.tubUnderEdit.open == "false" && ($scope.tubUnderEdit.date_opened == undefined || $scope.tubUnderEdit.date_opened == "") && ($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "")) {
+                toastr.warning("Closed tub needs an opening date.");
+            } else {
+                // if the date_open or date_closed fields were left blank, create them
+                if ($scope.tubUnderEdit.date_open == undefined) {
+                    $scope.tubUnderEdit.date_open = "";
+                }
+                if ($scope.tubUnderEdit.date_closed == undefined) {
+                    $scope.tubUnderEdit.date_closed = "";
+                }
 
-        // verify that necessary fields are filled
-            // date_received must be a valid date
-            // open must be true or false
-            // if open is true => 
-                // date_opened must be a valid date
-                // date_closed must be empty
-            // if open is false => 
-                // date_closed must be a valid date OR empty
-                    // if valid date => date_open must be a valid date
-                    // if empty => date_open must be empty
-        
+                // assign the new tub an incremented ID
+                $scope.tubUnderEdit.id = $scope.nextID;
+                $scope.nextID += 1;
 
-        $scope.currentDisplay.push($scope.tubUnderEdit);
+                // add tub to list
+                $scope.currentDisplay.push($scope.tubUnderEdit);
 
-        // duplicate last element on the list
-        var lastIndex = $scope.selectedFlavour.tubs.length;
-        var lastItem = jQuery.extend(true, {}, $scope.selectedFlavour.tubs[lastIndex - 1]);
-        $scope.selectedFlavour.tubs.push(lastItem);
-
-        // assign the new tub an incremented ID
-        $scope.tubUnderEdit.id = $scope.nextID;
-        $scope.nextID += 1;
-
-        // replace content of last element on the list
-        $scope.selectedFlavour.tubs[lastIndex] = $scope.tubUnderEdit;
-
-        // remove duplicated element
-        delete $scope.selectedFlavour.tubs[lastIndex][Object.keys(lastItem)[0]];
-            // TODO figure out if this is still needed
-
-        clearAll();
-        toastr.success("Item added successfully.");
+                // reset variables
+                $scope.tubUnderedit = {};
+                $scope.dateReceivedInputActive = false;
+                $scope.dateOpenedInputActive = false;
+                $scope.dateClosedInputActive = false;
+                $scope.add = false;
+                clearAll();
+                toastr.success("Item added successfully.");
+            }
+        }      
     };
 
     $scope.addFlavour = function () {
+        if ($scope.flavourAdd == false) {
+            $scope.flavourAdd = true;
+        } else {
+            // TODO
+        }
         var i = findFlavour();
         if (i > -1) {
             // $scope.selectedFlavour = $scope.flavours[i]; // TODO figure out if this is still needed
@@ -308,6 +335,28 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.closeTub = function(index) {
         $scope.currentDisplay[index].date_closed = new Date();
         $scope.currentDisplay[index].open = false;
+    };
+
+    // DATE PICKER SHOW/HIDE FUNCTIONS
+    $scope.dateReceivedInput = function () {
+        $scope.dateReceivedInputActive = true;
+        $scope.dateOpenedInputActive = false;
+        $scope.dateClosedInputActive = false;
+    };
+    $scope.openInput = function () {
+        $scope.dateReceivedInputActive = false;
+        $scope.dateOpenedInputActive = false;
+        $scope.dateClosedInputActive = false;
+    };
+    $scope.dateOpenedInput = function () {
+        $scope.dateReceivedInputActive = false;
+        $scope.dateOpenedInputActive = true;
+        $scope.dateClosedInputActive = false;
+    };
+    $scope.dateClosedInput = function () {
+        $scope.dateReceivedInputActive = false;
+        $scope.dateOpenedInputActive = false;
+        $scope.dateClosedInputActive = true;
     };
 
     // DATE PICKER FUNCTIONS
