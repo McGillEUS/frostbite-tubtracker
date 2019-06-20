@@ -32,7 +32,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             [
                 {
                     "id" : 1,
-                    "open" : true,
+                    "open" : "true",
                     "date_received" : "2019-06-17",
                     "date_opened" : "2019-06-17",
                     "date_closed" : ""
@@ -58,7 +58,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             [
                 {
                     "id" : 2,
-                    "open" : false,
+                    "open" : "false",
                     "date_received" : "2019-06-17",
                     "date_opened" : "",
                     "date_closed" : ""
@@ -84,7 +84,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             [
                 {
                     "id" : 3,
-                    "open" : false,
+                    "open" : "false",
                     "date_received" : "2019-06-17",
                     "date_opened" : "2019-06-17",
                     "date_closed" : "2019-06-19"
@@ -120,17 +120,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             // show the tub input fields
             $scope.add = true;
         } else {
-            // TODO implement proper data validation
-                // verify that necessary fields are filled
-                // date_received must be a valid date
-                // open must be true or false
-                // if open is true => 
-                    // date_opened must be a valid date
-                    // date_closed must be empty
-                // if open is false => 
-                    // date_closed must be a valid date OR empty
-                        // if valid date => date_open must be a valid date
-                        // if empty => date_open must be empty
+            // TODO upgrade data validation to check for proper dates
+                // proper date format
+                // open date can't be before received data
+                // closed date can't be before open date
+                // date not on a day that the store was closed?
 
             // temporary validation: validate that date_received and opened status are filled
                 // some rickety date validation is provided by the date pickers
@@ -195,11 +189,9 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 || $scope.flavourUnderEdit.format == ""
                 || $scope.flavourUnderEdit.type == undefined
                 || $scope.flavourUnderEdit.type == "") {
-                toastr.warning("All fields must be filled in.");
+                    // very basic "all fields required" data validation
+                    toastr.warning("All fields must be filled in.");
             } else {
-                // TODO implement basic "all fields required" data validation
-
-
                 // add an empty tubs field to the flavour
                 $scope.flavourUnderEdit.tubs = [];
 
@@ -222,6 +214,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         clearAll();
     };
 
+    // TODO not touched yet
     $scope.editTub = function(index) {
         $scope.index = index;
         $scope.tubUnderEdit = $scope.currentDisplay[$scope.index];
@@ -229,12 +222,14 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.edit = true;
     };
 
+    // TODO not touched yet
     $scope.editFlavour = function() {
         $scope.flavourUnderEdit = $scope.selectedFlavour;
         $scope.flavourEditOriginal = $scope.flavourUnderEdit;
         $scope.flavourEdit = true;
     };
 
+    // TODO not touched yet
     $scope.applyChanges = function() {
         if ($scope.tubEditOriginal.key == $scope.tubUnderEdit) {
             // nothing changed, change nothing
@@ -248,6 +243,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
     };
 
+    // TODO not touched yet
     $scope.applyFlavourChanges = function() {
         if ($scope.flavourEditOriginal == $scope.flavourUnderEdit) {
             // nothing changed, do nothing
@@ -267,6 +263,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
     };
 
+    // TODO not touched yet
     $scope.deleteTub = function(index){
         if (confirm("Are you sure you want to delete this tub?")) {
             $scope.tubUnderEdit = $scope.tubEditOriginal = {};
@@ -278,6 +275,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
     };
 
+    // TODO not touched yet
     $scope.deleteFlavour = function() {
         if (confirm("Are you sure you want to delete this flavour?")) {
             $scope.flavourUnderEdit = $scope.selectedFlavour;
