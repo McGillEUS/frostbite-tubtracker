@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/toastr.css">
+  <link rel="stylesheet" href="css/angular-date-picker.css">
   <link rel="stylesheet" href="css/application.css">
 </head>
 <body>
-  <div class="container" ng-app="rulesManager" ng-controller="jsonGUIController">
+  <div class="container" ng-app="tubTracker" ng-controller="jsonGUIController">
     <div class="row">
       <div class="page-header">
         <div class="span1">
@@ -56,6 +57,44 @@
       </div>
     </div>
 
+    <form id="editField" class="row form-inline">
+      <input id="itemInput" type="text" ng-model="tubUnderEdit.date_received" placeholder="Date Received" required>
+      <input type="text" ng-model="tubUnderEdit.open" placeholder="Open" required>
+      <input type="text" ng-model="tubUnderEdit.date_opened" placeholder="Date Opened">
+      <input type="text" ng-model="tubUnderEdit.date_closed" placeholder="Date Closed">
+      <button ng-hide="edit" class="btn btn-success" ng-click="addTub()">
+        <i class="icon-plus icon-white"></i> Add
+      </button>
+      <button ng-show="edit" class="btn btn-success" ng-click="applyChanges()">
+        <i class="icon-ok icon-white"></i> Save
+      </button>
+      <button class="btn btn-danger btn-small" ng-click="deleteTub()">
+        <i class="icon-trash icon-white"></i> Delete
+      </button>
+    </form>
+
+    <form id="editFlavourField" class="row form-inline" name="validateEnteredFlavour">
+      <input id="flavourInputFlavour" type="text" ng-model="flavourUnderEdit.flavour" placeholder="Flavour Name" required>
+      <input id="flavourInputSupplier" type="text" ng-model="flavourUnderEdit.supplier" placeholder="Supplier" required>
+      <input id="flavourInputQuantityValue" type="text" ng-model="flavourUnderEdit.quantity.value" placeholder="Quantity (value)" required>
+      <input id="flavourInputQuantityUnit" type="text" ng-model="flavourUnderEdit.quantity.unit" placeholder="Quantity (unit)" required>
+      <input id="flavourInputPriceValue" type="text" ng-model="flavourUnderEdit.price.value" placeholder="Price (value)" required>
+      <input id="flavourInputPriceUnit" type="text" ng-model="flavourUnderEdit.price.unit" placeholder="Price (unit)" required>
+      <input id="flavourInputFormat" type="text" ng-model="flavourUnderEdit.format" placeholder="Format (tub or individual)" required>
+      <input id="flavourInputType" type="text" ng-model="flavourUnderEdit.type" placeholder="Type (ice cream, sorbet, sandwich, drumstick, etc)" required>
+      <button ng-hide="catEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="addFlavour()">
+        <i class="icon-plus icon-white"></i> Add
+      </button>
+      <button ng-show="catEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="applyFlavourChanges()">
+        <i class="icon-ok icon-white"></i> Save
+      </button>
+      <div class="span2">
+        <button class="btn btn-danger btn-small" ng-click="deleteFlavour()">
+          <i class="icon-trash icon-white"></i> Delete Flavour
+        </button>
+      </div>
+    </form>
+
     <div class="row">
       <table id="lista-compras" class="table table-striped">
         <thead>
@@ -90,48 +129,16 @@
       </table>
     </div>
 
-    <form id="editField" class="row form-inline" name="validateEnteredValues">
-      <input id="itemInput" type="text" ng-model="tubUnderEdit.date_received" placeholder="Date Received" required>
-      <input type="text" ng-model="tubUnderEdit.open" placeholder="Open" required>
-      <input type="text" ng-model="tubUnderEdit.date_opened" placeholder="Date Opened" required>
-      <input type="text" ng-model="tubUnderEdit.date_closed" placeholder="Date Closed" required>
-      <button ng-hide="edit" class="btn btn-success" ng-click="addTub()">
-        <i class="icon-plus icon-white"></i> Add
-      </button>
-      <button ng-show="edit" class="btn btn-success" ng-click="applyChanges()">
-        <i class="icon-ok icon-white"></i> Save
-      </button>
-      <button class="btn btn-danger btn-small" ng-click="deleteTub()">
-        <i class="icon-trash icon-white"></i> Delete
-      </button>
-    </form>
-
-    <form id="editFlavourField" class="row form-inline" name="validateEnteredFlavour">
-      <input id="flavourInputFlavour" type="text" ng-model="flavourUnderEdit.flavour" placeholder="Flavour Name" required>
-      <input id="flavourInputSupplier" type="text" ng-model="flavourUnderEdit.supplier" placeholder="Supplier" required>
-      <input id="flavourInputQuantityValue" type="text" ng-model="flavourUnderEdit.quantity.value" placeholder="Quantity (value)" required>
-      <input id="flavourInputQuantityUnit" type="text" ng-model="flavourUnderEdit.quantity.unit" placeholder="Quantity (unit)" required>
-      <input id="flavourInputPriceValue" type="text" ng-model="flavourUnderEdit.price.value" placeholder="Price (value)" required>
-      <input id="flavourInputPriceUnit" type="text" ng-model="flavourUnderEdit.price.unit" placeholder="Price (unit)" required>
-      <input id="flavourInputFormat" type="text" ng-model="flavourUnderEdit.format" placeholder="Format (tub or individual)" required>
-      <input id="flavourInputType" type="text" ng-model="flavourUnderEdit.type" placeholder="Type (ice cream, sorbet, sandwich, drumstick, etc)" required>
-      <button ng-hide="catEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="addFlavour()">
-        <i class="icon-plus icon-white"></i> Add
-      </button>
-      <button ng-show="catEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="applyFlavourChanges()">
-        <i class="icon-ok icon-white"></i> Save
-      </button>
-      <div class="span2">
-        <button class="btn btn-danger btn-small" ng-click="deleteFlavour()">
-          <i class="icon-trash icon-white"></i> Delete Flavour
-        </button>
-      </div>
-    </form>
+    <date-picker ng-model="date" format-date="formatDate" parse-date="parseDate">
+    </date-picker>
+    
+    <input type="text" ng-model="date">
   </div>
   
   <script src="lib/jquery.min.js"></script>
   <script src="lib/angular.min.js"></script>
   <script src="lib/toastr.min.js"></script>
+  <script src="lib/angular-date-picker.js"></script>
   <script src="app/controllers.js"></script>
 
 </body>

@@ -1,4 +1,4 @@
-var app = angular.module('rulesManager', []);
+var app = angular.module('tubTracker', [ 'mp.datePicker' ]);
 app.controller('jsonGUIController', function($scope, $timeout) {
 
     $scope.tubUnderEdit = {};
@@ -29,7 +29,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 {
                     "id" : 1,
                     "open" : true,
-                    "date_received" : "",
+                    "date_received" : "2019-06-17",
                     "date_opened" : "2019-06-17",
                     "date_closed" : ""
                 }
@@ -55,9 +55,35 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 {
                     "id" : 2,
                     "open" : false,
-                    "date_received" : "",
+                    "date_received" : "2019-06-17",
                     "date_opened" : "",
                     "date_closed" : ""
+                }
+            ]
+        },
+        {
+            "flavour" : "Oreo Ice Cream Sandwich",
+            "supplier" : "Nestle",
+            "quantity" : 
+            {
+                "value" : 11.4,
+                "unit" : "L"
+            },
+            "price" :
+            {
+                "value" : 20.99,
+                "unit" : "CAD"
+            },
+            "format" : "individual",
+            "type" : "sandwich",
+            "tubs" :
+            [
+                {
+                    "id" : 3,
+                    "open" : false,
+                    "date_received" : "2019-06-17",
+                    "date_opened" : "2019-06-17",
+                    "date_closed" : "2019-06-19"
                 }
             ]
         }
@@ -86,6 +112,25 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.addTub = function () {
+        console.log($scope.tubUnderEdit.id);
+        console.log($scope.tubUnderEdit.date_received);
+        console.log($scope.tubUnderEdit.open);
+        console.log($scope.tubUnderEdit.date_opened);
+        console.log($scope.tubUnderEdit.date_closed);
+
+
+        // verify that necessary fields are filled
+            // date_received must be a valid date
+            // open must be true or false
+            // if open is true => 
+                // date_opened must be a valid date
+                // date_closed must be empty
+            // if open is false => 
+                // date_closed must be a valid date OR empty
+                    // if valid date => date_open must be a valid date
+                    // if empty => date_open must be empty
+        
+
         $scope.currentDisplay.push($scope.tubUnderEdit);
 
         // duplicate last element on the list
@@ -101,7 +146,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.selectedFlavour.tubs[lastIndex] = $scope.tubUnderEdit;
 
         // remove duplicated element
-        // delete $scope.selectedFlavour.Vars[lastIndex][Object.keys(lastItem)[0]];
+        delete $scope.selectedFlavour.tubs[lastIndex][Object.keys(lastItem)[0]];
             // TODO figure out if this is still needed
 
         clearAll();
@@ -263,5 +308,21 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.closeTub = function(index) {
         $scope.currentDisplay[index].date_closed = new Date();
         $scope.currentDisplay[index].open = false;
+    };
+
+    // DATE PICKER FUNCTIONS
+    $scope.formatDate = function (date) {
+        function pad(n) {
+            return n < 10 ? '0' + n : n;
+        }
+    
+        return date && date.getFullYear()
+            + '-' + pad(date.getMonth() + 1)
+            + '-' + pad(date.getDate());
+    };
+    $scope.parseDate = function (s) {
+        var tokens = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
+    
+        return tokens && new Date(tokens[1], tokens[2] - 1, tokens[3]);
     };
 });
