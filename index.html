@@ -49,12 +49,7 @@
           <button class="btn btn-warning btn-small" ng-click="editFlavour()">
             <i class="icon-pencil icon-white"></i> Modify Flavour
           </button>
-      </a>
-      </div>
-      <div class="span2">
-        <button ng-show="multiple" class="btn btn-danger btn-small" ng-click="deleteFlavour()">
-          <i class="icon-trash icon-white"></i> Delete Flavour
-        </button>
+        </a>
       </div>
       <div class="span3" style="float: right">
         <input type="search" ng-model="search" placeholder="Filter...">
@@ -65,7 +60,6 @@
       <table id="lista-compras" class="table table-striped">
         <thead>
           <tr>
-            <th>Tub ID</th>
             <th>Date Received</th>
             <th>Opened Status</th>
             <th>Date Opened</th>
@@ -74,20 +68,22 @@
         </thead>
         <tbody>
           <tr ng-repeat="tub in currentDisplay | filter:search">
-            <td><strong>{{ tub.id }}</strong></td>
             <td>{{ tub.date_received }}</td>
             <td>{{ tub.open }}</td>
             <td>{{ tub.date_opened }}</td>
             <td>{{ tub.date_closed }}</td>
             <td>
+              <button class="btn btn-primary btn-small" ng-hide="tub.open||tub.date_closed" ng-click="openTub($index)">
+                <i class="icon-ok icon-white"></i> Open
+              </button>
+              <button class="btn btn-primary btn-small" ng-show="tub.open" ng-click="closeTub($index)">
+                <i class="icon-remove icon-white"></i> Close
+              </button>
               <a href="#editField">
                 <button class="btn btn-warning btn-small" ng-click="editTub($index)">
                   <i class="icon-pencil icon-white"></i> Modify
                 </button>
               </a>
-              <button class="btn btn-danger btn-small" ng-click="deleteItem($index)">
-                <i class="icon-trash icon-white"></i> Delete
-              </button>
             </td>
           </tr>
         </tbody>
@@ -104,6 +100,9 @@
       </button>
       <button ng-show="edit" class="btn btn-success" ng-click="applyChanges()">
         <i class="icon-ok icon-white"></i> Save
+      </button>
+      <button class="btn btn-danger btn-small" ng-click="deleteTub()">
+        <i class="icon-trash icon-white"></i> Delete
       </button>
     </form>
 
@@ -122,6 +121,11 @@
       <button ng-show="catEdit" class="btn btn-success" ng-disabled="validateEnteredFlavour.$invalid" ng-click="applyFlavourChanges()">
         <i class="icon-ok icon-white"></i> Save
       </button>
+      <div class="span2">
+        <button class="btn btn-danger btn-small" ng-click="deleteFlavour()">
+          <i class="icon-trash icon-white"></i> Delete Flavour
+        </button>
+      </div>
     </form>
   </div>
   

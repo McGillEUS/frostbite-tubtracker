@@ -14,12 +14,12 @@
         },
         "format" : "tub",
         "type" : "ice cream",
-        "instances" :
+        "tubs" :
         [
             {
                 "id" : 1,
                 "open" : true,
-                "date_received" : "",
+                "date_received" : "2019-06-17",
                 "date_opened" : "2019-06-17",
                 "date_closed" : ""
             }
@@ -40,12 +40,12 @@
         },
         "format" : "tub",
         "type" : "sorbet",
-        "instances" :
+        "tubs" :
         [
             {
                 "id" : 2,
                 "open" : false,
-                "date_received" : "",
+                "date_received" : "2019-06-17",
                 "date_opened" : "",
                 "date_closed" : ""
             }
@@ -66,12 +66,12 @@
         },
         "format" : "individual",
         "type" : "sandwich",
-        "instances" :
+        "tubs" :
         [
             {
                 "id" : 3,
                 "open" : false,
-                "date_received" : "",
+                "date_received" : "2019-06-17",
                 "date_opened" : "2019-06-17",
                 "date_closed" : "2019-06-19"
             }

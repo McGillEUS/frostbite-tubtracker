@@ -115,8 +115,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             toastr.warning("Flavour already exists.");
             $("#flavourInputFlavour").focus();
         } else {
-            $scope.multipleFlavoursExist = true; // we always have at least one flavour, and we just added one, so there must be multiple now
-
             // duplicate last flavour on the list
             var lastIndex = $scope.flavours.length;
             var lastItem = jQuery.extend(true, {}, $scope.flavours[lastIndex - 1]);
@@ -141,10 +139,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.updateSelection = function() {
-        angular.forEach($scope.selectedFlavour.tubs, function(instance) {
-            $scope.currentDisplay.push(instance);
-        });
-
+        $scope.currentDisplay = $scope.selectedFlavour.tubs;
         clearAll();
     };
 
@@ -198,8 +193,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.tubUnderEdit = $scope.tubEditOriginal = {};
             $scope.edit = false;
 
-            $scope.currentDisplay.splice(index, 1);
-            $scope.selectedFlavour.tubs.splice(index, 1);
+            $scope.currentDisplay.splice($scope.index, 1);
+            $scope.selectedFlavour.tubs.splice($scope.index, 1);
             toastr.success("Tub removed successfully.");
         }
     };
@@ -212,12 +207,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.updateSelection();
 
             clearAll();
-
-            if ($scope.flavours.length == 1) {
-                $scope.multipleFlavoursExist = false; // we're down to 1 flavour, so remove the "Delete Flavour" button
-            } else {
-                $scope.multipleFlavoursExist = true;
-            }
         }
     };
 
@@ -228,13 +217,28 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         
 	    fileReader.onload = function(e) {
             $scope.flavours = angular.fromJson(fileReader.result);
+            $scope.selectedFlavour = $scope.flavours[0];
+            $scope.currentDisplay = $scope.selectedFlavour.tubs;
+
+            // find maximum tub ID
+            $scope.nextID = 1;
+            angular.forEach($scope.flavours, function(flavour) {
+                angular.forEach(flavour.tubs, function(tub) {
+                    if (tub.id > $scope.nextID) {
+                        $scope.nextID = tub.id;
+                    }
+                });
+            });
+            $scope.nextID += 1;
+
+            console.log($scope.nextID);
 
             clearAll();
             toastr.success("File imported successfully.");
             $scope.$apply();
         }
 
-        fileReader.readAsText(file, $scope);
+        fileReader.readAsText(file, $scope);    // TODO what does this do?
     };
 
     // TODO change this from a download link to a proper server-hosted JSON file
@@ -249,5 +253,15 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
     $scope.openFile = function() {
     	$("#fileLoader").click();
+    };
+
+    $scope.openTub = function(index) {
+        $scope.currentDisplay[index].date_opened = new Date();
+        $scope.currentDisplay[index].open = true;
+    };
+
+    $scope.closeTub = function(index) {
+        $scope.currentDisplay[index].date_closed = new Date();
+        $scope.currentDisplay[index].open = false;
     };
 });
