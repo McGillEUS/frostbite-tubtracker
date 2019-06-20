@@ -107,7 +107,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         // return the index if the flavour is found, -1 otherwise
         var i = 0, final = -1;
         angular.forEach($scope.flavours, function(flavour) {
-            if (flavour == $scope.flavourUnderEdit) {
+            if (flavour == $scope.flavourUnderEdit.flavour) {
                 final = i;
             }
             i++;
@@ -134,9 +134,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
             // temporary validation: validate that date_received and opened status are filled
                 // some rickety date validation is provided by the date pickers
-            console.log($scope.tubUnderEdit.open);
-            console.log($scope.tubUnderEdit.date_opened);
-            console.log($scope.tubUnderEdit.date_closed);
             if ($scope.tubUnderEdit.open == undefined || $scope.tubUnderEdit.date_received == undefined) {
                 toastr.warning("Date received and opened status required.")
             } else if ($scope.tubUnderEdit.open == "true" && ($scope.tubUnderEdit.date_opened == undefined || $scope.tubUnderEdit.date_opened == "")) {
@@ -179,35 +176,45 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         if ($scope.flavourAdd == false) {
             $scope.flavourAdd = true;
         } else {
-            // TODO
-        }
-        var i = findFlavour();
-        if (i > -1) {
-            // $scope.selectedFlavour = $scope.flavours[i]; // TODO figure out if this is still needed
-            toastr.warning("Flavour already exists.");
-            $("#flavourInputFlavour").focus();
-        } else {
-            // duplicate last flavour on the list
-            var lastIndex = $scope.flavours.length;
-            var lastItem = jQuery.extend(true, {}, $scope.flavours[lastIndex - 1]);
-            $scope.flavours.push(lastItem);
+            var i = findFlavour();
+            if (i > -1) {
+                toastr.warning("Flavour with this name already exists.");
+            } else if ($scope.flavourUnderEdit.flavour == undefined 
+                || $scope.flavourUnderEdit.flavour == ""
+                || $scope.flavourUnderEdit.supplier == undefined
+                || $scope.flavourUnderEdit.supplier == ""
+                || $scope.flavourUnderEdit.quantity.value == undefined
+                || $scope.flavourUnderEdit.quantity.value == ""
+                || $scope.flavourUnderEdit.quantity.unit == undefined
+                || $scope.flavourUnderEdit.quantity.unit == ""
+                || $scope.flavourUnderEdit.price.value == undefined
+                || $scope.flavourUnderEdit.price.value == ""
+                || $scope.flavourUnderEdit.price.unit == undefined
+                || $scope.flavourUnderEdit.price.unit == ""
+                || $scope.flavourUnderEdit.format == undefined
+                || $scope.flavourUnderEdit.format == ""
+                || $scope.flavourUnderEdit.type == undefined
+                || $scope.flavourUnderEdit.type == "") {
+                toastr.warning("All fields must be filled in.");
+            } else {
+                // TODO implement basic "all fields required" data validation
 
-            // replace last flavour on the list
-            $scope.flavours[lastIndex] = $scope.flavourUnderEdit;
-            
-            // change selected flavour
-            $scope.selectedFlavour = $scope.flavours[lastIndex];
 
-            // empty values from new flavour
-            while ($scope.selectedFlavour.tubs.length > 0) {
-                $scope.deleteTub(0);
-                toastr.remove();
+                // add an empty tubs field to the flavour
+                $scope.flavourUnderEdit.tubs = [];
+
+                // add flavour to list
+                $scope.flavours.push($scope.flavourUnderEdit);
+                $scope.selectedFlavour = $scope.flavourUnderEdit;
+                $scope.updateSelection();
+
+                // reset variables
+                $scope.flavourUnderEdit = {};
+                $scope.flavourAdd = false;
+                clearAll();
+                toastr.success("Flavour added successfully.");
             }
-
-            toastr.success("Flavour added successfully.");
         }
-        $scope.flavourUnderEdit = {};
-        $scope.updateSelection();
     };
 
     $scope.updateSelection = function() {
@@ -217,7 +224,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
     $scope.editTub = function(index) {
         $scope.index = index;
-        $scope.tubUnderEdit = $scope.currentDisplay[index];
+        $scope.tubUnderEdit = $scope.currentDisplay[$scope.index];
         $scope.tubEditOriginal = jQuery.extend(true, {}, $scope.tubUnderEdit);
         $scope.edit = true;
     };
@@ -302,8 +309,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 });
             });
             $scope.nextID += 1;
-
-            console.log($scope.nextID);
 
             clearAll();
             toastr.success("File imported successfully.");
