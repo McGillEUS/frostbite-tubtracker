@@ -107,7 +107,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         // return the index if the flavour is found, -1 otherwise
         var i = 0, final = -1;
         angular.forEach($scope.flavours, function(flavour) {
-            if (flavour == $scope.flavourUnderEdit.flavour) {
+            if (flavour.flavour == $scope.flavourUnderEdit.flavour) {
                 final = i;
             }
             i++;
@@ -120,27 +120,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             // show the tub input fields
             $scope.add = true;
         } else {
-            // TODO upgrade data validation to check for proper dates
-                // proper date format
-                // open date can't be before received data
-                // closed date can't be before open date
-                // date not on a day that the store was closed?
-
-            // temporary validation: validate that date_received and status are filled
-                // some rickety date validation is provided by the date pickers
-            if ($scope.tubUnderEdit.status == undefined || $scope.tubUnderEdit.date_received == undefined) {
-                toastr.warning("Date received and opened status required.")
-            } else if ($scope.tubUnderEdit.status == "open" && ($scope.tubUnderEdit.date_opened == undefined || $scope.tubUnderEdit.date_opened == "")) {
-                toastr.warning("Open tub needs an opening date.");
-            } else if ($scope.tubUnderEdit.status == "open" && ($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "")) {
-                toastr.warning("Open tub can't have a closing date.");
-            } else if ($scope.tubUnderEdit.status == "closed" && (($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "") || ($scope.tubUnderEdit.date_opened != undefined && $scope.tubUnderEdit.date_opened != ""))) {
-                toastr.warning("Closed tub can't have an opening or closing date.");
-            } else if ($scope.tubUnderEdit.status == "finished" && ($scope.tubUnderEdit.date_opened != undefined && $scope.tubUnderEdit.date_opened != "")  && ($scope.tubUnderEdit.date_closed == undefined || $scope.tubUnderEdit.date_closed == "")) {
-                toastr.warning("Finished tub needs a closing date.");
-            } else if ($scope.tubUnderEdit.status == "finished" && ($scope.tubUnderEdit.date_opened == undefined || $scope.tubUnderEdit.date_opened == "") && ($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "")) {
-                toastr.warning("Finished tub needs an opening date.");
-            } else {
+            if ($scope.validTub($scope.tubUnderEdit)) {
                 // if the date_opened or date_closed fields were left blank, create them
                 if ($scope.tubUnderEdit.date_opened == undefined) {
                     $scope.tubUnderEdit.date_opened = "";
@@ -171,43 +151,20 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.addFlavour = function () {
         if ($scope.flavourAdd == false) {
             $scope.flavourAdd = true;
-        } else {
-            var i = findFlavour();
-            if (i > -1) {
-                toastr.warning("Flavour with this name already exists.");
-            } else if ($scope.flavourUnderEdit.flavour == undefined 
-                || $scope.flavourUnderEdit.flavour == ""
-                || $scope.flavourUnderEdit.supplier == undefined
-                || $scope.flavourUnderEdit.supplier == ""
-                || $scope.flavourUnderEdit.quantity.value == undefined
-                || $scope.flavourUnderEdit.quantity.value == ""
-                || $scope.flavourUnderEdit.quantity.unit == undefined
-                || $scope.flavourUnderEdit.quantity.unit == ""
-                || $scope.flavourUnderEdit.price.value == undefined
-                || $scope.flavourUnderEdit.price.value == ""
-                || $scope.flavourUnderEdit.price.unit == undefined
-                || $scope.flavourUnderEdit.price.unit == ""
-                || $scope.flavourUnderEdit.format == undefined
-                || $scope.flavourUnderEdit.format == ""
-                || $scope.flavourUnderEdit.type == undefined
-                || $scope.flavourUnderEdit.type == "") {
-                    // very basic "all fields required" data validation
-                    toastr.warning("All fields must be filled in.");
-            } else {
-                // add an empty tubs field to the flavour
-                $scope.flavourUnderEdit.tubs = [];
+        } else if ($scope.validFlavour()){
+            // add an empty tubs field to the flavour
+            $scope.flavourUnderEdit.tubs = [];
 
-                // add flavour to list
-                $scope.flavours.push($scope.flavourUnderEdit);
-                $scope.selectedFlavour = $scope.flavourUnderEdit;
-                $scope.updateSelection();
+            // add flavour to list
+            $scope.flavours.push($scope.flavourUnderEdit);
+            $scope.selectedFlavour = $scope.flavourUnderEdit;
+            $scope.updateSelection();
 
-                // reset variables
-                $scope.flavourUnderEdit = {};
-                $scope.flavourAdd = false;
-                clearAll();
-                toastr.success("Flavour added successfully.");
-            }
+            // reset variables
+            $scope.flavourUnderEdit = {};
+            $scope.flavourAdd = false;
+            clearAll();
+            toastr.success("Flavour added successfully.");
         }
     };
 
@@ -340,6 +297,60 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.closeTub = function(index) {
         $scope.currentDisplay[index].date_closed = new Date();
         $scope.currentDisplay[index].status = "finished";
+    };
+
+    // basic validation: validate that date_received and status are filled
+        // some rickety date validation is provided by the date pickers
+    // TODO upgrade data validation to check for proper dates
+        // proper date format
+        // open date can't be before received data
+        // closed date can't be before open date
+        // date not on a day that the store was closed?
+    $scope.validTub = function(tub) {
+        if ($scope.tubUnderEdit.status == undefined || tub.date_received == undefined) {
+            toastr.warning("Date received and status required.")
+        } else if (tub.status == "open" && (tub.date_opened == undefined || tub.date_opened == "")) {
+            toastr.warning("Open tub needs an opening date.");
+        } else if (tub.status == "open" && (tub.date_closed != undefined && tub.date_closed != "")) {
+            toastr.warning("Open tub can't have a closing date.");
+        } else if (tub.status == "closed" && ((tub.date_closed != undefined && tub.date_closed != "") || (tub.date_opened != undefined && tub.date_opened != ""))) {
+            toastr.warning("Closed tub can't have an opening or closing date.");
+        } else if (tub.status == "finished" && (tub.date_opened != undefined && tub.date_opened != "")  && (tub.date_closed == undefined || tub.date_closed == "")) {
+            toastr.warning("Finished tub needs a closing date.");
+        } else if (tub.status == "finished" && (tub.date_opened == undefined || tub.date_opened == "") && (tub.date_closed != undefined && tub.date_closed != "")) {
+            toastr.warning("Finished tub needs an opening date.");
+        } else {
+            return true;
+        }
+        return false;
+    };
+
+    // basic "all fields required" data validation, plus duplicate flavour validation
+    $scope.validFlavour = function() {
+        if (findFlavour() > -1) {
+            toastr.warning("Flavour with this name already exists.");
+        } else if ($scope.flavourUnderEdit.flavour == undefined 
+            || $scope.flavourUnderEdit.flavour == ""
+            || $scope.flavourUnderEdit.supplier == undefined
+            || $scope.flavourUnderEdit.supplier == ""
+            || $scope.flavourUnderEdit.quantity.value == undefined
+            || $scope.flavourUnderEdit.quantity.value == ""
+            || $scope.flavourUnderEdit.quantity.unit == undefined
+            || $scope.flavourUnderEdit.quantity.unit == ""
+            || $scope.flavourUnderEdit.price.value == undefined
+            || $scope.flavourUnderEdit.price.value == ""
+            || $scope.flavourUnderEdit.price.unit == undefined
+            || $scope.flavourUnderEdit.price.unit == ""
+            || $scope.flavourUnderEdit.format == undefined
+            || $scope.flavourUnderEdit.format == ""
+            || $scope.flavourUnderEdit.type == undefined
+            || $scope.flavourUnderEdit.type == "") {
+                // very basic "all fields required" data validation
+                toastr.warning("All fields must be filled in.");
+        } else {
+            return true;
+        }
+        return false;
     };
 
     // DATE PICKER SHOW/HIDE FUNCTIONS
