@@ -106,8 +106,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     var findFlavour = function() {
         // return the index if the flavour is found, -1 otherwise
         var i = 0, final = -1;
-        angular.forEach($scope.flavours, function(flavour) {
-            if (flavour.flavour == $scope.flavourUnderEdit.flavour) {
+        angular.forEach($scope.flavours, function(x) {
+            if (x.flavour == $scope.flavourUnderEdit.flavour) {
                 final = i;
             }
             i++;
@@ -151,7 +151,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.addFlavour = function () {
         if ($scope.flavourAdd == false) {
             $scope.flavourAdd = true;
-        } else if ($scope.validFlavour()){
+        } else if ($scope.validFlavour("")){
             // add an empty tubs field to the flavour
             $scope.flavourUnderEdit.tubs = [];
 
@@ -181,10 +181,10 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.edit = true;
     };
 
-    // TODO not touched yet
+    // initiate editing tub
     $scope.editFlavour = function() {
         $scope.flavourUnderEdit = $scope.selectedFlavour;
-        $scope.flavourEditOriginal = $scope.flavourUnderEdit;
+        $scope.flavourEditOriginal = jQuery.extend(true, {}, $scope.flavourUnderEdit);
         $scope.flavourEdit = true;
     };
 
@@ -202,23 +202,20 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
     };
 
-    // TODO not touched yet
+    // save edited tub info
     $scope.applyFlavourChanges = function() {
-        if ($scope.flavourEditOriginal == $scope.flavourUnderEdit) {
+        if ($scope.compareFlavours($scope.flavourEditOriginal, $scope.flavourUnderEdit)) {
             // nothing changed, do nothing
             $scope.flavourUnderEdit = $scope.flavourEditOriginal = {};
             $scope.flavourEdit = false;
             toastr.warning("No changes made.");
-        } else {
-            if (findFlavour() > -1) {
-                toastr.warning("Flavour already exists.");
-            } else {
-                // perform modification
-                $scope.selectedFlavour = $scope.flavourUnderEdit;
-                $scope.flavourUnderEdit = {};
-                $scope.flavourEdit = false;
-                toastr.success("Flavour modified successfully.");
-            }
+        } else if ($scope.validFlavour($scope.flavourEditOriginal.flavour)) {
+            // perform modification
+            $scope.selectedFlavour = $scope.flavourUnderEdit;
+            $scope.flavourUnderEdit = {};
+            $scope.flavourEditOriginal = {};
+            $scope.flavourEdit = false;
+            toastr.success("Flavour modified successfully.");
         }
     };
 
@@ -325,11 +322,10 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         return false;
     };
 
-    // basic "all fields required" data validation, plus duplicate flavour validation
+    // basic "all fields required" data validation 
+        // TODO implement duplicate flavour validation
     $scope.validFlavour = function() {
-        if (findFlavour() > -1) {
-            toastr.warning("Flavour with this name already exists.");
-        } else if ($scope.flavourUnderEdit.flavour == undefined 
+        if ($scope.flavourUnderEdit.flavour == undefined 
             || $scope.flavourUnderEdit.flavour == ""
             || $scope.flavourUnderEdit.supplier == undefined
             || $scope.flavourUnderEdit.supplier == ""
@@ -352,6 +348,29 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
         return false;
     };
+    
+    // compare all data of two tubs
+    $scope.compareTubs = function(a, b) {
+        // TODO
+    }
+
+    // compare all data of two flavours
+        // return true if identical
+        // return false if different
+    $scope.compareFlavours = function(a, b) {
+        if (a.flavour != b.flavour
+            || a.supplier != b.supplier
+            || a.quantity.value != b.quantity.value
+            || a.quantity.unit != b.quantity.unit
+            || a.price.value != b.price.value
+            || a.price.unit != b.price.unit
+            || a.format != b.format
+            || a.type != b.type) {
+                return false;
+        } else {
+            return true;
+        } 
+    }
 
     // DATE PICKER SHOW/HIDE FUNCTIONS
     $scope.dateReceivedInput = function () {
