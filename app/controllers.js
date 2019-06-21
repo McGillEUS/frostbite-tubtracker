@@ -227,6 +227,10 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $timeout(function() {
             downloadLink.click(); // performs click to start download
         }, 100);
+        
+        /* $.post( "test.html", function( data ) {
+            $( ".result" ).html( data );
+          }); */
     };
 
     $scope.openFile = function() {

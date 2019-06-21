@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tub Tracker</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/toastr.css">
+  <link rel="stylesheet" href="css/angular-date-picker.css">
+  <link rel="stylesheet" href="css/application.css">
+</head>
+<body>
+  <div class="container" ng-app="tubTracker" ng-controller="jsonGUIController">
+    <div class="row">
+      <div class="page-header">
+        <div class="span1">
+          <img src="img/frostbite_favicon.png">
+        </div>
+        <div class="span5">
+          <h1>Frostbite Tub Tracker</h1>
+        </div>
+        <ol style="list-style-type: none;">
+          <li>
+            <div class="span3">
+              <input type="file" id="fileLoader" name="files" title="Load File" onchange="angular.element(this).scope().uploadFlavours()" />
+              <button class="btn btn-info btn-small" ng-click="openFile($filename)">
+                  <i class="icon-file icon-white"></i> Load Flavour History
+              </button>
+            </div>
+          </li>
+          <li>
+            <div class="span3">
+              <button class="btn btn-info btn-small" ng-click="saveChanges($filename)" id="create">
+                  <i class="icon-file icon-white"></i>Export Flavour History
+              </button>
+              <a href="" download="tubs.json" id="filedownload"></a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span3" style="float: right">
+        <input type="search" ng-model="search" placeholder="Filter...">
+      </div>
+    </div>
+
+    <div class="row">
+      <table id="lista-compras" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Flavour</th>
+            <th>Supplier</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Format</th>
+            <th>Type</th>
+            <th># of Tubs All Time</th>
+            <th>Average Days per Tub</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="flavour in flavours | filter:search">
+            <td>{{ flavour.flavour }}</td>
+            <td>{{ flavour.supplier }}</td>
+            <td>{{ flavour.quantity.value }} {{ flavour.quantity.unit }}</td>
+            <td>${{ flavour.price.value }} {{ flavour.price.unit }}</td>
+            <td>{{ flavour.format }}</td>
+            <td>{{ flavour.type }}</td>
+            <td>{{ flavour.tubs.length }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/toastr.min.js"></script>
+  <script src="lib/angular-date-picker.js"></script>
+  <script src="app/controllers.js"></script>
+
+</body>
+</html>
