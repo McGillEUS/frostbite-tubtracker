@@ -237,8 +237,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.flavourUnderEdit = $scope.selectedFlavour;
             $scope.flavours.splice(findFlavour(), 1);
             $scope.selectedFlavour = $scope.flavours[0];
+            $scope.flavourUnderEdit = {};
             $scope.updateSelection();
-
             clearAll();
         }
     };
