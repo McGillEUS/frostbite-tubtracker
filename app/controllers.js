@@ -220,13 +220,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
     };
 
-    // TODO not touched yet
+    // tub deletion logic
     $scope.deleteTub = function(index){
         if (confirm("Are you sure you want to delete this tub?")) {
             $scope.tubUnderEdit = $scope.tubEditOriginal = {};
             $scope.edit = false;
-
-            $scope.currentDisplay.splice($scope.index, 1);
             $scope.selectedFlavour.tubs.splice($scope.index, 1);
             toastr.success("Tub removed successfully.");
         }
@@ -270,7 +268,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.$apply();
         }
 
-        fileReader.readAsText(file, $scope);    // TODO what does this do?
+        fileReader.readAsText(file, $scope);
     };
 
     // TODO change this from a download link to a proper server-hosted JSON file
