@@ -14,7 +14,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.flavourEdit = false;
     $scope.flavours = [
         {
-            "flavour" : "Chocolate",
+            "flavour" : "Placeholder",
             "supplier" : "Nestle",
             "quantity" : 
             {
@@ -31,63 +31,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             "tubs" :
             [
                 {
-                    "id" : 1,
+                    "id" : 0,
                     "status" : "open",
                     "date_received" : "2019-06-17",
                     "date_opened" : "2019-06-17",
                     "date_closed" : ""
-                }
-            ]
-        },
-        {
-            "flavour" : "Mango",
-            "supplier" : "Ripples",
-            "quantity" : 
-            {
-                "value" : 11.4,
-                "unit" : "L"
-            },
-            "price" :
-            {
-                "value" : 44.99,
-                "unit" : "CAD"
-            },
-            "format" : "tub",
-            "type" : "sorbet",
-            "tubs" :
-            [
-                {
-                    "id" : 2,
-                    "status" : "closed",
-                    "date_received" : "2019-06-17",
-                    "date_opened" : "",
-                    "date_closed" : ""
-                }
-            ]
-        },
-        {
-            "flavour" : "Oreo Ice Cream Sandwich",
-            "supplier" : "Nestle",
-            "quantity" : 
-            {
-                "value" : 12,
-                "unit" : "unit"
-            },
-            "price" :
-            {
-                "value" : 20.99,
-                "unit" : "CAD"
-            },
-            "format" : "individual",
-            "type" : "sandwich",
-            "tubs" :
-            [
-                {
-                    "id" : 3,
-                    "status" : "finished",
-                    "date_received" : "2019-06-17",
-                    "date_opened" : "2019-06-17",
-                    "date_closed" : "2019-06-19"
                 }
             ]
         }

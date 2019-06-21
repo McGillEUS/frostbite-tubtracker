@@ -1519,6 +1519,526 @@
         ]
     },
     {
+        "flavour" : "Spumoni",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 141,
+                "status" : "finished",
+                "date_received" : "2019-03-27",
+                "date_opened" : "2019-03-27",
+                "date_closed" : "2019-04-09"
+            },
+            {
+                "id" : 142,
+                "status" : "finished",
+                "date_received" : "2019-05-22",
+                "date_opened" : "2019-05-22",
+                "date_closed" : "2019-06-12"
+            }
+        ]
+    },
+    {
+        "flavour" : "Coffee Crisp",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 143,
+                "status" : "finished",
+                "date_received" : "2019-03-29",
+                "date_opened" : "2019-03-29",
+                "date_closed" : "2019-04-04"
+            },
+            {
+                "id" : 144,
+                "status" : "finished",
+                "date_received" : "2019-04-12",
+                "date_opened" : "2019-04-12",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 145,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-15"
+            },
+            {
+                "id" : 146,
+                "status" : "finished",
+                "date_received" : "2019-05-28",
+                "date_opened" : "2019-05-28",
+                "date_closed" : "2019-06-07"
+            },
+            {
+                "id" : 147,
+                "status" : "finished",
+                "date_received" : "2019-06-11",
+                "date_opened" : "2019-06-11",
+                "date_closed" : "2019-06-18"
+            },
+            {
+                "id" : 148,
+                "status" : "open",
+                "date_received" : "2019-06-18",
+                "date_opened" : "2019-06-18",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Smarties",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 149,
+                "status" : "finished",
+                "date_received" : "2019-04-04",
+                "date_opened" : "2019-04-04",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 150,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-06-11"
+            }
+        ]
+    },
+    {
+        "flavour" : "Chocolate Mania",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "frozen yoghurt",
+        "tubs" :
+        [
+            {
+                "id" : 151,
+                "status" : "finished",
+                "date_received" : "2019-04-02",
+                "date_opened" : "2019-04-02",
+                "date_closed" : "2019-04-09"
+            },
+            {
+                "id" : 152,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-06-06"
+            },
+            {
+                "id" : 153,
+                "status" : "finished",
+                "date_received" : "2019-06-07",
+                "date_opened" : "2019-06-07",
+                "date_closed" : "2019-06-12"
+            }
+        ]
+    },
+    {
+        "flavour" : "Mojito",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            {
+                "id" : 154,
+                "status" : "finished",
+                "date_received" : "2019-06-06",
+                "date_opened" : "2019-06-06",
+                "date_closed" : "2019-06-13"
+            }
+        ]
+    },
+    {
+        "flavour" : "Raspberry",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            {
+                "id" : 155,
+                "status" : "finished",
+                "date_received" : "2019-06-14",
+                "date_opened" : "2019-06-14",
+                "date_closed" : "2019-06-19"
+            }
+        ]
+    },
+    {
+        "flavour" : "Passion Fruit",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            {
+                "id" : 156,
+                "status" : "open",
+                "date_received" : "2019-06-18",
+                "date_opened" : "2019-06-18",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Litchi",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            {
+                "id" : 157,
+                "status" : "finished",
+                "date_received" : "2019-06-05",
+                "date_opened" : "2019-06-05",
+                "date_closed" : "2019-06-11"
+            }
+        ]
+    },
+    {
+        "flavour" : "Lemon",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            {
+                "id" : 158,
+                "status" : "finished",
+                "date_received" : "2019-05-15",
+                "date_opened" : "2019-05-15",
+                "date_closed" : "2019-06-04"
+            }
+        ]
+    },
+    {
+        "flavour" : "Guava Grapefruit",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            {
+                "id" : 159,
+                "status" : "finished",
+                "date_received" : "2019-06-04",
+                "date_opened" : "2019-06-04",
+                "date_closed" : "2019-06-07"
+            }
+        ]
+    },
+    {
+        "flavour" : "Baby Monkey",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            
+        ]
+    },
+    {
+        "flavour" : "Strawberry",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            
+        ]
+    },
+    {
+        "flavour" : "Ginger",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 160,
+                "status" : "open",
+                "date_received" : "2019-06-14",
+                "date_opened" : "2019-06-14",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Coconut",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            {
+                "id" : 161,
+                "status" : "finished",
+                "date_received" : "2019-05-15",
+                "date_opened" : "2019-05-15",
+                "date_closed" : "2019-05-28"
+            }
+        ]
+    },
+    {
+        "flavour" : "Pistachio Almond",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 162,
+                "status" : "finished",
+                "date_received" : "2019-05-10",
+                "date_opened" : "2019-05-10",
+                "date_closed" : "2019-05-22"
+            },
+            {
+                "id" : 163,
+                "status" : "finished",
+                "date_received" : "2019-05-22",
+                "date_opened" : "2019-05-22",
+                "date_closed" : "2019-06-03"
+            }
+        ]
+    },
+    {
+        "flavour" : "Rum & Raisin",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            
+        ]
+    },
+    {
+        "flavour" : "Green Tea",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 164,
+                "status" : "open",
+                "date_received" : "2019-06-14",
+                "date_opened" : "2019-06-14",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Chai",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 165,
+                "status" : "finished",
+                "date_received" : "2019-06-03",
+                "date_opened" : "2019-06-03",
+                "date_closed" : "2019-06-07"
+            }
+        ]
+    },
+    {
         "flavour" : "Mango",
         "supplier" : "Ripples",
         "quantity" : 
@@ -1536,11 +2056,195 @@
         "tubs" :
         [
             {
-                "id" : 2,
-                "status" : "closed",
-                "date_received" : "2019-06-17",
-                "date_opened" : "",
+                "id" : 166,
+                "status" : "finished",
+                "date_received" : "2019-05-22",
+                "date_opened" : "2019-05-22",
+                "date_closed" : "2019-05-31"
+            }
+        ]
+    },
+    {
+        "flavour" : "Chocolate Raspberry",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 167,
+                "status" : "finished",
+                "date_received" : "2019-06-03",
+                "date_opened" : "2019-06-03",
+                "date_closed" : "2019-06-10"
+            }
+        ]
+    },
+    {
+        "flavour" : "Mint Oreo",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 168,
+                "status" : "finished",
+                "date_received" : "2019-06-14",
+                "date_opened" : "2019-06-14",
+                "date_closed" : "2019-06-19"
+            },
+            {
+                "id" : 169,
+                "status" : "open",
+                "date_received" : "2019-06-19",
+                "date_opened" : "2019-06-19",
                 "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Mocha Almond Fudge",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            
+        ]
+    },
+    {
+        "flavour" : "Chocolate 6x",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            
+        ]
+    },
+    {
+        "flavour" : "Soursop",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            {
+                "id" : 170,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-19"
+            },
+            {
+                "id" : 171,
+                "status" : "open",
+                "date_received" : "2019-06-14",
+                "date_opened" : "2019-06-14",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Cappucino Chocolate Chip",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 172,
+                "status" : "finished",
+                "date_received" : "2019-05-16",
+                "date_opened" : "2019-05-16",
+                "date_closed" : "2019-05-28"
+            }
+        ]
+    },
+    {
+        "flavour" : "Orange",
+        "supplier" : "Ripples",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 44.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "sorbet",
+        "tubs" :
+        [
+            {
+                "id" : 173,
+                "status" : "finished",
+                "date_received" : "2019-06-07",
+                "date_opened" : "2019-06-07",
+                "date_closed" : "2019-06-18"
             }
         ]
     },
@@ -1561,13 +2265,27 @@
         "type" : "sandwich",
         "tubs" :
         [
-            {
-                "id" : 3,
-                "status" : "finished",
-                "date_received" : "2019-06-17",
-                "date_opened" : "2019-06-17",
-                "date_closed" : "2019-06-19"
-            }
+            
+        ]
+    },
+    {
+        "flavour" : "Fudge Drumstick",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 12,
+            "unit" : "unit"
+        },
+        "price" :
+        {
+            "value" : 20.99,
+            "unit" : "CAD"
+        },
+        "format" : "individual",
+        "type" : "drumstick",
+        "tubs" :
+        [
+            
         ]
     }
 ]
