@@ -18,9 +18,1502 @@
         [
             {
                 "id" : 1,
-                "open" : true,
+                "status" : "finished",
+                "date_received" : "2019-02-11",
+                "date_opened" : "2019-02-11",
+                "date_closed" : "2019-02-22"
+            },
+            {
+                "id" : 2,
+                "status" : "finished",
+                "date_received" : "2019-03-15",
+                "date_opened" : "2019-03-15",
+                "date_closed" : "2019-04-10"
+            },
+            {
+                "id" : 3,
+                "status" : "finished",
+                "date_received" : "2019-04-10",
+                "date_opened" : "2019-04-10",
+                "date_closed" : "2019-04-11"
+            },
+            {
+                "id" : 4,
+                "status" : "finished",
+                "date_received" : "2019-05-07",
+                "date_opened" : "2019-05-07",
+                "date_closed" : "2019-06-13"
+            }
+        ]
+    },
+    {
+        "flavour" : "Strawberry",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 5,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-14"
+            },
+            {
+                "id" : 6,
+                "status" : "finished",
+                "date_received" : "2019-02-14",
+                "date_opened" : "2019-02-14",
+                "date_closed" : "2019-02-14"
+            },
+            {
+                "id" : 7,
+                "status" : "finished",
+                "date_received" : "2019-02-22",
+                "date_opened" : "2019-02-22",
+                "date_closed" : "2019-04-03"
+            },
+            {
+                "id" : 8,
+                "status" : "finished",
+                "date_received" : "2019-04-08",
+                "date_opened" : "2019-04-08",
+                "date_closed" : "2019-04-10"
+            },
+            {
+                "id" : 9,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-29"
+            },
+            {
+                "id" : 10,
+                "status" : "open",
+                "date_received" : "2019-05-29",
+                "date_opened" : "2019-05-29",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Vanilla",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            
+        ]
+    },
+    {
+        "flavour" : "Vanilla Bean",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 11,
+                "status" : "finished",
+                "date_received" : "2019-02-14",
+                "date_opened" : "2019-02-14",
+                "date_closed" : "2019-02-14"
+            },
+            {
+                "id" : 12,
+                "status" : "open",
+                "date_received" : "2019-06-19",
+                "date_opened" : "2019-06-19",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "French Vanilla",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 13,
+                "status" : "finished",
+                "date_received" : "2019-02-14",
+                "date_opened" : "2019-02-14",
+                "date_closed" : "2019-02-14"
+            },
+            {
+                "id" : 14,
+                "status" : "finished",
+                "date_received" : "2019-02-14",
+                "date_opened" : "2019-02-14",
+                "date_closed" : "2019-02-14"
+            },
+            {
+                "id" : 15,
+                "status" : "finished",
+                "date_received" : "2019-02-28",
+                "date_opened" : "2019-02-28",
+                "date_closed" : "2019-03-20"
+            },
+            {
+                "id" : 16,
+                "status" : "finished",
+                "date_received" : "2019-04-10",
+                "date_opened" : "2019-04-10",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 17,
+                "status" : "finished",
+                "date_received" : "2019-05-31",
+                "date_opened" : "2019-05-31",
+                "date_closed" : "2019-06-11"
+            }
+        ]
+    },
+    {
+        "flavour" : "Rolo Yolo",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 18,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-19"
+            },
+            {
+                "id" : 19,
+                "status" : "finished",
+                "date_received" : "2019-02-19",
+                "date_opened" : "2019-02-19",
+                "date_closed" : "2019-03-12"
+            },
+            {
+                "id" : 20,
+                "status" : "finished",
+                "date_received" : "2019-03-12",
+                "date_opened" : "2019-03-12",
+                "date_closed" : "2019-03-21"
+            },
+            {
+                "id" : 21,
+                "status" : "finished",
+                "date_received" : "2019-03-27",
+                "date_opened" : "2019-03-27",
+                "date_closed" : "2019-04-03"
+            },
+            {
+                "id" : 22,
+                "status" : "finished",
+                "date_received" : "2019-04-03",
+                "date_opened" : "2019-04-03",
+                "date_closed" : "2019-04-10"
+            },
+            {
+                "id" : 23,
+                "status" : "finished",
+                "date_received" : "2019-05-17",
+                "date_opened" : "2019-05-17",
+                "date_closed" : "2019-06-05"
+            },
+            {
+                "id" : 24,
+                "status" : "open",
+                "date_received" : "2019-06-18",
+                "date_opened" : "2019-06-18",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Kit Kat",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 25,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-19"
+            },
+            {
+                "id" : 26,
+                "status" : "finished",
+                "date_received" : "2019-02-19",
+                "date_opened" : "2019-02-19",
+                "date_closed" : "2019-03-12"
+            },
+            {
+                "id" : 27,
+                "status" : "finished",
+                "date_received" : "2019-03-13",
+                "date_opened" : "2019-03-13",
+                "date_closed" : "2019-04-09"
+            },
+            {
+                "id" : 28,
+                "status" : "finished",
+                "date_received" : "2019-04-12",
+                "date_opened" : "2019-04-12",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 29,
+                "status" : "finished",
+                "date_received" : "2019-05-29",
+                "date_opened" : "2019-05-29",
+                "date_closed" : "2019-06-07"
+            },
+            {
+                "id" : 30,
+                "status" : "finished",
+                "date_received" : "2019-06-11",
+                "date_opened" : "2019-06-11",
+                "date_closed" : "2019-06-17"
+            }
+        ]
+    },
+    {
+        "flavour" : "Triple Chocolate Brownie",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 31,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-11"
+            },
+            {
+                "id" : 32,
+                "status" : "finished",
+                "date_received" : "2019-02-22",
+                "date_opened" : "2019-02-22",
+                "date_closed" : "2019-03-11"
+            },
+            {
+                "id" : 33,
+                "status" : "finished",
+                "date_received" : "2019-03-11",
+                "date_opened" : "2019-03-11",
+                "date_closed" : "2019-03-15"
+            },
+            {
+                "id" : 34,
+                "status" : "finished",
+                "date_received" : "2019-03-21",
+                "date_opened" : "2019-03-21",
+                "date_closed" : "2019-03-26"
+            },
+            {
+                "id" : 35,
+                "status" : "finished",
+                "date_received" : "2019-04-09",
+                "date_opened" : "2019-04-09",
+                "date_closed" : "2019-04-11"
+            },
+            {
+                "id" : 36,
+                "status" : "finished",
+                "date_received" : "2019-04-12",
+                "date_opened" : "2019-04-12",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 37,
+                "status" : "finished",
+                "date_received" : "2019-05-07",
+                "date_opened" : "2019-05-07",
+                "date_closed" : "2019-05-15"
+            }
+        ]
+    },
+    {
+        "flavour" : "Toasted S'Mores",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 38,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-19"
+            },
+            {
+                "id" : 39,
+                "status" : "finished",
+                "date_received" : "2019-02-19",
+                "date_opened" : "2019-02-19",
+                "date_closed" : "2019-03-13"
+            },
+            {
+                "id" : 40,
+                "status" : "finished",
+                "date_received" : "2019-03-15",
+                "date_opened" : "2019-03-15",
+                "date_closed" : "2019-03-28"
+            },
+            {
+                "id" : 41,
+                "status" : "finished",
+                "date_received" : "2019-03-28",
+                "date_opened" : "2019-03-28",
+                "date_closed" : "2019-04-09"
+            },
+            {
+                "id" : 42,
+                "status" : "finished",
+                "date_received" : "2019-04-10",
+                "date_opened" : "2019-04-10",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 43,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-22"
+            }
+        ]
+    },
+    {
+        "flavour" : "Vanilla Caramel Swirl",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 44,
+                "status" : "finished",
+                "date_received" : "2019-02-12",
+                "date_opened" : "2019-02-12",
+                "date_closed" : "2019-03-12"
+            },
+            {
+                "id" : 45,
+                "status" : "finished",
+                "date_received" : "2019-03-12",
+                "date_opened" : "2019-03-12",
+                "date_closed" : "2019-04-02"
+            },
+            {
+                "id" : 46,
+                "status" : "finished",
+                "date_received" : "2019-04-09",
+                "date_opened" : "2019-04-09",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 47,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-22"
+            }
+        ]
+    },
+    {
+        "flavour" : "Chocolate Peanut Butter",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 48,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-12"
+            },
+            {
+                "id" : 49,
+                "status" : "finished",
+                "date_received" : "2019-02-12",
+                "date_opened" : "2019-02-12",
+                "date_closed" : "2019-02-19"
+            },
+            {
+                "id" : 50,
+                "status" : "finished",
+                "date_received" : "2019-02-21",
+                "date_opened" : "2019-02-21",
+                "date_closed" : "2019-02-28"
+            },
+            {
+                "id" : 51,
+                "status" : "finished",
+                "date_received" : "2019-02-28",
+                "date_opened" : "2019-02-28",
+                "date_closed" : "2019-03-12"
+            },
+            {
+                "id" : 52,
+                "status" : "finished",
+                "date_received" : "2019-03-12",
+                "date_opened" : "2019-03-12",
+                "date_closed" : "2019-03-18"
+            },
+            {
+                "id" : 53,
+                "status" : "finished",
+                "date_received" : "2019-03-18",
+                "date_opened" : "2019-03-18",
+                "date_closed" : "2019-03-22"
+            },
+            {
+                "id" : 54,
+                "status" : "finished",
+                "date_received" : "2019-03-22",
+                "date_opened" : "2019-03-22",
+                "date_closed" : "2019-04-02"
+            },
+            {
+                "id" : 55,
+                "status" : "finished",
+                "date_received" : "2019-04-09",
+                "date_opened" : "2019-04-09",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 56,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-13"
+            },
+            {
+                "id" : 57,
+                "status" : "finished",
+                "date_received" : "2019-05-13",
+                "date_opened" : "2019-05-13",
+                "date_closed" : "2019-05-17"
+            },
+            {
+                "id" : 58,
+                "status" : "finished",
+                "date_received" : "2019-05-21",
+                "date_opened" : "2019-05-21",
+                "date_closed" : "2019-05-28"
+            },
+            {
+                "id" : 59,
+                "status" : "finished",
+                "date_received" : "2019-05-28",
+                "date_opened" : "2019-05-28",
+                "date_closed" : "2019-06-05"
+            },
+            {
+                "id" : 60,
+                "status" : "finished",
+                "date_received" : "2019-06-07",
+                "date_opened" : "2019-06-07",
+                "date_closed" : "2019-06-12"
+            },
+            {
+                "id" : 61,
+                "status" : "open",
                 "date_received" : "2019-06-17",
                 "date_opened" : "2019-06-17",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Peanut Butter Heaven",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 62,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-20"
+            },
+            {
+                "id" : 63,
+                "status" : "finished",
+                "date_received" : "2019-02-20",
+                "date_opened" : "2019-02-20",
+                "date_closed" : "2019-03-15"
+            },
+            {
+                "id" : 64,
+                "status" : "finished",
+                "date_received" : "2019-03-18",
+                "date_opened" : "2019-03-18",
+                "date_closed" : "2019-03-29"
+            },
+            {
+                "id" : 65,
+                "status" : "finished",
+                "date_received" : "2019-04-03",
+                "date_opened" : "2019-04-03",
+                "date_closed" : "2019-04-09"
+            },
+            {
+                "id" : 66,
+                "status" : "finished",
+                "date_received" : "2019-04-04",
+                "date_opened" : "2019-04-04",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 67,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-21"
+            },
+            {
+                "id" : 68,
+                "status" : "finished",
+                "date_received" : "2019-06-07",
+                "date_opened" : "2019-06-07",
+                "date_closed" : "2019-06-17"
+            }
+        ]
+    },
+    {
+        "flavour" : "Salted Caramel",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 69,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-19"
+            },
+            {
+                "id" : 70,
+                "status" : "finished",
+                "date_received" : "2019-02-19",
+                "date_opened" : "2019-02-19",
+                "date_closed" : "2019-03-28"
+            },
+            {
+                "id" : 71,
+                "status" : "finished",
+                "date_received" : "2019-03-14",
+                "date_opened" : "2019-03-14",
+                "date_closed" : "2019-03-26"
+            },
+            {
+                "id" : 72,
+                "status" : "finished",
+                "date_received" : "2019-04-02",
+                "date_opened" : "2019-04-02",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 73,
+                "status" : "finished",
+                "date_received" : "2019-05-29",
+                "date_opened" : "2019-05-29",
+                "date_closed" : "2019-06-06"
+            },
+            {
+                "id" : 74,
+                "status" : "open",
+                "date_received" : "2019-06-19",
+                "date_opened" : "2019-06-19",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Pralines & Cream",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 75,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-18"
+            },
+            {
+                "id" : 76,
+                "status" : "finished",
+                "date_received" : "2019-02-18",
+                "date_opened" : "2019-02-18",
+                "date_closed" : "2019-03-01"
+            },
+            {
+                "id" : 77,
+                "status" : "finished",
+                "date_received" : "2019-03-12",
+                "date_opened" : "2019-03-12",
+                "date_closed" : "2019-03-26"
+            },
+            {
+                "id" : 78,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-16"
+            },
+            {
+                "id" : 79,
+                "status" : "finished",
+                "date_received" : "2019-05-24",
+                "date_opened" : "2019-05-24",
+                "date_closed" : "2019-06-06"
+            }
+        ]
+    },
+    {
+        "flavour" : "Cookies & Cream",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 80,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-12"
+            },
+            {
+                "id" : 81,
+                "status" : "finished",
+                "date_received" : "2019-02-19",
+                "date_opened" : "2019-02-19",
+                "date_closed" : "2019-02-25"
+            },
+            {
+                "id" : 82,
+                "status" : "finished",
+                "date_received" : "2019-03-12",
+                "date_opened" : "2019-03-12",
+                "date_closed" : "2019-03-18"
+            },
+            {
+                "id" : 83,
+                "status" : "finished",
+                "date_received" : "2019-03-20",
+                "date_opened" : "2019-03-20",
+                "date_closed" : "2019-03-27"
+            },
+            {
+                "id" : 84,
+                "status" : "finished",
+                "date_received" : "2019-03-27",
+                "date_opened" : "2019-03-27",
+                "date_closed" : "2019-04-02"
+            },
+            {
+                "id" : 85,
+                "status" : "finished",
+                "date_received" : "2019-05-07",
+                "date_opened" : "2019-04-11",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 86,
+                "status" : "finished",
+                "date_received" : "2019-05-07",
+                "date_opened" : "2019-05-07",
+                "date_closed" : "2019-05-15"
+            },
+            {
+                "id" : 87,
+                "status" : "finished",
+                "date_received" : "2019-05-28",
+                "date_opened" : "2019-05-28",
+                "date_closed" : "2019-06-06"
+            },
+            {
+                "id" : 88,
+                "status" : "finished",
+                "date_received" : "2019-06-10",
+                "date_opened" : "2019-06-10",
+                "date_closed" : "2019-06-18"
+            }
+        ]
+    },
+    {
+        "flavour" : "Chocolate Chip Cookie Dough",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 89,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-12"
+            },
+            {
+                "id" : 90,
+                "status" : "finished",
+                "date_received" : "2019-02-12",
+                "date_opened" : "2019-02-12",
+                "date_closed" : "2019-02-19"
+            },
+            {
+                "id" : 91,
+                "status" : "finished",
+                "date_received" : "2019-02-25",
+                "date_opened" : "2019-02-25",
+                "date_closed" : "2019-03-11"
+            },
+            {
+                "id" : 92,
+                "status" : "finished",
+                "date_received" : "2019-03-11",
+                "date_opened" : "2019-03-11",
+                "date_closed" : "2019-03-14"
+            },
+            {
+                "id" : 93,
+                "status" : "finished",
+                "date_received" : "2019-04-02",
+                "date_opened" : "2019-04-02",
+                "date_closed" : "2019-04-08"
+            },
+            {
+                "id" : 94,
+                "status" : "finished",
+                "date_received" : "2019-04-10",
+                "date_opened" : "2019-04-10",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 95,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-10"
+            },
+            {
+                "id" : 87,
+                "status" : "finished",
+                "date_received" : "2019-05-29",
+                "date_opened" : "2019-05-29",
+                "date_closed" : "2019-06-04"
+            },
+            {
+                "id" : 88,
+                "status" : "finished",
+                "date_received" : "2019-06-17",
+                "date_opened" : "2019-06-17",
+                "date_closed" : "2019-06-18"
+            }
+        ]
+    },
+    {
+        "flavour" : "Maple Walnut",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 89,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-03-11"
+            },
+            {
+                "id" : 90,
+                "status" : "finished",
+                "date_received" : "2019-03-11",
+                "date_opened" : "2019-03-11",
+                "date_closed" : "2019-03-27"
+            },
+            {
+                "id" : 91,
+                "status" : "finished",
+                "date_received" : "2019-04-02",
+                "date_opened" : "2019-04-02",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 92,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-29"
+            },
+            {
+                "id" : 93,
+                "status" : "open",
+                "date_received" : "2019-06-18",
+                "date_opened" : "2019-06-18",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "New York Cherry Cheesecake",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 94,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-15"
+            },
+            {
+                "id" : 95,
+                "status" : "finished",
+                "date_received" : "2019-02-18",
+                "date_opened" : "2019-02-18",
+                "date_closed" : "2019-02-26"
+            },
+            {
+                "id" : 96,
+                "status" : "finished",
+                "date_received" : "2019-03-01",
+                "date_opened" : "2019-03-01",
+                "date_closed" : "2019-03-15"
+            },
+            {
+                "id" : 97,
+                "status" : "finished",
+                "date_received" : "2019-03-15",
+                "date_opened" : "2019-03-15",
+                "date_closed" : "2019-03-21"
+            },
+            {
+                "id" : 98,
+                "status" : "finished",
+                "date_received" : "2019-03-26",
+                "date_opened" : "2019-03-26",
+                "date_closed" : "2019-04-02"
+            },
+            {
+                "id" : 99,
+                "status" : "finished",
+                "date_received" : "2019-04-02",
+                "date_opened" : "2019-04-02",
+                "date_closed" : "2019-04-10"
+            },
+            {
+                "id" : 100,
+                "status" : "finished",
+                "date_received" : "2019-04-11",
+                "date_opened" : "2019-04-11",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 101,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-21"
+            },
+            {
+                "id" : 102,
+                "status" : "finished",
+                "date_received" : "2019-05-21",
+                "date_opened" : "2019-05-21",
+                "date_closed" : "2019-06-06"
+            },
+            {
+                "id" : 103,
+                "status" : "finished",
+                "date_received" : "2019-06-10",
+                "date_opened" : "2019-06-10",
+                "date_closed" : "2019-06-18"
+            },
+            {
+                "id" : 104,
+                "status" : "open",
+                "date_received" : "2019-06-18",
+                "date_opened" : "2019-06-18",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Black Cherry",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 105,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-14"
+            },
+            {
+                "id" : 106,
+                "status" : "finished",
+                "date_received" : "2019-02-14",
+                "date_opened" : "2019-02-14",
+                "date_closed" : "2019-02-14"
+            },
+            {
+                "id" : 107,
+                "status" : "finished",
+                "date_received" : "2019-02-19",
+                "date_opened" : "2019-02-19",
+                "date_closed" : "2019-03-14"
+            },
+            {
+                "id" : 108,
+                "status" : "finished",
+                "date_received" : "2019-03-14",
+                "date_opened" : "2019-03-14",
+                "date_closed" : "2019-04-01"
+            },
+            {
+                "id" : 109,
+                "status" : "finished",
+                "date_received" : "2019-04-01",
+                "date_opened" : "2019-04-01",
+                "date_closed" : "2019-04-11"
+            },
+            {
+                "id" : 110,
+                "status" : "finished",
+                "date_received" : "2019-04-12",
+                "date_opened" : "2019-04-12",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 111,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-22"
+            },
+            {
+                "id" : 112,
+                "status" : "finished",
+                "date_received" : "2019-06-07",
+                "date_opened" : "2019-06-07",
+                "date_closed" : "2019-06-18"
+            }
+        ]
+    },
+    {
+        "flavour" : "Mint Chocolate Chip",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 113,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-14"
+            },
+            {
+                "id" : 114,
+                "status" : "finished",
+                "date_received" : "2019-02-14",
+                "date_opened" : "2019-02-14",
+                "date_closed" : "2019-02-22"
+            },
+            {
+                "id" : 115,
+                "status" : "finished",
+                "date_received" : "2019-02-26",
+                "date_opened" : "2019-02-26",
+                "date_closed" : "2019-03-15"
+            },
+            {
+                "id" : 116,
+                "status" : "finished",
+                "date_received" : "2019-03-15",
+                "date_opened" : "2019-03-15",
+                "date_closed" : "2019-03-26"
+            },
+            {
+                "id" : 117,
+                "status" : "finished",
+                "date_received" : "2019-03-26",
+                "date_opened" : "2019-03-26",
+                "date_closed" : "2019-04-02"
+            },
+            {
+                "id" : 118,
+                "status" : "finished",
+                "date_received" : "2019-04-02",
+                "date_opened" : "2019-04-02",
+                "date_closed" : "2019-04-10"
+            },
+            {
+                "id" : 119,
+                "status" : "finished",
+                "date_received" : "2019-04-10",
+                "date_opened" : "2019-04-10",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 120,
+                "status" : "finished",
+                "date_received" : "2019-05-16",
+                "date_opened" : "2019-05-26",
+                "date_closed" : "2019-05-29"
+            },
+            {
+                "id" : 121,
+                "status" : "finished",
+                "date_received" : "2019-06-04",
+                "date_opened" : "2019-06-04",
+                "date_closed" : "2019-06-11"
+            }
+        ]
+    },
+    {
+        "flavour" : "Tiger Tiger",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 122,
+                "status" : "finished",
+                "date_received" : "2019-02-11",
+                "date_opened" : "2019-02-11",
+                "date_closed" : "2019-04-11"
+            },
+            {
+                "id" : 123,
+                "status" : "open",
+                "date_received" : "2019-06-06",
+                "date_opened" : "2019-06-06",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Cotton Candy",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 124,
+                "status" : "finished",
+                "date_received" : "2019-02-04",
+                "date_opened" : "2019-02-04",
+                "date_closed" : "2019-02-19"
+            },
+            {
+                "id" : 125,
+                "status" : "finished",
+                "date_received" : "2019-02-19",
+                "date_opened" : "2019-02-19",
+                "date_closed" : "2019-03-12"
+            },
+            {
+                "id" : 126,
+                "status" : "finished",
+                "date_received" : "2019-03-21",
+                "date_opened" : "2019-03-21",
+                "date_closed" : "2019-04-05"
+            },
+            {
+                "id" : 127,
+                "status" : "finished",
+                "date_received" : "2019-04-09",
+                "date_opened" : "2019-04-09",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 128,
+                "status" : "finished",
+                "date_received" : "2019-05-06",
+                "date_opened" : "2019-05-06",
+                "date_closed" : "2019-05-28"
+            },
+            {
+                "id" : 129,
+                "status" : "open",
+                "date_received" : "2019-06-11",
+                "date_opened" : "2019-06-11",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Bubblegum",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 130,
+                "status" : "finished",
+                "date_received" : "2019-02-11",
+                "date_opened" : "2019-02-11",
+                "date_closed" : "2019-03-26"
+            },
+            {
+                "id" : 131,
+                "status" : "finished",
+                "date_received" : "2019-04-09",
+                "date_opened" : "2019-04-09",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 132,
+                "status" : "finished",
+                "date_received" : "2019-05-28",
+                "date_opened" : "2019-05-28",
+                "date_closed" : "2019-06-19"
+            }
+        ]
+    },
+    {
+        "flavour" : "Heavenly Hash",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 133,
+                "status" : "finished",
+                "date_received" : "2019-03-26",
+                "date_opened" : "2019-03-26",
+                "date_closed" : "2019-04-04"
+            },
+            {
+                "id" : 134,
+                "status" : "finished",
+                "date_received" : "2019-04-11",
+                "date_opened" : "2019-04-11",
+                "date_closed" : "2019-04-12"
+            },
+            {
+                "id" : 135,
+                "status" : "open",
+                "date_received" : "2019-06-11",
+                "date_opened" : "2019-06-11",
+                "date_closed" : ""
+            }
+        ]
+    },
+    {
+        "flavour" : "Caramel Cookie Blast",
+        "supplier" : "Nestle",
+        "quantity" : 
+        {
+            "value" : 11.4,
+            "unit" : "L"
+        },
+        "price" :
+        {
+            "value" : 34.99,
+            "unit" : "CAD"
+        },
+        "format" : "tub",
+        "type" : "ice cream",
+        "tubs" :
+        [
+            {
+                "id" : 136,
+                "status" : "finished",
+                "date_received" : "2019-03-27",
+                "date_opened" : "2019-03-27",
+                "date_closed" : "2019-04-02"
+            },
+            {
+                "id" : 137,
+                "status" : "finished",
+                "date_received" : "2019-04-04",
+                "date_opened" : "2019-04-04",
+                "date_closed" : "2019-04-10"
+            },
+            {
+                "id" : 138,
+                "status" : "finished",
+                "date_received" : "2019-05-22",
+                "date_opened" : "2019-05-22",
+                "date_closed" : "2019-05-29"
+            },
+            {
+                "id" : 139,
+                "status" : "finished",
+                "date_received" : "2019-06-06",
+                "date_opened" : "2019-06-06",
+                "date_closed" : "2019-06-10"
+            },
+            {
+                "id" : 140,
+                "status" : "open",
+                "date_received" : "2019-06-18",
+                "date_opened" : "2019-06-18",
                 "date_closed" : ""
             }
         ]
@@ -44,7 +1537,7 @@
         [
             {
                 "id" : 2,
-                "open" : false,
+                "status" : "closed",
                 "date_received" : "2019-06-17",
                 "date_opened" : "",
                 "date_closed" : ""
@@ -57,7 +1550,7 @@
         "quantity" : 
         {
             "value" : 12,
-            "unit" : "N/A"
+            "unit" : "unit"
         },
         "price" :
         {
@@ -70,7 +1563,7 @@
         [
             {
                 "id" : 3,
-                "open" : false,
+                "status" : "finished",
                 "date_received" : "2019-06-17",
                 "date_opened" : "2019-06-17",
                 "date_closed" : "2019-06-19"
