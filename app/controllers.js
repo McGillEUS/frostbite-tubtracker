@@ -173,7 +173,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         clearAll();
     };
 
-    // TODO not touched yet
+    // initiate editing tub
     $scope.editTub = function(index) {
         $scope.index = index;
         $scope.tubUnderEdit = $scope.currentDisplay[$scope.index];
@@ -181,35 +181,36 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.edit = true;
     };
 
-    // initiate editing tub
+    // initiate editing flavour
     $scope.editFlavour = function() {
         $scope.flavourUnderEdit = $scope.selectedFlavour;
         $scope.flavourEditOriginal = jQuery.extend(true, {}, $scope.flavourUnderEdit);
         $scope.flavourEdit = true;
     };
 
-    // TODO not touched yet
+    // save edited tub info
     $scope.applyChanges = function() {
-        if ($scope.tubEditOriginal.key == $scope.tubUnderEdit) {
+        if ($scope.compareTubs($scope.tubEditOriginal, $scope.tubUnderEdit)) {
             // nothing changed, change nothing
             $scope.tubUnderEdit = $scope.tubEditOriginal = {};
             $scope.edit = false;
             toastr.warning("No changes made.");
-        } else {
-            // only instance info has changed, update it and save
+        } else if ($scope.validTub($scope.tubUnderEdit)) {
+            // tub info has changed, save it
             $scope.selectedFlavour.tubs[$scope.index] = $scope.tubUnderEdit;
+            toastr.success("Tub modified successfully.");
             clearAll();
         }
     };
 
-    // save edited tub info
+    // save edited flavour info
     $scope.applyFlavourChanges = function() {
         if ($scope.compareFlavours($scope.flavourEditOriginal, $scope.flavourUnderEdit)) {
             // nothing changed, do nothing
             $scope.flavourUnderEdit = $scope.flavourEditOriginal = {};
             $scope.flavourEdit = false;
             toastr.warning("No changes made.");
-        } else if ($scope.validFlavour($scope.flavourEditOriginal.flavour)) {
+        } else if ($scope.validFlavour()) {
             // perform modification
             $scope.selectedFlavour = $scope.flavourUnderEdit;
             $scope.flavourUnderEdit = {};
@@ -231,7 +232,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
     };
 
-    // TODO not touched yet
+    // flavour deletion logic
     $scope.deleteFlavour = function() {
         if (confirm("Are you sure you want to delete this flavour?")) {
             $scope.flavourUnderEdit = $scope.selectedFlavour;
@@ -351,8 +352,15 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     
     // compare all data of two tubs
     $scope.compareTubs = function(a, b) {
-        // TODO
-    }
+        if (a.date_received != b.date_received
+            || a.status != b.status
+            || a.date_opened != b.date_opened
+            || a.date_closed != b.date_closed) {
+                return false;
+        } else {
+            return true;
+        }
+    };
 
     // compare all data of two flavours
         // return true if identical
