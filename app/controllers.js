@@ -32,7 +32,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             [
                 {
                     "id" : 1,
-                    "open" : "true",
+                    "status" : "open",
                     "date_received" : "2019-06-17",
                     "date_opened" : "2019-06-17",
                     "date_closed" : ""
@@ -58,7 +58,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             [
                 {
                     "id" : 2,
-                    "open" : "false",
+                    "status" : "closed",
                     "date_received" : "2019-06-17",
                     "date_opened" : "",
                     "date_closed" : ""
@@ -84,7 +84,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             [
                 {
                     "id" : 3,
-                    "open" : "false",
+                    "status" : "finished",
                     "date_received" : "2019-06-17",
                     "date_opened" : "2019-06-17",
                     "date_closed" : "2019-06-19"
@@ -126,22 +126,24 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 // closed date can't be before open date
                 // date not on a day that the store was closed?
 
-            // temporary validation: validate that date_received and opened status are filled
+            // temporary validation: validate that date_received and status are filled
                 // some rickety date validation is provided by the date pickers
-            if ($scope.tubUnderEdit.open == undefined || $scope.tubUnderEdit.date_received == undefined) {
+            if ($scope.tubUnderEdit.status == undefined || $scope.tubUnderEdit.date_received == undefined) {
                 toastr.warning("Date received and opened status required.")
-            } else if ($scope.tubUnderEdit.open == "true" && ($scope.tubUnderEdit.date_opened == undefined || $scope.tubUnderEdit.date_opened == "")) {
+            } else if ($scope.tubUnderEdit.status == "open" && ($scope.tubUnderEdit.date_opened == undefined || $scope.tubUnderEdit.date_opened == "")) {
                 toastr.warning("Open tub needs an opening date.");
-            } else if ($scope.tubUnderEdit.open == "true" && ($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "")) {
+            } else if ($scope.tubUnderEdit.status == "open" && ($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "")) {
                 toastr.warning("Open tub can't have a closing date.");
-            } else if ($scope.tubUnderEdit.open == "false" && ($scope.tubUnderEdit.date_opened != undefined && $scope.tubUnderEdit.date_opened != "")  && ($scope.tubUnderEdit.date_closed == undefined || $scope.tubUnderEdit.date_closed == "")) {
-                toastr.warning("Closed tub needs a closing date.");
-            } else if ($scope.tubUnderEdit.open == "false" && ($scope.tubUnderEdit.date_opened == undefined || $scope.tubUnderEdit.date_opened == "") && ($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "")) {
-                toastr.warning("Closed tub needs an opening date.");
+            } else if ($scope.tubUnderEdit.status == "closed" && (($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "") || ($scope.tubUnderEdit.date_opened != undefined && $scope.tubUnderEdit.date_opened != ""))) {
+                toastr.warning("Closed tub can't have an opening or closing date.");
+            } else if ($scope.tubUnderEdit.status == "finished" && ($scope.tubUnderEdit.date_opened != undefined && $scope.tubUnderEdit.date_opened != "")  && ($scope.tubUnderEdit.date_closed == undefined || $scope.tubUnderEdit.date_closed == "")) {
+                toastr.warning("Finished tub needs a closing date.");
+            } else if ($scope.tubUnderEdit.status == "finished" && ($scope.tubUnderEdit.date_opened == undefined || $scope.tubUnderEdit.date_opened == "") && ($scope.tubUnderEdit.date_closed != undefined && $scope.tubUnderEdit.date_closed != "")) {
+                toastr.warning("Finished tub needs an opening date.");
             } else {
-                // if the date_open or date_closed fields were left blank, create them
-                if ($scope.tubUnderEdit.date_open == undefined) {
-                    $scope.tubUnderEdit.date_open = "";
+                // if the date_opened or date_closed fields were left blank, create them
+                if ($scope.tubUnderEdit.date_opened == undefined) {
+                    $scope.tubUnderEdit.date_opened = "";
                 }
                 if ($scope.tubUnderEdit.date_closed == undefined) {
                     $scope.tubUnderEdit.date_closed = "";
@@ -332,12 +334,12 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
     $scope.openTub = function(index) {
         $scope.currentDisplay[index].date_opened = new Date();
-        $scope.currentDisplay[index].open = true;
+        $scope.currentDisplay[index].status = "open";
     };
 
     $scope.closeTub = function(index) {
         $scope.currentDisplay[index].date_closed = new Date();
-        $scope.currentDisplay[index].open = false;
+        $scope.currentDisplay[index].status = "finished";
     };
 
     // DATE PICKER SHOW/HIDE FUNCTIONS

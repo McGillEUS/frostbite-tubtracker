@@ -59,10 +59,11 @@
     <form id="editField" class="row form-inline">    
       <input id="itemInput" type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_received" ng-click="dateReceivedInput()" placeholder="Date Received">
       <date-picker ng-model="tubUnderEdit.date_received" ng-show="dateReceivedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
-      <select ng-show="add||edit" ng-model="tubUnderEdit.open">
-          <option value="">Open Status</option>
-          <option value="false">false</option>
-          <option value="true">true</option>
+      <select ng-show="add||edit" ng-model="tubUnderEdit.status">
+          <option value="">Status</option>
+          <option value="closed">closed</option>
+          <option value="open">open</option>
+          <option value="finished">finished</option>
       </select>
       <input type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_opened" ng-click="dateOpenedInput()" placeholder="Date Opened">
       <date-picker ng-model="tubUnderEdit.date_opened" ng-show="dateOpenedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
@@ -127,7 +128,7 @@
         <thead>
           <tr>
             <th>Date Received</th>
-            <th>Opened Status</th>
+            <th>Status</th>
             <th>Date Opened</th>
             <th>Date Closed</th>
           </tr>
@@ -135,14 +136,14 @@
         <tbody>
           <tr ng-repeat="tub in currentDisplay | filter:search">
             <td>{{ tub.date_received }}</td>
-            <td>{{ tub.open }}</td>
+            <td>{{ tub.status }}</td>
             <td>{{ tub.date_opened }}</td>
             <td>{{ tub.date_closed }}</td>
             <td>
-              <button class="btn btn-primary btn-small" ng-hide="tub.open||tub.date_closed" ng-click="openTub($index)">
+              <button class="btn btn-primary btn-small" ng-show="tub.status == 'closed'" ng-click="openTub($index)">
                 <i class="icon-ok icon-white"></i> Open Tub
               </button>
-              <button class="btn btn-primary btn-small" ng-show="tub.open" ng-click="closeTub($index)">
+              <button class="btn btn-primary btn-small" ng-show="tub.status == 'open'" ng-click="closeTub($index)">
                 <i class="icon-remove icon-white"></i> Close Tub
               </button>
               <a href="#editField">
