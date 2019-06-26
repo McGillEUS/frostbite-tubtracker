@@ -238,12 +238,22 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.openTub = function(index) {
-        $scope.currentDisplay[index].date_opened = new Date();
+        var now = new Date();
+        var month = now.getMonth() + 1;
+        if (month < 10) {
+            month = "0" + month;
+        }
+        $scope.currentDisplay[index].date_opened = now.getFullYear() + "-" + month + "-" + now.getDate();
         $scope.currentDisplay[index].status = "open";
     };
 
     $scope.closeTub = function(index) {
-        $scope.currentDisplay[index].date_closed = new Date();
+        var now = new Date();
+        var month = now.getMonth() + 1;
+        if (month < 10) {
+            month = "0" + month;
+        }
+        $scope.currentDisplay[index].date_closed = now.getFullYear() + "-" + month + "-" + now.getDate();
         $scope.currentDisplay[index].status = "finished";
     };
 
