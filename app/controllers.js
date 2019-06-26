@@ -346,7 +346,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.dateOpenedInputActive = false;
         $scope.dateClosedInputActive = false;
     };
-    $scope.openInput = function () {
+    $scope.statusInput = function () {
         $scope.dateReceivedInputActive = false;
         $scope.dateOpenedInputActive = false;
         $scope.dateClosedInputActive = false;
