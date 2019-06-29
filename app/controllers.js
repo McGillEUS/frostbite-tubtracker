@@ -296,7 +296,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         });
 
         // send edited data to the flavour.json file
-        $.ajax.POST({
+        $.ajax({
             'async': false,
             'type': "POST",
             'global': false,
