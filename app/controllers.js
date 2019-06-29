@@ -286,6 +286,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         // back up current flavour history to a separate file
         $.ajax.POST({
             'async': false,
+            'type': "POST",
             'global': false,
             'url': "tubs/flavourBackup-" + now.getFullYear() + "-" + month + "-" + now.getDate() + ".json",
             'dataType': "json",
@@ -297,6 +298,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         // send edited data to the flavour.json file
         $.ajax.POST({
             'async': false,
+            'type': "POST",
             'global': false,
             'url': "tubs/flavours.json",
             'dataType': "json",
