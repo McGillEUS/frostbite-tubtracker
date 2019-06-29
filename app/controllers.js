@@ -48,7 +48,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $.ajax({
             'async': false,
             'global': false,
-            'url': "../tubs/flavours.json",
+            'url': "tubs/flavours.json",
             'dataType': "json",
             'success': function (data) {
                 $scope.flavours = data;
@@ -58,7 +58,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $.ajax({
             'async': false,
             'global': false,
-            'url': "../daysClosed.json",
+            'url': "daysClosed.json",
             'dataType': "json",
             'success': function (data) {
                 $scope.daysClosed = data;
