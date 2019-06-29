@@ -64,18 +64,16 @@
     </div>
 
     <form id="editField" class="row form-inline">    
-      <input id="itemInput" type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_received" ng-click="dateReceivedInput()" placeholder="Date Received">
-      <date-picker ng-model="tubUnderEdit.date_received" ng-show="dateReceivedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
-      <select ng-show="add||edit" ng-model="tubUnderEdit.status">
+      <input id="tubReceivedInput" type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_received" ng-click="dateReceivedInput()" placeholder="Date Received">
+      
+      <select ng-show="add||edit" ng-model="tubUnderEdit.status" ng-click="statusInput()">
           <option value="">Status</option>
           <option value="closed">closed</option>
           <option value="open">open</option>
           <option value="finished">finished</option>
       </select>
-      <input type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_opened" ng-click="dateOpenedInput()" placeholder="Date Opened">
-      <date-picker ng-model="tubUnderEdit.date_opened" ng-show="dateOpenedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
-      <input type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_closed" ng-click="dateClosedInput()" placeholder="Date Closed">
-      <date-picker ng-model="tubUnderEdit.date_closed" ng-show="dateClosedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
+      <input id="tubOpenedInput" type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_opened" ng-click="dateOpenedInput()" placeholder="Date Opened">
+      <input id="tubClosedInput" type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_closed" ng-click="dateClosedInput()" placeholder="Date Closed">
       <button ng-hide="edit" class="btn btn-success" ng-click="addTub()">
         <i class="icon-plus icon-white"></i> Add Tub
       </button>
@@ -86,6 +84,12 @@
         <i class="icon-trash icon-white"></i> Delete
       </button>
     </form>
+
+    <div id="editFieldDatePickers">
+      <date-picker id="tubReceivedDatePicker" ng-model="tubUnderEdit.date_received" ng-show="dateReceivedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
+      <date-picker id="tubOpenedDatePicker" ng-model="tubUnderEdit.date_opened" ng-show="dateOpenedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
+      <date-picker id="tubClosedDatePicker" ng-model="tubUnderEdit.date_closed" ng-show="dateClosedInputActive" format-date="formatDate" parse-date="parseDate"></date-picker>
+    </div>
 
     <form id="editFlavourField" class="row form-inline" name="validateEnteredFlavour">
       <input id="flavourInputFlavour" type="text" ng-show="flavourAdd||flavourEdit" ng-model="flavourUnderEdit.flavour" placeholder="Flavour Name">
