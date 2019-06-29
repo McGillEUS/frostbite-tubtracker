@@ -75,6 +75,7 @@
             <td>{{ flavour.format }}</td>
             <td>{{ flavour.type }}</td>
             <td>{{ flavour.tubs.length }}</td>
+            <td ng-init="avgDaysOpen(flavour)">{{ flavour.avgDaysOpen }}</td>
           </tr>
         </tbody>
       </table>

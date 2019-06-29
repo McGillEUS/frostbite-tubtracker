@@ -37,7 +37,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                     "date_opened" : "2019-06-17",
                     "date_closed" : ""
                 }
-            ]
+            ],
+            "avgDaysOpen" : "N/A"
         }
     ];
     $scope.selectedFlavour = $scope.flavours[0];
@@ -227,7 +228,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $timeout(function() {
             downloadLink.click(); // performs click to start download
         }, 100);
-        
+
         /* $.post( "test.html", function( data ) {
             $( ".result" ).html( data );
           }); */
@@ -328,7 +329,31 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         } else {
             return true;
         } 
-    }
+    };
+
+    // calculate average number of days open of a flavour
+    $scope.avgDaysOpen = function(flavour) {
+        var total = 0;
+
+        angular.forEach(flavour.tubs, function(tub) {
+            if (tub.status == "finished") {
+                var dateData = tub.date_opened.split("-");
+                var openedDate = new Date(dateData[0], dateData[1] - 1, dateData[2]);
+                dateData = tub.date_closed.split("-");
+                var closedDate = new Date(dateData[0], dateData[1] - 1, dateData[2]);
+                var seconds = Math.abs(closedDate - openedDate) / 1000;
+                var days = Math.floor(seconds / 86400);
+                // TODO subtract the number of days that Frostbite was closed during this period
+                total += days;
+            }
+        });
+
+        if (flavour.tubs.length > 0) {
+            flavour.avgDaysOpen = Math.floor(total / flavour.tubs.length);
+        } else {
+            flavour.avgDaysOpen = "N/A";
+        }
+    };
 
     // DATE PICKER SHOW/HIDE FUNCTIONS
     $scope.dateReceivedInput = function () {
