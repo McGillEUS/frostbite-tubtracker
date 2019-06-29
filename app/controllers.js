@@ -275,7 +275,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }, 100);
     };
 
-    // save flavour changes
+    /* save flavour changes
     $scope.saveChanges = function() {
         var now = new Date();
         var month = now.getMonth() + 1;
@@ -306,7 +306,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 toastr.success("Flavours saved successfully.");
             }
         });
-    };
+    }; */
 
     $scope.openFile = function() {
     	$("#fileLoader").click();
