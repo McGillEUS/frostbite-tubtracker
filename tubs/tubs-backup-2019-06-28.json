@@ -41,7 +41,8 @@
         "date_opened": "2019-05-07",
         "date_closed": "2019-06-13"
       }
-    ]
+    ],
+    "avgDaysOpen": 18
   },
   {
     "flavour": "Strawberry",
@@ -99,7 +100,8 @@
         "date_opened": "2019-05-29",
         "date_closed": ""
       }
-    ]
+    ],
+    "avgDaysOpen": 12
   },
   {
     "flavour": "Vanilla",
@@ -114,7 +116,8 @@
     },
     "format": "tub",
     "type": "ice cream",
-    "tubs": []
+    "tubs": [],
+    "avgDaysOpen": "N/A"
   },
   {
     "flavour": "Vanilla Bean",
@@ -144,7 +147,8 @@
         "date_opened": "2019-06-19",
         "date_closed": ""
       }
-    ]
+    ],
+    "avgDaysOpen": 0
   },
   {
     "flavour": "French Vanilla",
@@ -195,7 +199,8 @@
         "date_opened": "2019-05-31",
         "date_closed": "2019-06-11"
       }
-    ]
+    ],
+    "avgDaysOpen": 6
   },
   {
     "flavour": "Rolo Yolo",
@@ -260,7 +265,8 @@
         "date_opened": "2019-06-18",
         "date_closed": ""
       }
-    ]
+    ],
+    "avgDaysOpen": 11
   },
   {
     "flavour": "Kit Kat",
@@ -325,7 +331,8 @@
         "date_closed": "",
         "id": 195
       }
-    ]
+    ],
+    "avgDaysOpen": 11
   },
   {
     "flavour": "Triple Chocolate Brownie",
@@ -397,7 +404,8 @@
         "date_closed": "",
         "id": 189
       }
-    ]
+    ],
+    "avgDaysOpen": 5
   },
   {
     "flavour": "Toasted S'Mores",
@@ -457,12 +465,13 @@
       },
       {
         "date_received": "2019-06-27",
-        "status": "closed",
-        "date_opened": "",
+        "status": "open",
+        "date_opened": "2019-06-28",
         "date_closed": "",
         "id": 192
       }
-    ]
+    ],
+    "avgDaysOpen": 11
   },
   {
     "flavour": "Vanilla Caramel Swirl",
@@ -506,7 +515,8 @@
         "date_opened": "2019-05-06",
         "date_closed": "2019-05-22"
       }
-    ]
+    ],
+    "avgDaysOpen": 16
   },
   {
     "flavour": "Chocolate Peanut Butter",
@@ -641,7 +651,8 @@
         "date_closed": "",
         "id": 188
       }
-    ]
+    ],
+    "avgDaysOpen": 5
   },
   {
     "flavour": "Peanut Butter Heaven",
@@ -713,7 +724,8 @@
         "date_closed": "",
         "id": 193
       }
-    ]
+    ],
+    "avgDaysOpen": 11
   },
   {
     "flavour": "Salted Caramel",
@@ -771,7 +783,8 @@
         "date_opened": "2019-06-19",
         "date_closed": ""
       }
-    ]
+    ],
+    "avgDaysOpen": 13
   },
   {
     "flavour": "Pralines & Cream",
@@ -829,7 +842,8 @@
         "date_closed": "",
         "id": 185
       }
-    ]
+    ],
+    "avgDaysOpen": 10
   },
   {
     "flavour": "Cookies & Cream",
@@ -915,7 +929,8 @@
         "date_closed": "",
         "id": 190
       }
-    ]
+    ],
+    "avgDaysOpen": 5
   },
   {
     "flavour": "Chocolate Chip Cookie Dough",
@@ -1001,7 +1016,8 @@
         "date_closed": "",
         "id": 191
       }
-    ]
+    ],
+    "avgDaysOpen": 5
   },
   {
     "flavour": "Maple Walnut",
@@ -1047,10 +1063,10 @@
       },
       {
         "id": 93,
-        "status": "open",
+        "status": "finished",
         "date_received": "unknown",
         "date_opened": "2019-06-18",
-        "date_closed": ""
+        "date_closed": "2019-06-28"
       },
       {
         "date_received": "2019-06-27",
@@ -1059,7 +1075,8 @@
         "date_closed": "",
         "id": 198
       }
-    ]
+    ],
+    "avgDaysOpen": 15
   },
   {
     "flavour": "New York Cherry Cheesecake",
@@ -1159,7 +1176,8 @@
         "date_closed": "",
         "id": 196
       }
-    ]
+    ],
+    "avgDaysOpen": 7
   },
   {
     "flavour": "Black Cherry",
@@ -1238,7 +1256,8 @@
         "date_closed": "",
         "id": 197
       }
-    ]
+    ],
+    "avgDaysOpen": 9
   },
   {
     "flavour": "Mint Chocolate Chip",
@@ -1324,7 +1343,8 @@
         "date_closed": "",
         "id": 176
       }
-    ]
+    ],
+    "avgDaysOpen": 7
   },
   {
     "flavour": "Tiger Tiger",
@@ -1354,7 +1374,8 @@
         "date_opened": "2019-06-06",
         "date_closed": ""
       }
-    ]
+    ],
+    "avgDaysOpen": 29
   },
   {
     "flavour": "Cotton Candy",
@@ -1412,7 +1433,8 @@
         "date_opened": "2019-06-11",
         "date_closed": ""
       }
-    ]
+    ],
+    "avgDaysOpen": 12
   },
   {
     "flavour": "Bubblegum",
@@ -1456,7 +1478,8 @@
         "date_closed": "",
         "id": 186
       }
-    ]
+    ],
+    "avgDaysOpen": 16
   },
   {
     "flavour": "Heavenly Hash",
@@ -1500,7 +1523,8 @@
         "date_closed": "",
         "id": 194
       }
-    ]
+    ],
+    "avgDaysOpen": 2
   },
   {
     "flavour": "Caramel Cookie Blast",
@@ -1549,9 +1573,10 @@
         "status": "finished",
         "date_received": "unknown",
         "date_opened": "2019-06-18",
-        "date_closed": "2019-06-25T20:50:10.773Z"
+        "date_closed": "2019-06-25"
       }
-    ]
+    ],
+    "avgDaysOpen": "N/A"
   },
   {
     "flavour": "Spumoni",
@@ -1588,7 +1613,8 @@
         "date_opened": "",
         "date_closed": ""
       }
-    ]
+    ],
+    "avgDaysOpen": 11
   },
   {
     "flavour": "Coffee Crisp",
@@ -1646,7 +1672,8 @@
         "date_opened": "2019-06-18",
         "date_closed": ""
       }
-    ]
+    ],
+    "avgDaysOpen": 5
   },
   {
     "flavour": "Smarties",
@@ -1676,7 +1703,8 @@
         "date_opened": "2019-05-06",
         "date_closed": "2019-06-11"
       }
-    ]
+    ],
+    "avgDaysOpen": 22
   },
   {
     "flavour": "Chocolate Mania",
@@ -1713,7 +1741,8 @@
         "date_opened": "2019-06-07",
         "date_closed": "2019-06-12"
       }
-    ]
+    ],
+    "avgDaysOpen": 14
   },
   {
     "flavour": "Mojito",
@@ -1723,7 +1752,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -1736,7 +1765,8 @@
         "date_opened": "2019-06-06",
         "date_closed": "2019-06-13"
       }
-    ]
+    ],
+    "avgDaysOpen": 7
   },
   {
     "flavour": "Raspberry",
@@ -1746,7 +1776,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -1759,7 +1789,8 @@
         "date_opened": "2019-06-14",
         "date_closed": "2019-06-19"
       }
-    ]
+    ],
+    "avgDaysOpen": 5
   },
   {
     "flavour": "Passion Fruit",
@@ -1769,7 +1800,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -1782,7 +1813,8 @@
         "date_opened": "2019-06-18",
         "date_closed": ""
       }
-    ]
+    ],
+    "avgDaysOpen": 0
   },
   {
     "flavour": "Litchi",
@@ -1792,7 +1824,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -1805,7 +1837,8 @@
         "date_opened": "2019-06-05",
         "date_closed": "2019-06-11"
       }
-    ]
+    ],
+    "avgDaysOpen": 6
   },
   {
     "flavour": "Lemon",
@@ -1835,7 +1868,8 @@
         "date_closed": "",
         "id": 177
       }
-    ]
+    ],
+    "avgDaysOpen": 10
   },
   {
     "flavour": "Guava Grapefruit",
@@ -1845,7 +1879,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -1858,7 +1892,8 @@
         "date_opened": "2019-06-04",
         "date_closed": "2019-06-07"
       }
-    ]
+    ],
+    "avgDaysOpen": 3
   },
   {
     "flavour": "Baby Monkey",
@@ -1868,12 +1903,13 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
     "type": "sorbet",
-    "tubs": []
+    "tubs": [],
+    "avgDaysOpen": "N/A"
   },
   {
     "flavour": "Strawberry",
@@ -1896,7 +1932,8 @@
         "date_closed": "",
         "id": 178
       }
-    ]
+    ],
+    "avgDaysOpen": 0
   },
   {
     "flavour": "Ginger",
@@ -1906,7 +1943,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -1919,7 +1956,8 @@
         "date_opened": "2019-06-14",
         "date_closed": "2019-06-21"
       }
-    ]
+    ],
+    "avgDaysOpen": 7
   },
   {
     "flavour": "Coconut",
@@ -1944,12 +1982,13 @@
       },
       {
         "date_received": "2019-06-25",
-        "status": "closed",
-        "date_opened": "",
+        "status": "open",
+        "date_opened": "2019-06-28",
         "date_closed": "",
         "id": 179
       }
-    ]
+    ],
+    "avgDaysOpen": 6
   },
   {
     "flavour": "Pistachio Almond",
@@ -1993,7 +2032,8 @@
         "date_closed": "",
         "id": 181
       }
-    ]
+    ],
+    "avgDaysOpen": 6
   },
   {
     "flavour": "Rum & Raisin",
@@ -2003,12 +2043,13 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
     "type": "ice cream",
-    "tubs": []
+    "tubs": [],
+    "avgDaysOpen": "N/A"
   },
   {
     "flavour": "Green Tea",
@@ -2018,7 +2059,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -2029,9 +2070,10 @@
         "status": "finished",
         "date_received": "unknown",
         "date_opened": "2019-06-14",
-        "date_closed": "2019-06-25T20:50:56.867Z"
+        "date_closed": "2019-06-25"
       }
-    ]
+    ],
+    "avgDaysOpen": "N/A"
   },
   {
     "flavour": "Chai",
@@ -2061,7 +2103,8 @@
         "date_closed": "",
         "id": 182
       }
-    ]
+    ],
+    "avgDaysOpen": 2
   },
   {
     "flavour": "Mango",
@@ -2091,7 +2134,8 @@
         "date_closed": "",
         "id": 183
       }
-    ]
+    ],
+    "avgDaysOpen": 4
   },
   {
     "flavour": "Chocolate Raspberry",
@@ -2101,7 +2145,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -2121,7 +2165,8 @@
         "date_closed": "2019-06-20",
         "id": 175
       }
-    ]
+    ],
+    "avgDaysOpen": 7
   },
   {
     "flavour": "Mint Oreo",
@@ -2131,7 +2176,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -2146,12 +2191,13 @@
       },
       {
         "id": 169,
-        "status": "open",
+        "status": "finished",
         "date_received": "unknown",
         "date_opened": "2019-06-19",
-        "date_closed": ""
+        "date_closed": "2019-06-28"
       }
-    ]
+    ],
+    "avgDaysOpen": 7
   },
   {
     "flavour": "Mocha Almond Fudge",
@@ -2161,12 +2207,13 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
     "type": "ice cream",
-    "tubs": []
+    "tubs": [],
+    "avgDaysOpen": "N/A"
   },
   {
     "flavour": "Chocolate 6x",
@@ -2176,12 +2223,13 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
     "type": "ice cream",
-    "tubs": []
+    "tubs": [],
+    "avgDaysOpen": "N/A"
   },
   {
     "flavour": "Soursop",
@@ -2191,7 +2239,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -2211,7 +2259,8 @@
         "date_opened": "2019-06-14",
         "date_closed": "2019-06-27"
       }
-    ]
+    ],
+    "avgDaysOpen": 14
   },
   {
     "flavour": "Cappucino Chocolate Chip",
@@ -2241,7 +2290,8 @@
         "date_closed": "",
         "id": 184
       }
-    ]
+    ],
+    "avgDaysOpen": 6
   },
   {
     "flavour": "Orange",
@@ -2251,7 +2301,7 @@
       "unit": "L"
     },
     "price": {
-      "value": 0.00,
+      "value": 0,
       "unit": "CAD"
     },
     "format": "tub",
@@ -2264,7 +2314,8 @@
         "date_opened": "2019-06-07",
         "date_closed": "2019-06-18"
       }
-    ]
+    ],
+    "avgDaysOpen": 11
   },
   {
     "flavour": "Oreo Ice Cream Sandwich",
@@ -2279,7 +2330,8 @@
     },
     "format": "individual",
     "type": "sandwich",
-    "tubs": []
+    "tubs": [],
+    "avgDaysOpen": "N/A"
   },
   {
     "flavour": "Fudge Drumstick",
@@ -2294,7 +2346,8 @@
     },
     "format": "individual",
     "type": "drumstick",
-    "tubs": []
+    "tubs": [],
+    "avgDaysOpen": "N/A"
   },
   {
     "flavour": "Oreo Drumstick",
@@ -2309,6 +2362,7 @@
     },
     "format": "individual",
     "type": "drumstick",
-    "tubs": []
+    "tubs": [],
+    "avgDaysOpen": "N/A"
   }
 ]
