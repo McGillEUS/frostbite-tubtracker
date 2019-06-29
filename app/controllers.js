@@ -284,7 +284,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
 
         // back up current flavour history to a separate file
-        $.ajax.POST({
+        $.ajax({
             'async': false,
             'type': "POST",
             'global': false,
