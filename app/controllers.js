@@ -44,6 +44,19 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.selectedFlavour = $scope.flavours[0];
     $scope.currentDisplay = $scope.selectedFlavour.tubs;
 
+    var resetNextID = function() {
+        // find maximum tub ID
+        $scope.nextID = 1;
+        angular.forEach($scope.flavours, function(flavour) {
+            angular.forEach(flavour.tubs, function(tub) {
+                if (tub.id > $scope.nextID) {
+                    $scope.nextID = tub.id;
+                }
+            });
+        });
+        $scope.nextID += 1;
+    }
+
     var loadData = function() {
         $.ajax({
             'async': false,
@@ -64,6 +77,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 $scope.daysClosed = data;
             }
         });
+
+        $scope.selectedFlavour = $scope.flavours[0];
+        $scope.currentDisplay = $scope.selectedFlavour.tubs;
+
+        resetNextID();
     };
     loadData();
 
