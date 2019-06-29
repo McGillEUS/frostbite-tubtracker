@@ -29,12 +29,19 @@
           </li>
           <li>
             <div class="span3">
-              <button class="btn btn-info btn-small" ng-click="saveChanges($filename)" id="create">
+              <button class="btn btn-info btn-small" ng-click="exportChanges($filename)" id="create">
                   <i class="icon-file icon-white"></i>Export Flavour History
               </button>
               <a href="" download="tubs.json" id="filedownload"></a>
             </div>
           </li>
+          <li>
+              <div class="span3">
+                <button class="btn btn-success btn-small" ng-click="saveChanges()">
+                    <i class="icon-file icon-white"></i>Save Changes
+                </button>
+              </div>
+            </li>
         </ol>
       </div>
     </div>

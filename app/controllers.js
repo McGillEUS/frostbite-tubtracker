@@ -41,6 +41,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             "avgDaysOpen" : "N/A"
         }
     ];
+    $scope.flavourBackup = [];
     $scope.selectedFlavour = $scope.flavours[0];
     $scope.currentDisplay = $scope.selectedFlavour.tubs;
 
@@ -77,6 +78,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 $scope.daysClosed = data;
             }
         });
+
+        $scope.flavourBackup = jQuery.extend(true, {}, $scope.flavours);
 
         $scope.selectedFlavour = $scope.flavours[0];
         $scope.currentDisplay = $scope.selectedFlavour.tubs;
@@ -232,13 +235,14 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
     };
 
-    // TODO change this to a proper server-hosted JSON file
+    // upload JSON file of tub history
     $scope.uploadFlavours = function() {
         var file = document.getElementById("fileLoader").files[0];
         var fileReader = new FileReader();
         
 	    fileReader.onload = function(e) {
             $scope.flavours = angular.fromJson(fileReader.result);
+            $scope.flavourBackup = jQuery.extend(true, {}, $scope.flavours);
             $scope.selectedFlavour = $scope.flavours[0];
             $scope.currentDisplay = $scope.selectedFlavour.tubs;
 
@@ -261,18 +265,45 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         fileReader.readAsText(file, $scope);
     };
 
-    // TODO change this from a download link to a proper server-hosted JSON file
-    $scope.saveChanges = function() {
+    // download JSON file of tub history
+    $scope.exportChanges = function() {
         var data = new Blob([angular.toJson($scope.flavours, true)], {type: 'text/plain'});
         var downloadLink = document.getElementById('filedownload');
         downloadLink.href = window.URL.createObjectURL(data);
         $timeout(function() {
             downloadLink.click(); // performs click to start download
         }, 100);
+    };
 
-        /* $.post( "test.html", function( data ) {
-            $( ".result" ).html( data );
-          }); */
+    // save flavour changes
+    $scope.saveChanges = function() {
+        var now = new Date();
+        var month = now.getMonth() + 1;
+        if (month < 10) {
+            month = "0" + month;
+        }
+
+        // back up current flavour history to a separate file
+        $.ajax.POST({
+            'async': false,
+            'global': false,
+            'url': "tubs/flavourBackup-" + now.getFullYear() + "-" + month + "-" + now.getDate() + ".json",
+            'dataType': "json",
+            'success': function (data) {
+                toastr.success("Flavours backup saved successfully.");
+            }
+        });
+
+        // send edited data to the flavour.json file
+        $.ajax.POST({
+            'async': false,
+            'global': false,
+            'url': "tubs/flavours.json",
+            'dataType': "json",
+            'success': function (data) {
+                toastr.success("Flavours saved successfully.");
+            }
+        });
     };
 
     $scope.openFile = function() {
