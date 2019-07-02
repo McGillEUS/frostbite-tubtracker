@@ -1,5 +1,5 @@
 <?php
-    $data = $_POST['data'];
+    $data = $_POST['flavour'];
     echo $data;
     $fname = "flavourBackup-" . date("Y-m-d") . ".json";
     $file = fopen("tubs/" . $fname, 'w');
