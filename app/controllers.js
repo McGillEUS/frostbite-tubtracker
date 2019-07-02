@@ -319,7 +319,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         if (month < 10) {
             month = "0" + month;
         }
-        $scope.currentDisplay[index].date_opened = now.getFullYear() + "-" + month + "-" + now.getDate();
+        var day = now.getDate();
+        if (day < 10) {
+            day = "0" + day;
+        }
+        $scope.currentDisplay[index].date_opened = now.getFullYear() + "-" + month + "-" + day;
         $scope.currentDisplay[index].status = "open";
     };
 
@@ -329,7 +333,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         if (month < 10) {
             month = "0" + month;
         }
-        $scope.currentDisplay[index].date_closed = now.getFullYear() + "-" + month + "-" + now.getDate();
+        var day = now.getDate();
+        if (day < 10) {
+            day = "0" + day;
+        }
+        $scope.currentDisplay[index].date_closed = now.getFullYear() + "-" + month + "-" + day;
         $scope.currentDisplay[index].status = "finished";
     };
 
