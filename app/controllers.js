@@ -286,9 +286,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         // back up current flavour history to a separate file
         $.ajax({ 
             'url' : 'app/saveFlavourHistory.php',
-            'data' : $scope.flavourBackup,
+            'data' : {'data' : $scope.flavourBackup},
             'type' : 'POST',
-            success : function(data) {
+            'dataType' : 'json',
+            'success' : function(data) {
+                console.log(data);
                 toastr.success("Backup saved.");
             }
         });
@@ -297,9 +299,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         // send edited data to the flavour.json file
         $.ajax({ 
             'url' : 'app/saveFlavours.php',
-            'data' : $scope.flavours,
+            'data' : {'data' : $scope.flavours},
             'type' : 'POST',
-            success : function(data) {
+            'dataType' : 'json',
+            'success' : function(data) {
+                console.log(data);
                 toastr.success("Flavour update saved.");
             }
         });
