@@ -289,7 +289,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             'data' : $scope.flavourBackup,
             'type' : 'POST',
             success: function(data) {
-                console.log(data);
                 toastr.success("Backup saved.");
             }
         });
@@ -301,7 +300,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             'data' : $scope.flavours,
             'type' : 'POST',
             success: function(data) {
-                console.log(data);
                 toastr.success("Flavour update saved.");
             }
         });
