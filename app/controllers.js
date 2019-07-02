@@ -1,6 +1,10 @@
 var app = angular.module('tubTracker', [ 'mp.datePicker' ]);
 app.controller('jsonGUIController', function($scope, $timeout) {
 
+    var fs = require('fs');
+    var flavours = JSON.parse(fs.readFileSync('../tubs/flavours.json'));
+    console.log(flavours);
+
     $scope.tubUnderEdit = {};
     $scope.flavourUnderEdit = {};
     $scope.tubEditOriginal = {};
