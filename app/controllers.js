@@ -284,26 +284,23 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
 
         // back up current flavour history to a separate file
-        $.ajax({
-            'async': false,
-            'type': "POST",
-            'global': false,
-            'url': "tubs/flavourBackup-" + now.getFullYear() + "-" + month + "-" + now.getDate() + ".json",
-            'dataType': "json",
-            'success': function (data) {
-                toastr.success("Flavours backup saved successfully.");
+        $.ajax({ 
+            'url' : 'saveFlavourHistory.php',
+            'data' : $scope.flavourBackup,
+            'type' : 'POST',
+            success: function(data) {
+                toastr.success("Backup saved.");
             }
         });
 
+
         // send edited data to the flavour.json file
-        $.ajax({
-            'async': false,
-            'type': "POST",
-            'global': false,
-            'url': "tubs/flavours.json",
-            'dataType': "json",
-            'success': function (data) {
-                toastr.success("Flavours saved successfully.");
+        $.ajax({ 
+            'url' : 'saveFlavours.php',
+            'data' : $scope.flavours,
+            'type' : 'POST',
+            success: function(data) {
+                toastr.success("Flavour update saved.");
             }
         });
     };
