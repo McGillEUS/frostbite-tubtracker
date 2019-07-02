@@ -285,7 +285,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
         // back up current flavour history to a separate file
         $.ajax({ 
-            'url' : 'saveFlavourHistory.php',
+            'url' : 'app/saveFlavourHistory.php',
             'data' : $scope.flavourBackup,
             'type' : 'POST',
             success: function(data) {
@@ -296,7 +296,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
         // send edited data to the flavour.json file
         $.ajax({ 
-            'url' : 'saveFlavours.php',
+            'url' : 'app/saveFlavours.php',
             'data' : $scope.flavours,
             'type' : 'POST',
             success: function(data) {
