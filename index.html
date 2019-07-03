@@ -55,10 +55,9 @@
     </div>
 
     <form id="editField" class="row form-inline">    
-      <input id="tubReceivedInput" type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_received" ng-click="dateReceivedInput()" placeholder="Date Received">
+      <input id="tubReceivedInput" type="text" ng-show="add||edit" ng-model="tubUnderEdit.date_received" ng-click="dateReceivedInput()" placeholder="Date Received" ng-init="tubUnderEdit.date_received = today()">
       
-      <select ng-show="add||edit" ng-model="tubUnderEdit.status" ng-click="statusInput()">
-          <option value="">Status</option>
+      <select ng-show="add||edit" ng-model="tubUnderEdit.status" ng-click="statusInput()" ng-init="tubUnderEdit.status = 'closed'">
           <option value="closed">closed</option>
           <option value="open">open</option>
           <option value="finished">finished</option>

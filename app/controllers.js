@@ -277,12 +277,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
     // save flavour changes
     $scope.saveChanges = function() {
-        var now = new Date();
-        var month = now.getMonth() + 1;
-        if (month < 10) {
-            month = "0" + month;
-        }
-
         // back up current flavour history to a separate file
         $.ajax({ 
             'url' : 'app/saveFlavourHistory.php',
@@ -314,30 +308,12 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.openTub = function(index) {
-        var now = new Date();
-        var month = now.getMonth() + 1;
-        if (month < 10) {
-            month = "0" + month;
-        }
-        var day = now.getDate();
-        if (day < 10) {
-            day = "0" + day;
-        }
-        $scope.currentDisplay[index].date_opened = now.getFullYear() + "-" + month + "-" + day;
+        $scope.currentDisplay[index].date_opened = $scope.today();
         $scope.currentDisplay[index].status = "open";
     };
 
     $scope.closeTub = function(index) {
-        var now = new Date();
-        var month = now.getMonth() + 1;
-        if (month < 10) {
-            month = "0" + month;
-        }
-        var day = now.getDate();
-        if (day < 10) {
-            day = "0" + day;
-        }
-        $scope.currentDisplay[index].date_closed = now.getFullYear() + "-" + month + "-" + day;
+        $scope.currentDisplay[index].date_closed = $scope.today();
         $scope.currentDisplay[index].status = "finished";
     };
 
@@ -469,6 +445,20 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.dateOpenedInputActive = false;
         $scope.dateClosedInputActive = true;
     };
+
+    // utility functions
+    $scope.today = function () {
+        var now = new Date();
+        var month = now.getMonth() + 1;
+        if (month < 10) {
+            month = "0" + month;
+        }
+        var day = now.getDate();
+        if (day < 10) {
+            day = "0" + day;
+        }
+        return now.getFullYear() + "-" + month + "-" + day;
+    }
 
     // DATE PICKER FUNCTIONS
     $scope.formatDate = function (date) {
