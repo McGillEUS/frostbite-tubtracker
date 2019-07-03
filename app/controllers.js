@@ -284,26 +284,27 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
 
         // back up current flavour history to a separate file
-        $.ajax({
-            'async': false,
-            'type': "POST",
-            'global': false,
-            'url': "tubs/flavourBackup-" + now.getFullYear() + "-" + month + "-" + now.getDate() + ".json",
-            'dataType': "json",
-            'success': function (data) {
-                toastr.success("Flavours backup saved successfully.");
+        $.ajax({ 
+            'url' : 'app/saveFlavourHistory.php',
+            'data' : {'data' : $scope.flavourBackup},
+            'type' : 'POST',
+            'dataType' : 'json',
+            'success' : function(data) {
+                console.log(data);
+                toastr.success("Backup saved.");
             }
         });
 
+
         // send edited data to the flavour.json file
-        $.ajax({
-            'async': false,
-            'type': "POST",
-            'global': false,
-            'url': "tubs/flavours.json",
-            'dataType': "json",
-            'success': function (data) {
-                toastr.success("Flavours saved successfully.");
+        $.ajax({ 
+            'url' : 'app/saveFlavours.php',
+            'data' : {'data' : $scope.flavours},
+            'type' : 'POST',
+            'dataType' : 'json',
+            'success' : function(data) {
+                console.log(data);
+                toastr.success("Flavour update saved.");
             }
         });
     };
@@ -318,7 +319,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         if (month < 10) {
             month = "0" + month;
         }
-        $scope.currentDisplay[index].date_opened = now.getFullYear() + "-" + month + "-" + now.getDate();
+        var day = now.getDate();
+        if (day < 10) {
+            day = "0" + day;
+        }
+        $scope.currentDisplay[index].date_opened = now.getFullYear() + "-" + month + "-" + day;
         $scope.currentDisplay[index].status = "open";
     };
 
@@ -328,7 +333,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         if (month < 10) {
             month = "0" + month;
         }
-        $scope.currentDisplay[index].date_closed = now.getFullYear() + "-" + month + "-" + now.getDate();
+        var day = now.getDate();
+        if (day < 10) {
+            day = "0" + day;
+        }
+        $scope.currentDisplay[index].date_closed = now.getFullYear() + "-" + month + "-" + day;
         $scope.currentDisplay[index].status = "finished";
     };
 
