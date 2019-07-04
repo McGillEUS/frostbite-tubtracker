@@ -79,7 +79,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             }
         });
 
-        $scope.flavourBackup = jQuery.extend(true, {}, $scope.flavours);
+        $scope.flavourBackup = JSON.stringify($scope.flavours);
 
         $scope.selectedFlavour = $scope.flavours[0];
         $scope.currentDisplay = $scope.selectedFlavour.tubs;
@@ -242,7 +242,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         
 	    fileReader.onload = function(e) {
             $scope.flavours = angular.fromJson(fileReader.result);
-            $scope.flavourBackup = jQuery.extend(true, {}, $scope.flavours);
+            $scope.flavourBackup = JSON.stringify($scope.flavours);
             $scope.selectedFlavour = $scope.flavours[0];
             $scope.currentDisplay = $scope.selectedFlavour.tubs;
 
@@ -281,7 +281,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         // back up current flavour history to a separate file
         $.ajax({ 
             'url' : 'app/saveFlavourHistory.php',
-            'data' : {'data' : JSON.stringify($scope.flavourBackup)},
+            'data' : {'data' : $scope.flavourBackup},
             'type' : 'POST',
             'dataType' : 'json',
             'success' : function() {
@@ -300,6 +300,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 toastr.success("Flavour update saved.");
             }
         });
+
+
     };
 
     $scope.openFile = function() {
