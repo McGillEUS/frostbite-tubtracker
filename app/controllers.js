@@ -285,10 +285,9 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             'type' : 'POST',
             'dataType' : 'json',
             'success' : function() {
-                toastr.success("Backup saved.");
             }
         });
-
+        toastr.success("Backup saved.");
 
         // send edited data to the flavour.json file
         $.ajax({ 
@@ -297,11 +296,9 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             'type' : 'POST',
             'dataType' : 'json',
             'success' : function() {
-                toastr.success("Flavour update saved.");
             }
         });
-
-
+        toastr.success("Flavour update saved.");
     };
 
     $scope.openFile = function() {
