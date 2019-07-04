@@ -3,6 +3,6 @@
     $fname = "flavours.json";
     $file = fopen("../tubs/" . $fname, "w");
     fwrite($file, json_encode($data));
-    chmod($file, 777);
+    chmod($file, 0777);
     fclose($file);
 ?>
