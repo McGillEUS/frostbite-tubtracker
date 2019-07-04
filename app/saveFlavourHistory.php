@@ -1,5 +1,5 @@
 <?php
-    $data = json_decode($_POST['data']);
+    $data = json_decode($_POST);
     $fname = "flavourBackup-" . date("Y-m-d") . ".json";
     $file = fopen("../tubs/" . $fname, "w");
     fwrite($file, json_encode($data));
