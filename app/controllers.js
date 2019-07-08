@@ -41,6 +41,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             "avgDaysOpen" : "N/A"
         }
     ];
+    $scope.openTubs = [];
     $scope.flavourBackup = [];
     $scope.selectedFlavour = $scope.flavours[0];
     $scope.currentDisplay = $scope.selectedFlavour.tubs;
@@ -57,6 +58,17 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         });
         $scope.nextID += 1;
     }
+
+    $scope.findOpenTubs = function() {
+        $scope.openTubs = [];
+        angular.forEach($scope.flavours, function(flavour) {
+            angular.forEach(flavour.tubs, function(tub) {
+                if (tub.status == "open") {
+                    $scope.openTubs.push(flavour.flavour);
+                }
+            });
+        });
+    };
 
     var loadData = function() {
         $.ajax({
@@ -85,6 +97,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.currentDisplay = $scope.selectedFlavour.tubs;
 
         resetNextID();
+        $scope.findOpenTubs();
     };
     loadData();
 
@@ -94,6 +107,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.load = { };
         $scope.flavourEdit = false;
         $scope.edit = false;
+        $scope.findOpenTubs();
     };
 
     var findFlavour = function() {

@@ -158,6 +158,21 @@
       </table>
     </div>
 
+    <div class="row">
+      <table id="open-tubs" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Current Open Flavours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="flavour in openTubs">
+            <td>{{ $index + 1}} - {{ flavour }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <ol style="list-style-type: none;">
         <li>
           <div class="span3">
