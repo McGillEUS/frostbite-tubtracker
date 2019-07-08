@@ -33,7 +33,7 @@
     <div class="row">
       <p style="float: left; margin-right: 10px; margin-top: 4px; font-weight: bold">Flavour:</p>
       <div class="span3">
-        <select ng-model="selectedFlavour" ng-options="x.flavour for x in flavours" ng-change="updateSelection()"></select>
+        <select ng-model="selectedFlavour" ng-options="x.flavour for x in flavours | orderBy:'flavour'" ng-change="updateSelection()"></select>
       </div>
       <div class="span2">
         <a href="#editFlavourField">
