@@ -163,11 +163,15 @@
         <thead>
           <tr>
             <th>Current Open Flavours</th>
+            <th>Date Received</th>
+            <th>Date Opened</th>
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="flavour in openTubs">
-            <td>{{ $index + 1}} - {{ flavour }}</td>
+          <tr ng-repeat="openTub in openTubs">
+            <td>{{ $index + 1}} - {{ openTub.flavourName }}</td>
+            <td>{{ openTub.dateReceived }}</td>
+            <td>{{ openTub.dateOpened }}</td>
           </tr>
         </tbody>
       </table>

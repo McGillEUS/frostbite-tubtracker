@@ -64,7 +64,12 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         angular.forEach($scope.flavours, function(flavour) {
             angular.forEach(flavour.tubs, function(tub) {
                 if (tub.status == "open") {
-                    $scope.openTubs.push(flavour.flavour);
+                    var openTubData = {
+                        'flavourName' : flavour.flavour,
+                        'dateReceived' : tub.date_received,
+                        'dateOpened' : tub.date_opened
+                    };
+                    $scope.openTubs.push(openTubData);
                 }
             });
         });
