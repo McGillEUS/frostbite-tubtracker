@@ -605,6 +605,14 @@
                 "date_opened": "2019-05-06",
                 "date_closed": "2019-05-22",
                 "$$hashKey": "object:382"
+            },
+            {
+                "date_received": "2019-07-04",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 208,
+                "$$hashKey": "object:387"
             }
         ],
         "avgDaysOpen": 16,
