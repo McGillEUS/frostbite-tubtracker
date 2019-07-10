@@ -30,6 +30,84 @@
       </div>
     </div>
 
+    <h2>Current Open Tubs</h2>
+    <div class="row">
+      <table id="open-tubs" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Flavour Name</th>
+            <th>Date Received</th>
+            <th>Date Opened</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="openTub in openTubs">
+            <td>{{ $index + 1}} - {{ openTub.flavour.flavour }}</td>
+            <td>{{ openTub.tub.date_received }}</td>
+            <td>{{ openTub.tub.date_opened }}</td>
+            <td>
+              <button class="btn btn-primary btn-small" ng-show="openTub.tub.status == 'open'" ng-click="finishTubStatusPage($index)">
+                <i class="icon-remove icon-white"></i> Finish Tub
+              </button>
+              <!--a href="#editField">
+                <button class="btn btn-warning btn-small" ng-click="editTub($index)">
+                  <i class="icon-pencil icon-white"></i> Modify Tub
+                </button>
+              </a-->
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Nestle Tubs: {{ openNestleTubs.length }}</td>
+            <td>Ripples Tubs: {{ openRipplesTubs.length }}</td>
+            <td>Total Open Tubs: {{ openTubs.length }}</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <h2>Tubs In Stock</h2>
+    <div class="row">
+      <table id="closed-tubs" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Flavour Name</th>
+            <th>Date Received</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="closedTub in closedTubs">
+            <td>{{ $index + 1}} - {{ closedTub.flavour.flavour }}</td>
+            <td>{{ closedTub.tub.date_received }}</td>
+            <td>{{ closedTub.flavour.supplier }}</td>
+            <td>
+              <button class="btn btn-primary btn-small" ng-show="closedTub.tub.status == 'closed'" ng-click="openTubStatusPage($index)">
+                <i class="icon-ok icon-white"></i> Open Tub
+              </button>
+              <a href="#editField">
+                <button class="btn btn-warning btn-small" ng-click="editTub($index)">
+                  <i class="icon-pencil icon-white"></i> Modify Tub
+                </button>
+              </a-->
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Nestle Tubs: {{ closedNestleTubs.length }}</td>
+            <td>Ripples Tubs: {{ closedRipplesTubs.length }}</td>
+            <td>Total Closed Tubs: {{ closedTubs.length }}</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <h2>Flavour-by-Flavour History</h2>
     <div class="row">
       <p style="float: left; margin-right: 10px; margin-top: 4px; font-weight: bold">Flavour:</p>
       <div class="span3">
@@ -144,7 +222,7 @@
               <button class="btn btn-primary btn-small" ng-show="tub.status == 'closed'" ng-click="openTub($index)">
                 <i class="icon-ok icon-white"></i> Open Tub
               </button>
-              <button class="btn btn-primary btn-small" ng-show="tub.status == 'open'" ng-click="closeTub($index)">
+              <button class="btn btn-primary btn-small" ng-show="tub.status == 'open'" ng-click="finishTub($index)">
                 <i class="icon-remove icon-white"></i> Close Tub
               </button>
               <a href="#editField">
@@ -153,25 +231,6 @@
                 </button>
               </a>
             </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="row">
-      <table id="open-tubs" class="table table-striped">
-        <thead>
-          <tr>
-            <th>Current Open Flavours</th>
-            <th>Date Received</th>
-            <th>Date Opened</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="openTub in openTubs">
-            <td>{{ $index + 1}} - {{ openTub.flavourName }}</td>
-            <td>{{ openTub.dateReceived }}</td>
-            <td>{{ openTub.dateOpened }}</td>
           </tr>
         </tbody>
       </table>

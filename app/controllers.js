@@ -42,6 +42,11 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
     ];
     $scope.openTubs = [];
+    $scope.openNestleTubs = [];
+    $scope.openRipplesTubs = [];
+    $scope.closedTubs = [];
+    $scope.closedNestleTubs = [];
+    $scope.closedRipplesTubs = [];
     $scope.flavourBackup = [];
     $scope.selectedFlavour = $scope.flavours[0];
     $scope.currentDisplay = $scope.selectedFlavour.tubs;
@@ -61,15 +66,43 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
     $scope.findOpenTubs = function() {
         $scope.openTubs = [];
+        $scope.openNestleTubs = [];
+        $scope.openRipplesTubs = [];
         angular.forEach($scope.flavours, function(flavour) {
             angular.forEach(flavour.tubs, function(tub) {
                 if (tub.status == "open") {
                     var openTubData = {
-                        'flavourName' : flavour.flavour,
-                        'dateReceived' : tub.date_received,
-                        'dateOpened' : tub.date_opened
+                        'flavour' : flavour,
+                        'tub' : tub
                     };
                     $scope.openTubs.push(openTubData);
+                    if (flavour.supplier == "Nestle") {
+                        $scope.openNestleTubs.push(tub);
+                    } else if (flavour.supplier == "Ripples") {
+                        $scope.openRipplesTubs.push(tub);
+                    }
+                }
+            });
+        });
+    };
+
+    $scope.findClosedTubs = function() {
+        $scope.closedTubs = [];
+        $scope.closedNestleTubs = [];
+        $scope.closedRipplesTubs = [];
+        angular.forEach($scope.flavours, function(flavour) {
+            angular.forEach(flavour.tubs, function(tub) {
+                if (tub.status == "closed") {
+                    var closedTubData = {
+                        'flavour' : flavour,
+                        'tub' : tub
+                    };
+                    $scope.closedTubs.push(closedTubData);
+                    if (flavour.supplier == "Nestle") {
+                        $scope.closedNestleTubs.push(tub);
+                    } else if (flavour.supplier == "Ripples") {
+                        $scope.closedRipplesTubs.push(tub);
+                    }
                 }
             });
         });
@@ -103,6 +136,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
         resetNextID();
         $scope.findOpenTubs();
+        $scope.findClosedTubs();
     };
     loadData();
 
@@ -113,6 +147,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.flavourEdit = false;
         $scope.edit = false;
         $scope.findOpenTubs();
+        $scope.findClosedTubs();
     };
 
     var findFlavour = function() {
@@ -327,11 +362,25 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     $scope.openTub = function(index) {
         $scope.currentDisplay[index].date_opened = $scope.today();
         $scope.currentDisplay[index].status = "open";
+        clearAll();
     };
 
-    $scope.closeTub = function(index) {
+    $scope.openTubStatusPage = function(index) {
+        $scope.closedTubs[index].tub.date_opened = $scope.today();
+        $scope.closedTubs[index].tub.status = "open";
+        clearAll();
+    };
+
+    $scope.finishTub = function(index) {
         $scope.currentDisplay[index].date_closed = $scope.today();
         $scope.currentDisplay[index].status = "finished";
+        clearAll();
+    };
+
+    $scope.finishTubStatusPage = function(index) {
+        $scope.openTubs[index].tub.date_closed = $scope.today();
+        $scope.openTubs[index].tub.status = "finished";
+        clearAll();
     };
 
     // basic validation: validate that date_received and status are filled
