@@ -135,7 +135,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="tub in currentDisplay | filter:search">
+          <tr ng-repeat="tub in currentDisplay | filter:search | orderBy: '-'">
             <td>{{ tub.date_received }}</td>
             <td>{{ tub.status }}</td>
             <td>{{ tub.date_opened }}</td>
