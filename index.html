@@ -148,6 +148,9 @@
       <button ng-show="edit" class="btn btn-success" ng-click="applyChanges()">
         <i class="icon-ok icon-white"></i> Save
       </button>
+      <button class="btn btn-danger btn-small" ng-show="add||edit" ng-click="cancelTub()">
+        <i class="icon-remove icon-white"></i> Cancel
+      </button>
       <button class="btn btn-danger btn-small" ng-show="edit" ng-click="deleteTub()">
         <i class="icon-trash icon-white"></i> Delete
       </button>
@@ -194,6 +197,9 @@
       </button>
       <button ng-show="flavourEdit" class="btn btn-success" ng-click="applyFlavourChanges()">
         <i class="icon-ok icon-white"></i> Save
+      </button>
+      <button class="btn btn-danger btn-small" ng-show="flavourAdd||flavourEdit" ng-click="cancelFlavour()">
+        <i class="icon-remove icon-white"></i> Cancel
       </button>
       <div class="span2">
         <button class="btn btn-danger btn-small" ng-show="flavourEdit" ng-click="deleteFlavour()">
