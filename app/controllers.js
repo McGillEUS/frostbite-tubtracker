@@ -156,6 +156,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         if ($scope.add == false) {
             // show the tub input fields
             $scope.add = true;
+            $scope.tubUnderEdit.date_received = $scope.today();
+            $scope.tubUnderEdit.status = "closed";
         } else {
             if ($scope.validTub($scope.tubUnderEdit)) {
                 // if the date_opened or date_closed fields were left blank, create them
