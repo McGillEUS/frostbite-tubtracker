@@ -1,17 +1,8 @@
 var app = angular.module('tubTracker', [ 'mp.datePicker' ]);
 app.controller('jsonGUIController', function($scope, $timeout) {
 
-    $scope.tubUnderEdit = {};
-    $scope.flavourUnderEdit = {};
-    $scope.tubEditOriginal = {};
-    $scope.flavourEditOriginal = {};
-    $scope.index = 0;
+    // non-clearable variables
     $scope.nextID = 1;
-    $scope.load = { };
-    $scope.edit = false;
-    $scope.add = false;
-    $scope.flavourAdd = false;
-    $scope.flavourEdit = false;
     $scope.flavours = [
         {
             "flavour" : "Placeholder",
@@ -41,12 +32,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             "avgDaysOpen" : "N/A"
         }
     ];
-    $scope.openTubs = [];
-    $scope.openNestleTubs = [];
-    $scope.openRipplesTubs = [];
-    $scope.closedTubs = [];
-    $scope.closedNestleTubs = [];
-    $scope.closedRipplesTubs = [];
     $scope.flavourBackup = [];
     $scope.selectedFlavour = $scope.flavours[0];
     $scope.currentDisplay = $scope.selectedFlavour.tubs;
@@ -143,12 +128,17 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     var clearAll = function() {
         $scope.tubUnderEdit = {};
         $scope.flavourUnderEdit = {};
-        $scope.load = { };
-        $scope.flavourEdit = false;
+        $scope.tubEditOriginal = {};
+        $scope.flavourEditOriginal = {};
+        $scope.index = 0;
         $scope.edit = false;
+        $scope.add = false;
+        $scope.flavourAdd = false;
+        $scope.flavourEdit = false;
         $scope.findOpenTubs();
         $scope.findClosedTubs();
     };
+    clearAll();
 
     var findFlavour = function() {
         // return the index if the flavour is found, -1 otherwise
@@ -195,6 +185,13 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }      
     };
 
+    $scope.cancelTub = function () {
+        if ($scope.edit == true) {
+            $scope.selectedFlavour.tubs[$scope.index] = jQuery.extend(true, {}, $scope.tubEditOriginal);
+        }
+        clearAll();
+    };
+
     $scope.addFlavour = function () {
         if ($scope.flavourAdd == false) {
             $scope.flavourAdd = true;
@@ -213,6 +210,13 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             clearAll();
             toastr.success("Flavour added successfully.");
         }
+    };
+
+    $scope.cancelFlavour = function () {
+        if ($scope.flavourEdit == true) {
+            $scope.selectedFlavour = jQuery.extend(true, {}, $scope.flavourEditOriginal);
+        }
+        clearAll();
     };
 
     $scope.updateSelection = function() {
