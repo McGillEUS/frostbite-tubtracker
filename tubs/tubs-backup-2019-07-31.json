@@ -137,9 +137,9 @@
             },
             {
                 "date_received": "2019-07-15",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-07-23",
-                "date_closed": "2019-07-31",
+                "date_closed": "",
                 "id": 224,
                 "$$hashKey": "object:351"
             }
