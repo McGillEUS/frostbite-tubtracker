@@ -229,7 +229,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     // initiate editing tub
     $scope.editTub = function(index) {
         $scope.index = index;
-        $scope.tubUnderEdit = $scope.currentDisplay[$scope.index];
+        $scope.tubUnderEdit = $scope.currentDisplay[$scope.selectedFlavour.tubs.length - $scope.index - 1];
         $scope.tubEditOriginal = jQuery.extend(true, {}, $scope.tubUnderEdit);
         $scope.edit = true;
     };
@@ -366,8 +366,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.openTub = function(index) {
-        $scope.currentDisplay[index].date_opened = $scope.today();
-        $scope.currentDisplay[index].status = "open";
+        $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].date_opened = $scope.today();
+        $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].status = "open";
         clearAll();
     };
 
@@ -378,8 +378,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
 
     $scope.finishTub = function(index) {
-        $scope.currentDisplay[index].date_closed = $scope.today();
-        $scope.currentDisplay[index].status = "finished";
+        $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].date_closed = $scope.today();
+        $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].status = "finished";
         clearAll();
     };
 
