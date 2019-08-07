@@ -36,16 +36,15 @@
         <thead>
           <tr>
             <th>Flavour Name</th>
-            <th>Date Received</th>
             <th>Date Opened</th>
-            <th></th>
+            <th>Supplier</th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="openTub in openTubs">
             <td>{{ $index + 1}} - {{ openTub.flavour.flavour }}</td>
-            <td>{{ openTub.tub.date_received }}</td>
             <td>{{ openTub.tub.date_opened }}</td>
+            <td>{{ openTub.flavour.supplier }}</td>
             <td>
               <button class="btn btn-primary btn-small" ng-show="openTub.tub.status == 'open'" ng-click="finishTubStatusPage($index)">
                 <i class="icon-remove icon-white"></i> Finish Tub
@@ -76,7 +75,7 @@
           <tr>
             <th>Flavour Name</th>
             <th>Date Received</th>
-            <th></th>
+            <th>Supplier</th>
           </tr>
         </thead>
         <tbody>
