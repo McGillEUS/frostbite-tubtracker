@@ -182,6 +182,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 $scope.dateClosedInputActive = false;
                 $scope.add = false;
                 clearAll();
+                $scope.saveChanges();
                 toastr.success("Item added successfully.");
             }
         }      
@@ -210,6 +211,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.flavourUnderEdit = {};
             $scope.flavourAdd = false;
             clearAll();
+            $scope.saveChanges();
             toastr.success("Flavour added successfully.");
         }
     };
@@ -251,6 +253,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         } else if ($scope.validTub($scope.tubUnderEdit)) {
             // tub info has changed, save it
             $scope.selectedFlavour.tubs[$scope.index] = $scope.tubUnderEdit;
+            $scope.saveChanges();
             toastr.success("Tub modified successfully.");
             clearAll();
         }
@@ -269,6 +272,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.flavourUnderEdit = {};
             $scope.flavourEditOriginal = {};
             $scope.flavourEdit = false;
+            clearAll();
+            $scope.saveChanges();
             toastr.success("Flavour modified successfully.");
         }
     };
@@ -279,6 +284,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.tubUnderEdit = $scope.tubEditOriginal = {};
             $scope.edit = false;
             $scope.selectedFlavour.tubs.splice($scope.index, 1);
+            clearAll();
+            $scope.saveChanges();
             toastr.success("Tub removed successfully.");
         }
     };
@@ -292,6 +299,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.flavourUnderEdit = {};
             $scope.updateSelection();
             clearAll();
+            $scope.saveChanges();
+            toastr.success("Flavour removed successfully.");
         }
     };
 
@@ -369,24 +378,28 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].date_opened = $scope.today();
         $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].status = "open";
         clearAll();
+        $scope.saveChanges();
     };
 
     $scope.openTubStatusPage = function(index) {
         $scope.closedTubs[index].tub.date_opened = $scope.today();
         $scope.closedTubs[index].tub.status = "open";
         clearAll();
+        $scope.saveChanges();
     };
 
     $scope.finishTub = function(index) {
         $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].date_closed = $scope.today();
         $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].status = "finished";
         clearAll();
+        $scope.saveChanges();
     };
 
     $scope.finishTubStatusPage = function(index) {
         $scope.openTubs[index].tub.date_closed = $scope.today();
         $scope.openTubs[index].tub.status = "finished";
         clearAll();
+        $scope.saveChanges();
     };
 
     // basic validation: validate that date_received and status are filled
