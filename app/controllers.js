@@ -356,7 +356,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             'success' : function() {
             }
         });
-        toastr.success("Backup saved.");
 
         // send edited data to the flavour.json file
         $.ajax({ 
@@ -367,7 +366,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             'success' : function() {
             }
         });
-        toastr.success("Flavour update saved.");
     };
 
     $scope.openFile = function() {
@@ -379,6 +377,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].status = "open";
         clearAll();
         $scope.saveChanges();
+        toastr.success("Tub opened.");
     };
 
     $scope.openTubStatusPage = function(index) {
@@ -386,6 +385,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.closedTubs[index].tub.status = "open";
         clearAll();
         $scope.saveChanges();
+        toastr.success("Tub opened.");
     };
 
     $scope.finishTub = function(index) {
@@ -393,6 +393,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.currentDisplay[$scope.selectedFlavour.tubs.length - index - 1].status = "finished";
         clearAll();
         $scope.saveChanges();
+        toastr.success("Tub finished.");
     };
 
     $scope.finishTubStatusPage = function(index) {
@@ -400,6 +401,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.openTubs[index].tub.status = "finished";
         clearAll();
         $scope.saveChanges();
+        toastr.success("Tub finished.");
     };
 
     // basic validation: validate that date_received and status are filled
