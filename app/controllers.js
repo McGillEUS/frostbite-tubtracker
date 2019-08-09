@@ -230,8 +230,8 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
     // initiate editing tub
     $scope.editTub = function(index) {
-        $scope.index = index;
-        $scope.tubUnderEdit = $scope.currentDisplay[$scope.selectedFlavour.tubs.length - $scope.index - 1];
+        $scope.index = $scope.selectedFlavour.tubs.length - index - 1;
+        $scope.tubUnderEdit = $scope.currentDisplay[$scope.index];
         $scope.tubEditOriginal = jQuery.extend(true, {}, $scope.tubUnderEdit);
         $scope.edit = true;
     };
@@ -269,9 +269,6 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         } else if ($scope.validFlavour()) {
             // perform modification
             $scope.selectedFlavour = $scope.flavourUnderEdit;
-            $scope.flavourUnderEdit = {};
-            $scope.flavourEditOriginal = {};
-            $scope.flavourEdit = false;
             clearAll();
             $scope.saveChanges();
             toastr.success("Flavour modified successfully.");
