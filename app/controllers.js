@@ -363,6 +363,16 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             'success' : function() {
             }
         });
+
+        // send edited data to the flavour.json file
+        $.ajax({ 
+            'url' : 'app/saveOpenTubs.php',
+            'data' : {'data' : JSON.stringify($scope.openTubs)},
+            'type' : 'POST',
+            'dataType' : 'json',
+            'success' : function() {
+            }
+        });
     };
 
     $scope.openFile = function() {
