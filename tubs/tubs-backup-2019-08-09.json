@@ -60,6 +60,13 @@
                 "date_closed": "",
                 "id": 223,
                 "$$hashKey": "object:285"
+            },
+            {
+                "date_received": "2019-08-09",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 287
             }
         ],
         "avgDaysOpen": 18,
