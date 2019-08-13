@@ -354,6 +354,9 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             }
         });
 
+        // now that it's saved, update the backup with the latest info
+        $scope.flavourBackup = JSON.stringify($scope.flavours);
+
         // send edited data to the flavour.json file
         $.ajax({ 
             'url' : 'app/saveFlavours.php',
