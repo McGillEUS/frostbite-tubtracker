@@ -3219,8 +3219,8 @@
             },
             {
                 "date_received": "2019-08-09",
-                "status": "open",
-                "date_opened": "2019-08-16",
+                "status": "closed",
+                "date_opened": "",
                 "date_closed": "",
                 "id": 286
             }
