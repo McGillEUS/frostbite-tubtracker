@@ -130,9 +130,9 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             'dataType': "json",
             'success': function (data) {
                 $scope.oapSales = data;
-                $scope.populateOAPData(true);
             }
         });
+        $scope.populateOAPData(true);
 
         $scope.flavourBackup = JSON.stringify($scope.flavours);
 
