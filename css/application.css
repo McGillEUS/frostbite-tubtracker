@@ -8,3 +8,9 @@
 .page-header {
     padding-bottom: 50px;
 }
+/* Create equal columns that float next to each other */
+.input-column {
+	float: left;
+	width: 20%;
+	padding: 10px;
+}

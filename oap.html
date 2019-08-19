@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tub Tracker</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/toastr.css">
+  <link rel="stylesheet" href="css/angular-date-picker.css">
+  <link rel="stylesheet" href="css/application.css">
+</head>
+<body>
+  <div class="container" ng-app="tubTracker" ng-controller="jsonGUIController">
+    <div class="row">
+      <div class="page-header">
+        <div class="span1">
+          <img src="img/frostbite_favicon.png">
+        </div>
+        <div class="span1" style="background-color:black;">
+          <img src="img/oap_logo.svg">
+        </div>
+        <div class="span5">
+          <h1>OAPhrostbite Tub Tracker</h1>
+        </div>
+        <ol style="list-style-type: none;">
+            <li>
+              <div class="span3">
+                <a ng-click="saveOAPChanges()" href="index.html">
+                  <button class="btn btn-info btn-large" id="mainpage">
+                    Tub Tracker Main Page
+                  </button>
+                </a>
+              </div>
+            </li>
+          </ol>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-column">
+        <button class="btn btn-success btn-medium input-column-item" ng-click="oapSale('2 scoops')">
+          2 Scoops
+        </button>
+      </div>
+      <div class="input-column">
+        <button class="btn btn-success btn-medium input-column-item" ng-click="oapSale('1 scoop')">
+          1 Scoop
+        </button>
+      </div>
+    </div>
+
+    <h2>Sales History</h2>
+    <div class="row">
+      <table id="sales-inventory" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Sold in Last Hour</th>
+            <th>Sold Today</th>
+            <th>Sold this Week</th>
+            <th>Sold this OAP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in food">
+            <td>{{ item.name }}</td>
+            <td>{{ item.history[item.history.length - 1].stock }}</td>
+            <td>{{ usedSince(item, startsOfTime('hour')) }}</td>
+            <td>{{ usedSince(item, startsOfTime('day')) }}</td>
+            <td>{{ usedSince(item, startsOfTime('week')) }}</td>
+            <td>{{ usedSince(item, startsOfTime('oap'))}}</td>
+            <!-- Each OAP, need to update the hardcoded value for "oap" in startsOfTime()-->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <canvas id="base" class="chart-horizontal-bar" chart-data="oapData" chart-labels="oapDateLabels"></canvas>
+  </div>
+  
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/toastr.min.js"></script>
+  <script src="lib/angular-date-picker.js"></script>
+  <script src="lib/Chart.min.js"></script>
+  <script src="lib/angular-chart.min.js"></script>
+  <script src="app/controllers.js"></script>
+
+</body>
+</html>
