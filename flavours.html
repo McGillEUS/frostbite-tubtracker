@@ -21,9 +21,11 @@
         <ol style="list-style-type: none;">
           <li>
             <div class="span3">
-              <button class="btn btn-success btn-small" ng-click="saveChanges()">
-                  <i class="icon-file icon-white"></i>Save Changes
-              </button>
+              <a ng-click="saveChanges()" href="index.html">
+                <button class="btn btn-info btn-large" id="mainpage">
+                  Tub Tracker Main Page
+                </button>
+              </a>
             </div>
           </li>
         </ol>
@@ -31,13 +33,6 @@
     </div>
 
     <div class="row">
-      <div class="span2">
-          <a href="index.html">
-            <button class="btn btn-info btn-small">
-              <i class="icon-signal icon-white"></i> Back to Tub List
-            </button>
-          </a>
-        </div>
       <div class="span3" style="float: right">
         <input type="search" ng-model="search" placeholder="Filter...">
       </div>
