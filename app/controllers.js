@@ -650,6 +650,12 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.saveOAPChanges();
         $scope.populateOAPData(false);
     }
+    $scope.undoOAPSale = function() {
+        // remove the most recent sale from $scope.oapSales
+        $scope.oapSales.splice($scope.oapSales.length - 1, 1);
+        $scope.saveOAPChanges();
+        $scope.populateOAPData(false);
+    }
 
     // UTILITY FUNCTIONS
     $scope.today = function () {
