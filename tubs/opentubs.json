@@ -61,106 +61,6 @@
     },
     {
         "flavour": {
-            "flavour": "Rolo Yolo",
-            "supplier": "Nestle",
-            "quantity": {
-                "value": 11.4,
-                "unit": "L"
-            },
-            "price": {
-                "value": 31.34,
-                "unit": "CAD"
-            },
-            "format": "tub",
-            "type": "ice cream",
-            "tubs": [
-                {
-                    "id": 18,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-02-04",
-                    "date_closed": "2019-02-19",
-                    "$$hashKey": "object:217"
-                },
-                {
-                    "id": 19,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-02-19",
-                    "date_closed": "2019-03-12",
-                    "$$hashKey": "object:218"
-                },
-                {
-                    "id": 20,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-03-12",
-                    "date_closed": "2019-03-21",
-                    "$$hashKey": "object:219"
-                },
-                {
-                    "id": 21,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-03-27",
-                    "date_closed": "2019-04-03",
-                    "$$hashKey": "object:220"
-                },
-                {
-                    "id": 22,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-04-03",
-                    "date_closed": "2019-04-10",
-                    "$$hashKey": "object:221"
-                },
-                {
-                    "id": 23,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-05-17",
-                    "date_closed": "2019-06-05",
-                    "$$hashKey": "object:222"
-                },
-                {
-                    "id": 24,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-06-18",
-                    "date_closed": "2019-07-02",
-                    "$$hashKey": "object:223"
-                },
-                {
-                    "date_received": "2019-07-15",
-                    "status": "finished",
-                    "date_opened": "2019-07-24",
-                    "date_closed": "2019-08-01",
-                    "id": 235,
-                    "$$hashKey": "object:2015"
-                },
-                {
-                    "date_received": "2019-08-12",
-                    "status": "open",
-                    "date_opened": "2019-08-15",
-                    "date_closed": "",
-                    "id": 293,
-                    "$$hashKey": "object:1273"
-                }
-            ],
-            "avgDaysOpen": 11,
-            "$$hashKey": "object:182"
-        },
-        "tub": {
-            "date_received": "2019-08-12",
-            "status": "open",
-            "date_opened": "2019-08-15",
-            "date_closed": "",
-            "id": 293,
-            "$$hashKey": "object:1273"
-        }
-    },
-    {
-        "flavour": {
             "flavour": "Triple Chocolate Brownie",
             "supplier": "Nestle",
             "quantity": {
@@ -533,6 +433,14 @@
                     "date_closed": "",
                     "id": 274,
                     "$$hashKey": "object:1540"
+                },
+                {
+                    "date_received": "2019-08-19",
+                    "status": "closed",
+                    "date_opened": "",
+                    "date_closed": "",
+                    "id": 299,
+                    "$$hashKey": "object:752"
                 }
             ],
             "avgDaysOpen": 5,
@@ -549,7 +457,7 @@
     },
     {
         "flavour": {
-            "flavour": "Cookies & Cream",
+            "flavour": "Pralines & Cream",
             "supplier": "Nestle",
             "quantity": {
                 "value": 11.4,
@@ -563,120 +471,80 @@
             "type": "ice cream",
             "tubs": [
                 {
-                    "id": 80,
+                    "id": 75,
                     "status": "finished",
                     "date_received": "unknown",
                     "date_opened": "2019-02-04",
-                    "date_closed": "2019-02-12",
-                    "$$hashKey": "object:332"
+                    "date_closed": "2019-02-18",
+                    "$$hashKey": "object:320"
                 },
                 {
-                    "id": 81,
+                    "id": 76,
                     "status": "finished",
                     "date_received": "unknown",
-                    "date_opened": "2019-02-19",
-                    "date_closed": "2019-02-25",
-                    "$$hashKey": "object:333"
+                    "date_opened": "2019-02-18",
+                    "date_closed": "2019-03-01",
+                    "$$hashKey": "object:321"
                 },
                 {
-                    "id": 82,
+                    "id": 77,
                     "status": "finished",
                     "date_received": "unknown",
                     "date_opened": "2019-03-12",
-                    "date_closed": "2019-03-18",
-                    "$$hashKey": "object:334"
+                    "date_closed": "2019-03-26",
+                    "$$hashKey": "object:322"
                 },
                 {
-                    "id": 83,
+                    "id": 78,
                     "status": "finished",
                     "date_received": "unknown",
-                    "date_opened": "2019-03-20",
-                    "date_closed": "2019-03-27",
-                    "$$hashKey": "object:335"
+                    "date_opened": "2019-05-06",
+                    "date_closed": "2019-05-16",
+                    "$$hashKey": "object:323"
                 },
                 {
-                    "id": 84,
+                    "id": 79,
                     "status": "finished",
                     "date_received": "unknown",
-                    "date_opened": "2019-03-27",
-                    "date_closed": "2019-04-02",
-                    "$$hashKey": "object:336"
-                },
-                {
-                    "id": 85,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-04-11",
-                    "date_closed": "2019-04-12",
-                    "$$hashKey": "object:337"
-                },
-                {
-                    "id": 86,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-05-07",
-                    "date_closed": "2019-05-15",
-                    "$$hashKey": "object:338"
-                },
-                {
-                    "id": 87,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-05-28",
+                    "date_opened": "2019-05-24",
                     "date_closed": "2019-06-06",
-                    "$$hashKey": "object:339"
-                },
-                {
-                    "id": 88,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-06-10",
-                    "date_closed": "2019-06-18",
-                    "$$hashKey": "object:340"
+                    "$$hashKey": "object:324"
                 },
                 {
                     "date_received": "2019-06-27",
                     "status": "finished",
-                    "date_opened": "2019-07-08",
-                    "date_closed": "2019-07-11",
-                    "id": 190,
-                    "$$hashKey": "object:341"
+                    "date_opened": "2019-06-27",
+                    "date_closed": "2019-07-09",
+                    "id": 185,
+                    "$$hashKey": "object:325"
                 },
                 {
                     "date_received": "2019-07-15",
                     "status": "finished",
-                    "date_opened": "2019-07-15",
-                    "date_closed": "2019-07-18",
-                    "id": 229,
-                    "$$hashKey": "object:1019"
+                    "date_opened": "2019-08-01",
+                    "date_closed": "2019-08-08",
+                    "id": 237,
+                    "$$hashKey": "object:2350"
                 },
                 {
-                    "date_received": "2019-08-06",
+                    "date_received": "2019-08-12",
                     "status": "open",
-                    "date_opened": "2019-08-08",
+                    "date_opened": "2019-08-19",
                     "date_closed": "",
-                    "id": 268,
-                    "$$hashKey": "object:891"
-                },
-                {
-                    "date_received": "2019-08-06",
-                    "status": "closed",
-                    "date_opened": "",
-                    "date_closed": "",
-                    "id": 269,
-                    "$$hashKey": "object:983"
+                    "id": 295,
+                    "$$hashKey": "object:1604"
                 }
             ],
-            "avgDaysOpen": 5,
-            "$$hashKey": "object:191"
+            "avgDaysOpen": 10,
+            "$$hashKey": "object:190"
         },
         "tub": {
-            "date_received": "2019-08-06",
+            "date_received": "2019-08-12",
             "status": "open",
-            "date_opened": "2019-08-08",
+            "date_opened": "2019-08-19",
             "date_closed": "",
-            "id": 268,
-            "$$hashKey": "object:891"
+            "id": 295,
+            "$$hashKey": "object:1604"
         }
     },
     {
@@ -1301,6 +1169,58 @@
             "date_closed": "",
             "id": 271,
             "$$hashKey": "object:1193"
+        }
+    },
+    {
+        "flavour": {
+            "flavour": "Guava Grapefruit",
+            "supplier": "Ripples",
+            "quantity": {
+                "value": 11.4,
+                "unit": "L"
+            },
+            "price": {
+                "value": 0,
+                "unit": "CAD"
+            },
+            "format": "tub",
+            "type": "sorbet",
+            "tubs": [
+                {
+                    "id": 159,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-06-04",
+                    "date_closed": "2019-06-07",
+                    "$$hashKey": "object:479"
+                },
+                {
+                    "date_received": "2019-07-12",
+                    "status": "finished",
+                    "date_opened": "2019-07-23",
+                    "date_closed": "2019-07-24",
+                    "id": 222,
+                    "$$hashKey": "object:1477"
+                },
+                {
+                    "date_received": "2019-08-09",
+                    "status": "open",
+                    "date_opened": "2019-08-19",
+                    "date_closed": "",
+                    "id": 285,
+                    "$$hashKey": "object:1230"
+                }
+            ],
+            "avgDaysOpen": 3,
+            "$$hashKey": "object:211"
+        },
+        "tub": {
+            "date_received": "2019-08-09",
+            "status": "open",
+            "date_opened": "2019-08-19",
+            "date_closed": "",
+            "id": 285,
+            "$$hashKey": "object:1230"
         }
     },
     {

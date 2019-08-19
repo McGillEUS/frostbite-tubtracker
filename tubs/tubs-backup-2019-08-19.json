@@ -1208,8 +1208,8 @@
             },
             {
                 "date_received": "2019-08-12",
-                "status": "open",
-                "date_opened": "2019-08-19",
+                "status": "closed",
+                "date_opened": "",
                 "date_closed": "",
                 "id": 295,
                 "$$hashKey": "object:1604"
