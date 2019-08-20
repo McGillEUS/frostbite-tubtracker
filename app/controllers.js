@@ -2,7 +2,7 @@ var app = angular.module('tubTracker', ['mp.datePicker', 'chart.js']);
 app.controller('jsonGUIController', function($scope, $timeout) {
     /* FROSTBITE x OAP SECTION */
     $scope.oapDateLabels = ['Aug 26', 'Aug 27', 'Aug 28', 'Aug 29', 'Aug 30', 'Sep 3', 'Sep 4', 'Sep 5', 'Sep 6'];
-    $scope.oapTimeLabels = ['12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM'];
+    $scope.oapTimeLabels = ['12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'];
 
     var oapPopulateDate = function (date) {
         var aug27 = new Date('2019-08-27T04:00:00');
@@ -35,24 +35,24 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         }
     };
     var oapPopulateTime = function(hours) {
-        // hours adjusted forward by 4 to account for time change
-        if (hours >= 16 && hours < 17) {
+        // hours adjusted by 4 to account for time change
+        if (hours >= 8 && hours < 9) {
             $scope.oapTimeData[0]++;
-        } else if (hours >= 17 && hours < 18) {
+        } else if (hours >= 9 && hours < 10) {
             $scope.oapTimeData[1]++;
-        } else if (hours >= 18 && hours < 19) {
+        } else if (hours >= 10 && hours < 11) {
             $scope.oapTimeData[2]++;
-        } else if (hours >= 19 && hours < 20) {
+        } else if (hours >= 11 && hours < 12) {
             $scope.oapTimeData[3]++;
-        } else if (hours >= 20 && hours < 21) {
+        } else if (hours >= 12 && hours < 13) {
             $scope.oapTimeData[4]++;
-        } else if (hours >= 21 && hours < 22) {
+        } else if (hours >= 13 && hours < 14) {
             $scope.oapTimeData[5]++;
-        } else if (hours >= 22 && hours < 23) {
+        } else if (hours >= 14 && hours < 15) {
             $scope.oapTimeData[6]++;
-        } else if (hours >= 23) {
+        } else if (hours >= 15 && hours < 16) {
             $scope.oapTimeData[7]++;
-        } else if (hours >= 0 && hours < 1) {
+        } else if (hours >= 16 && hours < 17) {
             $scope.oapTimeData[8]++;
         }
     };
