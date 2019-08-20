@@ -8,3 +8,12 @@
 .page-header {
     padding-bottom: 50px;
 }
+/* Create equal columns that float next to each other */
+.oap-column {
+	float: left;
+	width: 31%;
+	padding: 10px;
+}
+.oap-column-item {
+	width: 100%;
+}

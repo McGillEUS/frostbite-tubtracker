@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tub Tracker</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/toastr.css">
+  <link rel="stylesheet" href="css/angular-date-picker.css">
+  <link rel="stylesheet" href="css/application.css">
+</head>
+<body>
+  <div class="container" ng-app="tubTracker" ng-controller="jsonGUIController">
+    <div class="row">
+      <div class="page-header">
+        <div class="span1">
+          <img src="img/frostbite_favicon.png">
+        </div>
+        <div class="span1" style="background-color:black;">
+          <img src="img/oap_logo.svg">
+        </div>
+        <div class="span5">
+          <h1>OAPhrostbite Tub Tracker</h1>
+        </div>
+        <ol style="list-style-type: none;">
+          <li>
+            <div class="span3">
+              <a href="index.html">
+                <button class="btn btn-info btn-large" id="mainpage">
+                  Tub Tracker Main Page
+                </button>
+              </a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="oap-column">
+        <button class="btn btn-success btn-medium oap-column-item" ng-click="oapSale('2 scoops')">
+          2 Scoops
+        </button>
+      </div>
+      <div class="oap-column">
+        <button class="btn btn-success btn-medium oap-column-item" ng-click="oapSale('1 scoop')">
+          1 Scoop
+        </button>
+      </div>
+      <div class="oap-column">
+        <button class="btn btn-warning btn-medium oap-column-item" ng-click="undoOAPSale()">
+          Undo
+        </button>
+      </div>
+    </div>
+
+    <h2>Sales History</h2>
+    <canvas class="chart-horizontal-bar" chart-data="oapDateData" chart-labels="oapDateLabels"></canvas>
+    <canvas class="chart-horizontal-bar" chart-data="oapTimeData" chart-labels="oapTimeLabels"></canvas>
+  </div>
+  
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/toastr.min.js"></script>
+  <script src="lib/angular-date-picker.js"></script>
+  <script src="lib/Chart.min.js"></script>
+  <script src="lib/angular-chart.min.js"></script>
+  <script src="app/controllers.js"></script>
+
+</body>
+</html>
