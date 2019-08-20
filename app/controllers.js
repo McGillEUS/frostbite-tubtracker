@@ -565,18 +565,59 @@ app.controller('jsonGUIController', function($scope, $timeout) {
 
     /* FROSTBITE x OAP SECTION */
     $scope.oapDateLabels = ['Aug 26', 'Aug 27', 'Aug 28', 'Aug 29', 'Aug 30', 'Sep 3', 'Sep 4', 'Sep 5', 'Sep 6'];
-    $scope.oapData = [1,2,3,4,5,6,7,8,9];   // TODO remove
-    $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72'];
-    $scope.datasetOverride = [
-        {
-            label: "Line chart",
-            borderWidth: 3,
-            hoverBackgroundColor: "rgba(255,99,132,0.4)",
-            hoverBorderColor: "rgba(255,99,132,1)",
-            type: 'line'
-        }
-    ];
+    $scope.oapTimeLabels = ['12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM'];
 
+    var oapPopulateDate = function (sale) {
+        var aug27 = new Date('2019-08-27T04:00:00');
+        var aug28 = new Date('2019-08-28T04:00:00');
+        var aug29 = new Date('2019-08-29T04:00:00');
+        var aug30 = new Date('2019-08-30T04:00:00');
+        var sep3 = new Date('2019-09-03T04:00:00');
+        var sep4 = new Date('2019-09-04T04:00:00');
+        var sep5 = new Date('2019-09-05T04:00:00');
+        var sep6 = new Date('2019-09-06T04:00:00');
+
+        if (sale.timestamp < aug27) {
+            $scope.oapDateData[0]++;
+        } else if (sale.timestamp > aug27 && sale.timestamp < aug28) {
+            $scope.oapDateData[1]++;
+        } else if (sale.timestamp > aug28 && sale.timestamp < aug29) {
+            $scope.oapDateData[2]++;
+        } else if (sale.timestamp > aug29 && sale.timestamp < aug30) {
+            $scope.oapDateData[3]++;
+        } else if (sale.timestamp > aug30 && sale.timestamp < sep3) {
+            $scope.oapDateData[4]++;
+        } else if (sale.timestamp > sep3 && sale.timestamp < sep4) {
+            $scope.oapDateData[5]++;
+        } else if (sale.timestamp > sep4 && sale.timestamp < sep5) {
+            $scope.oapDateData[6]++;
+        } else if (sale.timestamp > sep5 && sale.timestamp < sep6) {
+            $scope.oapDateData[7]++;
+        } else if (sale.timestamp > sep6) {
+            $scope.oapDateData[8]++;
+        }
+    };
+    var oapPopulateTime = function(hours) {
+        if (hours < 13) {
+            $scope.oapTimeData[0]++;
+        } else if (hours >= 13 && hours < 14) {
+            $scope.oapTimeData[1]++;
+        } else if (hours >= 14 && hours < 15) {
+            $scope.oapTimeData[2]++;
+        } else if (hours >= 15 && hours < 16) {
+            $scope.oapTimeData[3]++;
+        } else if (hours >= 16 && hours < 17) {
+            $scope.oapTimeData[4]++;
+        } else if (hours >= 17 && hours < 18) {
+            $scope.oapTimeData[5]++;
+        } else if (hours >= 18 && hours < 19) {
+            $scope.oapTimeData[6]++;
+        } else if (hours >= 19 && hours < 20) {
+            $scope.oapTimeData[7]++;
+        } else if (hours >= 20) {
+            $scope.oapTimeData[8]++;
+        }
+    };
     $scope.saveOAPChanges = function () {
         // send edited data to the OAP sales file
         $.ajax({ 
@@ -587,61 +628,18 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             'success' : function() {
             }
         });
-    }
+    };
     $scope.populateOAPData = function (fullRefresh) {
-        var aug27 = new Date('2019-08-27T04:00:00');
-        var aug28 = new Date('2019-08-28T04:00:00');
-        var aug29 = new Date('2019-08-29T04:00:00');
-        var aug30 = new Date('2019-08-30T04:00:00');
-        var sep3 = new Date('2019-09-03T04:00:00');
-        var sep4 = new Date('2019-09-04T04:00:00');
-        var sep5 = new Date('2019-09-05T04:00:00');
-        var sep6 = new Date('2019-09-06T04:00:00');
-
         if (fullRefresh) {
-            $scope.oapData = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+            $scope.oapDateData = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+            $scope.oapTimeData = [0, 0, 0, 0, 0, 0, 0, 0, 0];
             angular.forEach($scope.oapSales, function(sale) {
-                if (sale.timestamp < aug27) {
-                    $scope.oapData[0]++;
-                } else if (sale.timestamp > aug27 && sale.timestamp < aug28) {
-                    $scope.oapData[1]++;
-                } else if (sale.timestamp > aug28 && sale.timestamp < aug29) {
-                    $scope.oapData[2]++;
-                } else if (sale.timestamp > aug29 && sale.timestamp < aug30) {
-                    $scope.oapData[3]++;
-                } else if (sale.timestamp > aug30 && sale.timestamp < sep3) {
-                    $scope.oapData[4]++;
-                } else if (sale.timestamp > sep3 && sale.timestamp < sep4) {
-                    $scope.oapData[5]++;
-                } else if (sale.timestamp > sep4 && sale.timestamp < sep5) {
-                    $scope.oapData[6]++;
-                } else if (sale.timestamp > sep5 && sale.timestamp < sep6) {
-                    $scope.oapData[7]++;
-                } else if (sale.timestamp > sep6) {
-                    $scope.oapData[8]++;
-                }
+                oapPopulateDate(sale);
+                oapPopulateTime(sale.timestamp.getHours())
             });
         } else {
-            var sale = $scope.oapSales[$scope.oapSales.length - 1];
-            if (sale.timestamp < aug27) {
-                $scope.oapData[0]++;
-            } else if (sale.timestamp > aug27 && sale.timestamp < aug28) {
-                $scope.oapData[1]++;
-            } else if (sale.timestamp > aug28 && sale.timestamp < aug29) {
-                $scope.oapData[2]++;
-            } else if (sale.timestamp > aug29 && sale.timestamp < aug30) {
-                $scope.oapData[3]++;
-            } else if (sale.timestamp > aug30 && sale.timestamp < sep3) {
-                $scope.oapData[4]++;
-            } else if (sale.timestamp > sep3 && sale.timestamp < sep4) {
-                $scope.oapData[5]++;
-            } else if (sale.timestamp > sep4 && sale.timestamp < sep5) {
-                $scope.oapData[6]++;
-            } else if (sale.timestamp > sep5 && sale.timestamp < sep6) {
-                $scope.oapData[7]++;
-            } else if (sale.timestamp > sep6) {
-                $scope.oapData[8]++;
-            }
+            oapPopulateDate($scope.oapSales[$scope.oapSales.length - 1]);
+            oapPopulateTime(sale.timestamp.getHours());
         }
     };
     $scope.oapSale = function(item) {
@@ -649,13 +647,13 @@ app.controller('jsonGUIController', function($scope, $timeout) {
         $scope.oapSales.push({"item" : item, "timestamp" : date});
         $scope.saveOAPChanges();
         $scope.populateOAPData(false);
-    }
+    };
     $scope.undoOAPSale = function() {
         // remove the most recent sale from $scope.oapSales
         $scope.oapSales.splice($scope.oapSales.length - 1, 1);
         $scope.saveOAPChanges();
         $scope.populateOAPData(false);
-    }
+    };
 
     // UTILITY FUNCTIONS
     $scope.today = function () {
