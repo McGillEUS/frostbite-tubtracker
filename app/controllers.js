@@ -94,9 +94,9 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
     $scope.undoOAPSale = function() {
         // remove the most recent sale from $scope.oapSales
-        $scope.oapSales.splice($scope.oapSales.length - 1, 1);
+        $scope.oapSales.pop();
         $scope.saveOAPChanges();
-        $scope.populateOAPData(false);
+        $scope.populateOAPData(true);
     };
 
     // UTILITY FUNCTIONS
