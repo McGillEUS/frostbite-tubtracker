@@ -73,11 +73,13 @@ app.controller('jsonGUIController', function($scope, $timeout) {
             $scope.oapTimeData = [0, 0, 0, 0, 0, 0, 0, 0, 0];
             angular.forEach($scope.oapSales, function(sale) {
                 var date = new Date(sale.timestamp);
+                console.log(date);
                 oapPopulateDate(date);
                 oapPopulateTime(date.getHours());
             });
         } else {
             var date = new Date($scope.oapSales[$scope.oapSales.length - 1]);
+            console.log(date);
             oapPopulateDate(date);
             oapPopulateTime(date.getHours());
         }
