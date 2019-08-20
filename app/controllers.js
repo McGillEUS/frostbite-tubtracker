@@ -36,23 +36,23 @@ app.controller('jsonGUIController', function($scope, $timeout) {
     };
     var oapPopulateTime = function(hours) {
         // hours adjusted by 4 to account for time change
-        if (hours >= 8 && hours < 9) {
+        if (hours >= 12 && hours < 13) {
             $scope.oapTimeData[0]++;
-        } else if (hours >= 9 && hours < 10) {
-            $scope.oapTimeData[1]++;
-        } else if (hours >= 10 && hours < 11) {
-            $scope.oapTimeData[2]++;
-        } else if (hours >= 11 && hours < 12) {
-            $scope.oapTimeData[3]++;
-        } else if (hours >= 12 && hours < 13) {
-            $scope.oapTimeData[4]++;
         } else if (hours >= 13 && hours < 14) {
-            $scope.oapTimeData[5]++;
+            $scope.oapTimeData[1]++;
         } else if (hours >= 14 && hours < 15) {
-            $scope.oapTimeData[6]++;
+            $scope.oapTimeData[2]++;
         } else if (hours >= 15 && hours < 16) {
-            $scope.oapTimeData[7]++;
+            $scope.oapTimeData[3]++;
         } else if (hours >= 16 && hours < 17) {
+            $scope.oapTimeData[4]++;
+        } else if (hours >= 17 && hours < 18) {
+            $scope.oapTimeData[5]++;
+        } else if (hours >= 18 && hours < 19) {
+            $scope.oapTimeData[6]++;
+        } else if (hours >= 19 && hours < 20) {
+            $scope.oapTimeData[7]++;
+        } else if (hours >= 20 && hours < 21) {
             $scope.oapTimeData[8]++;
         }
     };
