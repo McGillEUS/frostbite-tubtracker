@@ -9,8 +9,11 @@
     padding-bottom: 50px;
 }
 /* Create equal columns that float next to each other */
-.input-column {
+.oap-column {
 	float: left;
-	width: 20%;
+	width: 31%;
 	padding: 10px;
+}
+.oap-column-item {
+	width: 100%;
 }
