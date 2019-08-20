@@ -79,7 +79,7 @@ app.controller('jsonGUIController', function($scope, $timeout) {
                 oapPopulateTime(date.getHours());
             });
         } else {
-            var date = new Date($scope.oapSales[$scope.oapSales.length - 1]);
+            var date = new Date($scope.oapSales[$scope.oapSales.length - 1].timestamp);
             console.log(date);
             console.log(date.getHours());
             oapPopulateDate(date);
