@@ -63,19 +63,11 @@
             },
             {
                 "date_received": "2019-08-12",
-                "status": "open",
-                "date_opened": "2019-09-09",
-                "date_closed": "",
-                "id": 287,
-                "$$hashKey": "object:370"
-            },
-            {
-                "date_received": "2019-08-26",
                 "status": "closed",
                 "date_opened": "",
                 "date_closed": "",
-                "id": 314,
-                "$$hashKey": "object:460"
+                "id": 287,
+                "$$hashKey": "object:370"
             }
         ],
         "avgDaysOpen": 18,
@@ -161,27 +153,11 @@
             },
             {
                 "date_received": "2019-08-12",
-                "status": "finished",
-                "date_opened": "2019-09-05",
-                "date_closed": "2019-09-09",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
                 "id": 288,
                 "$$hashKey": "object:510"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 318,
-                "$$hashKey": "object:548"
-            },
-            {
-                "date_received": "2019-08-27",
-                "status": "finished",
-                "date_opened": "2019-08-27",
-                "date_closed": "2019-09-06",
-                "id": 327,
-                "$$hashKey": "object:755"
             }
         ],
         "avgDaysOpen": 12,
@@ -244,9 +220,9 @@
             },
             {
                 "date_received": "2019-08-06",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-08",
-                "date_closed": "2019-08-21",
+                "date_closed": "",
                 "id": 272,
                 "$$hashKey": "object:1300"
             }
@@ -323,22 +299,6 @@
                 "date_closed": "2019-08-13",
                 "id": 266,
                 "$$hashKey": "object:530"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 311,
-                "$$hashKey": "object:275"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 312,
-                "$$hashKey": "object:295"
             }
         ],
         "avgDaysOpen": 6,
@@ -429,22 +389,6 @@
                 "date_closed": "2019-08-19",
                 "id": 293,
                 "$$hashKey": "object:1273"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 325,
-                "$$hashKey": "object:717"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 326,
-                "$$hashKey": "object:729"
             }
         ],
         "avgDaysOpen": 11,
@@ -538,27 +482,19 @@
             },
             {
                 "date_received": "2019-08-12",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-21",
-                "date_closed": "2019-09-05",
+                "date_closed": "",
                 "id": 292,
                 "$$hashKey": "object:1113"
             },
             {
                 "date_received": "2019-08-19",
-                "status": "finished",
-                "date_opened": "2019-09-09",
-                "date_closed": "2019-09-09",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
                 "id": 302,
                 "$$hashKey": "object:1171"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "open",
-                "date_opened": "2019-09-09",
-                "date_closed": "",
-                "id": 332,
-                "$$hashKey": "object:873"
             }
         ],
         "avgDaysOpen": 11,
@@ -665,22 +601,6 @@
                 "date_closed": "2019-08-20",
                 "id": 290,
                 "$$hashKey": "object:804"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 328,
-                "$$hashKey": "object:782"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 329,
-                "$$hashKey": "object:794"
             }
         ],
         "avgDaysOpen": 5,
@@ -766,16 +686,16 @@
             },
             {
                 "date_received": "2019-08-12",
-                "status": "finished",
-                "date_opened": "2019-09-09",
-                "date_closed": "2019-09-09",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
                 "id": 291,
                 "$$hashKey": "object:956"
             },
             {
                 "date_received": "2019-08-19",
-                "status": "open",
-                "date_opened": "2019-09-09",
+                "status": "closed",
+                "date_opened": "",
                 "date_closed": "",
                 "id": 301,
                 "$$hashKey": "object:1029"
@@ -837,14 +757,6 @@
                 "date_closed": "2019-08-20",
                 "id": 247,
                 "$$hashKey": "object:1444"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "closed",
-                "date_opened": "",
-                "date_closed": "",
-                "id": 333,
-                "$$hashKey": "object:894"
             }
         ],
         "avgDaysOpen": 16,
@@ -1042,27 +954,11 @@
             },
             {
                 "date_received": "2019-08-19",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-20",
-                "date_closed": "2019-08-23",
+                "date_closed": "",
                 "id": 299,
                 "$$hashKey": "object:752"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 323,
-                "$$hashKey": "object:680"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 324,
-                "$$hashKey": "object:692"
             }
         ],
         "avgDaysOpen": 5,
@@ -1230,19 +1126,11 @@
             },
             {
                 "date_received": "2019-07-23",
-                "status": "finished",
-                "date_opened": "2019-09-09",
-                "date_closed": "2019-09-09",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
                 "id": 246,
                 "$$hashKey": "object:1316"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 330,
-                "$$hashKey": "object:818"
             }
         ],
         "avgDaysOpen": 13,
@@ -1320,27 +1208,11 @@
             },
             {
                 "date_received": "2019-08-12",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-19",
-                "date_closed": "2019-09-09",
+                "date_closed": "",
                 "id": 295,
                 "$$hashKey": "object:1604"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 321,
-                "$$hashKey": "object:619"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "open",
-                "date_opened": "2019-09-09",
-                "date_closed": "",
-                "id": 322,
-                "$$hashKey": "object:630"
             }
         ],
         "avgDaysOpen": 10,
@@ -1458,27 +1330,11 @@
             },
             {
                 "date_received": "2019-08-06",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-20",
-                "date_closed": "2019-09-09",
+                "date_closed": "",
                 "id": 269,
                 "$$hashKey": "object:983"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 315,
-                "$$hashKey": "object:488"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "closed",
-                "date_opened": "",
-                "date_closed": "",
-                "id": 316,
-                "$$hashKey": "object:500"
             }
         ],
         "avgDaysOpen": 5,
@@ -1617,14 +1473,6 @@
                 "date_closed": "2019-08-20",
                 "id": 276,
                 "$$hashKey": "object:2344"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 313,
-                "$$hashKey": "object:438"
             }
         ],
         "avgDaysOpen": 5,
@@ -1699,14 +1547,6 @@
                 "date_closed": "2019-08-20",
                 "id": 234,
                 "$$hashKey": "object:1852"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 317,
-                "$$hashKey": "object:523"
             }
         ],
         "avgDaysOpen": 15,
@@ -1856,9 +1696,9 @@
             },
             {
                 "date_received": "2019-08-19",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-20",
-                "date_closed": "2019-09-09",
+                "date_closed": "",
                 "id": 300,
                 "$$hashKey": "object:892"
             }
@@ -1970,27 +1810,11 @@
             },
             {
                 "date_received": "2019-08-19",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-20",
-                "date_closed": "2019-09-09",
+                "date_closed": "",
                 "id": 298,
                 "$$hashKey": "object:362"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 309,
-                "$$hashKey": "object:210"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "open",
-                "date_opened": "2019-09-09",
-                "date_closed": "",
-                "id": 310,
-                "$$hashKey": "object:226"
             }
         ],
         "avgDaysOpen": 9,
@@ -2124,27 +1948,11 @@
             },
             {
                 "date_received": "2019-08-20",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-20",
-                "date_closed": "2019-08-22",
+                "date_closed": "",
                 "id": 307,
                 "$$hashKey": "object:611"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 319,
-                "$$hashKey": "object:583"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 320,
-                "$$hashKey": "object:595"
             }
         ],
         "avgDaysOpen": 7,
@@ -2190,8 +1998,8 @@
             },
             {
                 "date_received": "2019-07-23",
-                "status": "open",
-                "date_opened": "2019-08-26",
+                "status": "closed",
+                "date_opened": "",
                 "date_closed": "",
                 "id": 245,
                 "$$hashKey": "object:1189"
@@ -2288,27 +2096,18 @@
             },
             {
                 "date_received": "2019-08-19",
-                "status": "open",
-                "date_opened": "2019-09-09",
+                "status": "closed",
+                "date_opened": "",
                 "date_closed": "",
                 "id": 305,
                 "$$hashKey": "object:402"
             },
             {
                 "date_received": "2019-08-19",
-                "status": "closed",
-                "date_opened": "",
-                "date_closed": "",
-                "id": 306,
-                "$$hashKey": "object:824"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "closed",
-                "date_opened": "",
-                "date_closed": "",
-                "id": 331,
-                "$$hashKey": "object:846"
+                "status": "finished",
+                "date_opened": "2019-08-21",
+                "date_closed": "2019-08-21",
+                "id": 306
             }
         ],
         "avgDaysOpen": 12,
@@ -2370,9 +2169,9 @@
             },
             {
                 "date_received": "2019-08-06",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-08",
-                "date_closed": "2019-09-09",
+                "date_closed": "",
                 "id": 270,
                 "$$hashKey": "object:1084"
             }
@@ -2433,14 +2232,6 @@
                 "date_closed": "2019-08-20",
                 "id": 244,
                 "$$hashKey": "object:1070"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "closed",
-                "date_opened": "",
-                "date_closed": "",
-                "id": 336,
-                "$$hashKey": "object:949"
             }
         ],
         "avgDaysOpen": 2,
@@ -2502,27 +2293,11 @@
             },
             {
                 "date_received": "2019-08-19",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-20",
-                "date_closed": "2019-09-09",
+                "date_closed": "",
                 "id": 303,
                 "$$hashKey": "object:1312"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 334,
-                "$$hashKey": "object:916"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "open",
-                "date_opened": "2019-09-09",
-                "date_closed": "",
-                "id": 335,
-                "$$hashKey": "object:928"
             }
         ],
         "avgDaysOpen": "N\/A",
@@ -2576,9 +2351,9 @@
             },
             {
                 "date_received": "2019-08-12",
-                "status": "open",
-                "date_opened": "2019-09-09",
-                "date_closed": "",
+                "status": "finished",
+                "date_opened": "2019-08-21",
+                "date_closed": "2019-08-21",
                 "id": 296,
                 "$$hashKey": "object:1772"
             }
@@ -2674,19 +2449,11 @@
             },
             {
                 "date_received": "2019-08-06",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-14",
-                "date_closed": "2019-08-22",
+                "date_closed": "",
                 "id": 271,
                 "$$hashKey": "object:1193"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 338,
-                "$$hashKey": "object:991"
             }
         ],
         "avgDaysOpen": 5,
@@ -2724,11 +2491,10 @@
             },
             {
                 "date_received": "2019-08-19",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 304,
-                "$$hashKey": "object:1310"
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 304
             }
         ],
         "avgDaysOpen": 22,
@@ -2805,14 +2571,6 @@
                 "date_closed": "2019-07-23",
                 "id": 215,
                 "$$hashKey": "object:606"
-            },
-            {
-                "date_received": "2019-09-06",
-                "status": "open",
-                "date_opened": "2019-09-06",
-                "date_closed": "",
-                "id": 350,
-                "$$hashKey": "object:1264"
             }
         ],
         "avgDaysOpen": 7,
@@ -2839,30 +2597,6 @@
                 "date_opened": "2019-06-14",
                 "date_closed": "2019-06-19",
                 "$$hashKey": "object:469"
-            },
-            {
-                "date_received": "2019-08-23",
-                "status": "finished",
-                "date_opened": "2019-08-23",
-                "date_closed": "2019-09-09",
-                "id": 308,
-                "$$hashKey": "object:370"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 339,
-                "$$hashKey": "object:1009"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 340,
-                "$$hashKey": "object:1021"
             }
         ],
         "avgDaysOpen": 5,
@@ -2905,14 +2639,6 @@
                 "date_closed": "2019-08-16",
                 "id": 281,
                 "$$hashKey": "object:746"
-            },
-            {
-                "date_received": "2019-09-06",
-                "status": "open",
-                "date_opened": "2019-09-09",
-                "date_closed": "",
-                "id": 348,
-                "$$hashKey": "object:1180"
             }
         ],
         "avgDaysOpen": 0,
@@ -2955,14 +2681,6 @@
                 "date_closed": "2019-08-15",
                 "id": 278,
                 "$$hashKey": "object:425"
-            },
-            {
-                "date_received": "2019-09-06",
-                "status": "open",
-                "date_opened": "2019-09-06",
-                "date_closed": "",
-                "id": 349,
-                "$$hashKey": "object:1216"
             }
         ],
         "avgDaysOpen": 6,
@@ -3050,9 +2768,9 @@
             },
             {
                 "date_received": "2019-08-09",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-19",
-                "date_closed": "2019-08-23",
+                "date_closed": "",
                 "id": 285,
                 "$$hashKey": "object:1230"
             }
@@ -3109,9 +2827,9 @@
             },
             {
                 "date_received": "2019-08-13",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-13",
-                "date_closed": "2019-08-22",
+                "date_closed": "",
                 "id": 297,
                 "$$hashKey": "object:475"
             }
@@ -3193,35 +2911,11 @@
             },
             {
                 "date_received": "2019-08-09",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-15",
-                "date_closed": "2019-08-23",
+                "date_closed": "",
                 "id": 282,
                 "$$hashKey": "object:861"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 341,
-                "$$hashKey": "object:1041"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 342,
-                "$$hashKey": "object:1053"
-            },
-            {
-                "date_received": "2019-09-06",
-                "status": "open",
-                "date_opened": "2019-09-09",
-                "date_closed": "",
-                "id": 346,
-                "$$hashKey": "object:1119"
             }
         ],
         "avgDaysOpen": 6,
@@ -3334,9 +3028,9 @@
             },
             {
                 "date_received": "2019-08-09",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-20",
-                "date_closed": "2019-09-09",
+                "date_closed": "",
                 "id": 280,
                 "$$hashKey": "object:636"
             }
@@ -3439,30 +3133,6 @@
                 "date_closed": "2019-07-23",
                 "id": 211,
                 "$$hashKey": "object:279"
-            },
-            {
-                "date_received": "2019-08-26",
-                "status": "finished",
-                "date_opened": "2019-08-26",
-                "date_closed": "2019-09-09",
-                "id": 343,
-                "$$hashKey": "object:1072"
-            },
-            {
-                "date_received": "2019-09-06",
-                "status": "closed",
-                "date_opened": "",
-                "date_closed": "",
-                "id": 344,
-                "$$hashKey": "object:1083"
-            },
-            {
-                "date_received": "2019-09-06",
-                "status": "closed",
-                "date_opened": "",
-                "date_closed": "",
-                "id": 345,
-                "$$hashKey": "object:1093"
             }
         ],
         "avgDaysOpen": 4,
@@ -3627,11 +3297,10 @@
             },
             {
                 "date_received": "2019-08-09",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-16",
-                "date_closed": "2019-09-09",
-                "id": 286,
-                "$$hashKey": "object:2821"
+                "date_closed": "",
+                "id": 286
             }
         ],
         "avgDaysOpen": 14,
@@ -3677,9 +3346,9 @@
             },
             {
                 "date_received": "2019-08-09",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-15",
-                "date_closed": "2019-08-22",
+                "date_closed": "",
                 "id": 283,
                 "$$hashKey": "object:980"
             }

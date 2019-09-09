@@ -3627,11 +3627,10 @@
             },
             {
                 "date_received": "2019-08-09",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-08-16",
-                "date_closed": "2019-09-09",
-                "id": 286,
-                "$$hashKey": "object:2821"
+                "date_closed": "",
+                "id": 286
             }
         ],
         "avgDaysOpen": 14,

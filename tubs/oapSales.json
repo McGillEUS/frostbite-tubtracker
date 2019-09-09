@@ -1,10 +1,1138 @@
 [
     {
-        "item" : "2 Scoops",
-        "timestamp" : "2019-08-19T13:00:00.000Z"
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T17:53:40.482Z"
     },
     {
-        "item" : "1 Scoop",
-        "timestamp" : "2019-08-25T13:05:00.000Z"
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T18:15:16.379Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T18:15:58.788Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T18:20:08.013Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T18:25:11.831Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T18:25:17.861Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T18:27:00.416Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T18:28:10.518Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T20:20:03.393Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-26T20:20:52.997Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T17:38:23.465Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T18:08:44.212Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T18:11:04.998Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T18:12:44.192Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T18:13:42.629Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T18:24:53.888Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T18:28:16.646Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T18:29:59.622Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:04:10.305Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:05:09.049Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:05:51.013Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:06:49.507Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:07:36.181Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:22:57.390Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:26:59.671Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:42:10.493Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:50:32.827Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:50:33.647Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:55:11.140Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T19:56:14.187Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T20:09:51.761Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T20:10:37.963Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-27T20:27:48.852Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-27T20:27:49.500Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T20:28:50.893Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T20:35:39.520Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T20:40:58.601Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T20:44:33.728Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-27T20:54:27.099Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-27T21:02:00.711Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-28T17:14:08.892Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T16:06:39.210Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T16:48:16.618Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T16:48:18.077Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T16:50:20.435Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T16:50:31.781Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T16:56:41.922Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T17:21:36.455Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T17:33:02.212Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T17:42:39.011Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T17:42:39.739Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T17:42:40.567Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T17:42:41.380Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T17:42:42.488Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T17:46:49.376Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T18:03:04.987Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T18:03:06.768Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T18:06:41.000Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T18:29:11.326Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T18:29:13.133Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T19:51:47.883Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T19:51:48.753Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T19:51:49.495Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T20:00:24.182Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T20:00:24.803Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T20:00:25.510Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T20:00:30.047Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T20:05:26.350Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T20:10:50.415Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-29T20:29:53.015Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T20:39:32.130Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T20:46:55.753Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T20:50:52.359Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-29T21:00:14.996Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T16:59:38.691Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T17:33:12.649Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T17:44:26.105Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T17:46:20.478Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T17:47:16.602Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T17:48:59.369Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T17:51:15.190Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T17:52:11.663Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T18:22:32.108Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T18:23:31.180Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T18:28:07.312Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T18:32:09.735Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T18:33:14.407Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T18:34:24.989Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T18:36:24.533Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T18:38:44.314Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T18:39:49.396Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-30T18:41:50.892Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T19:17:03.750Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-30T20:00:56.624Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-30T20:00:57.361Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-30T20:00:59.236Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T20:28:32.867Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T20:28:33.659Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T20:28:34.392Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-30T20:34:42.022Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-08-30T21:15:47.493Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:15:53.789Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:15:56.951Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:15:57.783Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:15:58.598Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:15:59.387Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:00.085Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:00.798Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:01.487Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:02.169Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:10.398Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:14.164Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:14.749Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:15.373Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:17.310Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:17.816Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:18.310Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:18.718Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:19.652Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:21.515Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:22.030Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:22.603Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:23.139Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:23.629Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:25.193Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:25.789Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-08-30T21:16:26.937Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:34.442Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:35.002Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:35.601Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:36.157Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:36.653Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:37.172Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:37.633Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:38.144Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:38.634Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:39.143Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:39.588Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:49:40.075Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T17:50:09.305Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T17:50:09.876Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T17:50:10.373Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T17:50:10.843Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T17:50:11.292Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T17:50:11.727Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T17:50:12.135Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T17:59:46.392Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:02:58.810Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:13:11.460Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:15:34.951Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T18:22:00.563Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:29:15.538Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T18:49:07.395Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T18:49:07.790Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:49:13.039Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:49:13.688Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:49:20.006Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:52:37.975Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:54:00.070Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:56:44.441Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:56:45.290Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:56:46.014Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:58:37.952Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T18:59:47.923Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:04:52.162Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:04:52.722Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:04:53.282Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:04:53.841Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:04:54.377Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:09:27.342Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:12:59.625Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:16:08.187Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:16:08.808Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:16:09.350Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T19:17:20.281Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:27:10.225Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:29:10.072Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:32:15.157Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:32:16.450Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:34:01.826Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:34:04.196Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:36:57.584Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:36:59.014Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T19:43:50.419Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:49:19.473Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T19:49:21.165Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:52:16.429Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:52:18.354Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T19:52:20.223Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:30:26.248Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:30:26.977Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:30:27.686Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:30:28.729Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:30:29.289Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:30:29.841Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T20:30:33.025Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-04T20:30:34.829Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:35:12.047Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:35:13.337Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:38:33.686Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:43:54.936Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-04T20:48:45.994Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:28:44.041Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:31:26.334Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:33:32.350Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:34:15.414Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:35:39.829Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:40:15.734Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:41:15.712Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:42:09.445Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:44:32.431Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:46:45.257Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:46:58.316Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:47:49.383Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:49:12.265Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:49:21.796Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:50:15.300Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:52:28.317Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:53:04.877Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:55:17.853Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:56:02.741Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T16:57:04.674Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:08:03.516Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:08:03.752Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:15:29.638Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:15:30.617Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:21:12.937Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:21:13.856Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:29:08.631Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:31:23.367Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:35:37.183Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:36:14.654Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:38:02.166Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:38:35.463Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-05T17:41:35.592Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:44:04.722Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:50:34.344Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:51:17.868Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:53:23.333Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T17:55:44.972Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:00:24.509Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:01:17.221Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:03:06.979Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:04:19.694Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:05:17.783Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:05:18.256Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:07:49.052Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:09:13.044Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:11:06.290Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:11:37.845Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:12:28.610Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:14:10.628Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:15:21.775Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:20:27.822Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:20:59.228Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-05T18:26:30.936Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:43:51.754Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:43:52.142Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:48:30.128Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:51:09.314Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:51:09.657Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:51:59.399Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T18:54:22.183Z"
+    },
+    {
+        "item": "1 scoop",
+        "timestamp": "2019-09-05T18:58:48.804Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:02:27.302Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:05:39.855Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:06:45.718Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:07:03.251Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:10:33.215Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:14:04.628Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:14:05.059Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:16:26.156Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:18:11.772Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:18:56.048Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:19:40.290Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:20:32.237Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:21:08.764Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:25:16.608Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:26:30.394Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-05T19:27:48.021Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-06T21:32:00.134Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-06T21:32:00.922Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-06T21:32:02.311Z"
+    },
+    {
+        "item": "2 scoops",
+        "timestamp": "2019-09-06T21:33:20.048Z"
     }
 ]
