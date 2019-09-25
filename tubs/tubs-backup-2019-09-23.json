@@ -748,9 +748,9 @@
             },
             {
                 "date_received": "2019-09-13",
-                "status": "open",
+                "status": "finished",
                 "date_opened": "2019-09-18",
-                "date_closed": "",
+                "date_closed": "2019-09-23",
                 "id": 362,
                 "$$hashKey": "object:1595"
             },
@@ -1771,8 +1771,8 @@
             },
             {
                 "date_received": "2019-09-13",
-                "status": "closed",
-                "date_opened": "",
+                "status": "open",
+                "date_opened": "2019-09-20",
                 "date_closed": "",
                 "id": 354,
                 "$$hashKey": "object:522"
@@ -2651,8 +2651,8 @@
             },
             {
                 "date_received": "2019-09-20",
-                "status": "closed",
-                "date_opened": "",
+                "status": "open",
+                "date_opened": "2019-09-23",
                 "date_closed": "",
                 "id": 391,
                 "$$hashKey": "object:1941"
@@ -3476,6 +3476,14 @@
                 "date_closed": "2019-09-17",
                 "id": 346,
                 "$$hashKey": "object:1119"
+            },
+            {
+                "date_received": "2019-09-23",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 395,
+                "$$hashKey": "object:551"
             }
         ],
         "avgDaysOpen": 6,
@@ -3560,7 +3568,16 @@
         },
         "format": "tub",
         "type": "ice cream",
-        "tubs": [],
+        "tubs": [
+            {
+                "date_received": "2019-09-23",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 396,
+                "$$hashKey": "object:739"
+            }
+        ],
         "avgDaysOpen": "N\/A",
         "$$hashKey": "object:217"
     },
@@ -3791,6 +3808,14 @@
                 "date_closed": "2019-07-30",
                 "id": 220,
                 "$$hashKey": "object:1093"
+            },
+            {
+                "date_received": "2019-09-23",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 397,
+                "$$hashKey": "object:934"
             }
         ],
         "avgDaysOpen": 7,
@@ -3875,6 +3900,13 @@
                 "date_closed": "",
                 "id": 379,
                 "$$hashKey": "object:2710"
+            },
+            {
+                "date_received": "2019-09-23",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 399
             }
         ],
         "avgDaysOpen": "N\/A",
@@ -3999,6 +4031,14 @@
                 "date_closed": "2019-08-22",
                 "id": 283,
                 "$$hashKey": "object:980"
+            },
+            {
+                "date_received": "2019-09-23",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 398,
+                "$$hashKey": "object:1134"
             }
         ],
         "avgDaysOpen": 6,
