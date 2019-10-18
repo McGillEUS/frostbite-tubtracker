@@ -3310,6 +3310,14 @@
                 "date_closed": "2019-09-09",
                 "id": 340,
                 "$$hashKey": "object:1021"
+            },
+            {
+                "date_received": "2019-10-18",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 447,
+                "$$hashKey": "object:5081"
             }
         ],
         "avgDaysOpen": 5,
