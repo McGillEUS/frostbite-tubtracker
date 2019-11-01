@@ -512,9 +512,9 @@
             },
             {
                 "date_received": "2019-10-04",
-                "status": "finished",
+                "status": "open",
                 "date_opened": "2019-10-18",
-                "date_closed": "2019-11-01",
+                "date_closed": "",
                 "id": 418,
                 "$$hashKey": "object:1843"
             },
