@@ -1717,6 +1717,13 @@
                     "date_closed": "",
                     "id": 469,
                     "$$hashKey": "object:1581"
+                },
+                {
+                    "date_received": "2019-11-01",
+                    "status": "closed",
+                    "date_opened": "",
+                    "date_closed": "",
+                    "id": 482
                 }
             ],
             "avgDaysOpen": 7,
@@ -2129,14 +2136,6 @@
                     "date_closed": "",
                     "id": 331,
                     "$$hashKey": "object:846"
-                },
-                {
-                    "date_received": "2019-11-01",
-                    "status": "closed",
-                    "date_opened": "",
-                    "date_closed": "",
-                    "id": 473,
-                    "$$hashKey": "object:2599"
                 }
             ],
             "avgDaysOpen": 12,
