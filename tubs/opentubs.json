@@ -357,7 +357,7 @@
     },
     {
         "flavour": {
-            "flavour": "Toasted S'Mores",
+            "flavour": "Rolo Yolo",
             "supplier": "Nestle",
             "quantity": {
                 "value": 11.4,
@@ -371,120 +371,316 @@
             "type": "ice cream",
             "tubs": [
                 {
-                    "id": 38,
+                    "id": 18,
                     "status": "finished",
                     "date_received": "unknown",
                     "date_opened": "2019-02-04",
                     "date_closed": "2019-02-19",
-                    "$$hashKey": "object:255"
+                    "$$hashKey": "object:217"
                 },
                 {
-                    "id": 39,
+                    "id": 19,
                     "status": "finished",
                     "date_received": "unknown",
                     "date_opened": "2019-02-19",
-                    "date_closed": "2019-03-13",
-                    "$$hashKey": "object:256"
+                    "date_closed": "2019-03-12",
+                    "$$hashKey": "object:218"
                 },
                 {
-                    "id": 40,
+                    "id": 20,
                     "status": "finished",
                     "date_received": "unknown",
-                    "date_opened": "2019-03-15",
-                    "date_closed": "2019-03-28",
-                    "$$hashKey": "object:257"
+                    "date_opened": "2019-03-12",
+                    "date_closed": "2019-03-21",
+                    "$$hashKey": "object:219"
                 },
                 {
-                    "id": 41,
+                    "id": 21,
                     "status": "finished",
                     "date_received": "unknown",
-                    "date_opened": "2019-03-28",
-                    "date_closed": "2019-04-09",
-                    "$$hashKey": "object:258"
+                    "date_opened": "2019-03-27",
+                    "date_closed": "2019-04-03",
+                    "$$hashKey": "object:220"
                 },
                 {
-                    "id": 42,
+                    "id": 22,
                     "status": "finished",
                     "date_received": "unknown",
-                    "date_opened": "2019-04-10",
-                    "date_closed": "2019-04-12",
-                    "$$hashKey": "object:259"
+                    "date_opened": "2019-04-03",
+                    "date_closed": "2019-04-10",
+                    "$$hashKey": "object:221"
                 },
                 {
-                    "id": 43,
+                    "id": 23,
                     "status": "finished",
                     "date_received": "unknown",
-                    "date_opened": "2019-05-06",
-                    "date_closed": "2019-05-22",
-                    "$$hashKey": "object:260"
+                    "date_opened": "2019-05-17",
+                    "date_closed": "2019-06-05",
+                    "$$hashKey": "object:222"
                 },
                 {
-                    "date_received": "2019-06-27",
+                    "id": 24,
                     "status": "finished",
-                    "date_opened": "2019-06-28",
-                    "date_closed": "2019-07-09",
-                    "id": 192,
-                    "$$hashKey": "object:261"
+                    "date_received": "unknown",
+                    "date_opened": "2019-06-18",
+                    "date_closed": "2019-07-02",
+                    "$$hashKey": "object:223"
                 },
                 {
                     "date_received": "2019-07-15",
                     "status": "finished",
-                    "date_opened": "2019-07-16",
-                    "date_closed": "2019-07-23",
-                    "id": 231,
-                    "$$hashKey": "object:1313"
+                    "date_opened": "2019-07-24",
+                    "date_closed": "2019-08-01",
+                    "id": 235,
+                    "$$hashKey": "object:2015"
                 },
                 {
                     "date_received": "2019-08-12",
                     "status": "finished",
-                    "date_opened": "2019-09-09",
-                    "date_closed": "2019-09-09",
-                    "id": 291,
-                    "$$hashKey": "object:956"
+                    "date_opened": "2019-08-15",
+                    "date_closed": "2019-08-19",
+                    "id": 293,
+                    "$$hashKey": "object:1273"
                 },
                 {
-                    "date_received": "2019-08-19",
+                    "date_received": "2019-08-26",
                     "status": "finished",
-                    "date_opened": "2019-09-09",
-                    "date_closed": "2019-09-12",
-                    "id": 301,
-                    "$$hashKey": "object:1029"
+                    "date_opened": "2019-08-26",
+                    "date_closed": "2019-09-09",
+                    "id": 325,
+                    "$$hashKey": "object:717"
+                },
+                {
+                    "date_received": "2019-08-26",
+                    "status": "finished",
+                    "date_opened": "2019-08-26",
+                    "date_closed": "2019-09-09",
+                    "id": 326,
+                    "$$hashKey": "object:729"
                 },
                 {
                     "date_received": "2019-09-13",
                     "status": "finished",
-                    "date_opened": "2019-09-27",
+                    "date_opened": "2019-09-17",
+                    "date_closed": "2019-09-24",
+                    "id": 355,
+                    "$$hashKey": "object:620"
+                },
+                {
+                    "date_received": "2019-09-20",
+                    "status": "finished",
+                    "date_opened": "2019-09-26",
                     "date_closed": "2019-10-08",
-                    "id": 363,
-                    "$$hashKey": "object:1725"
+                    "id": 393,
+                    "$$hashKey": "object:2334"
                 },
                 {
                     "date_received": "2019-10-04",
                     "status": "finished",
-                    "date_opened": "2019-10-09",
-                    "date_closed": "2019-10-18",
-                    "id": 410,
-                    "$$hashKey": "object:387"
+                    "date_opened": "2019-10-18",
+                    "date_closed": "2019-11-01",
+                    "id": 418,
+                    "$$hashKey": "object:1843"
+                },
+                {
+                    "date_received": "2019-11-01",
+                    "status": "open",
+                    "date_opened": "2019-11-06",
+                    "date_closed": "",
+                    "id": 471,
+                    "$$hashKey": "object:2092"
+                }
+            ],
+            "avgDaysOpen": 11,
+            "$$hashKey": "object:182"
+        },
+        "tub": {
+            "date_received": "2019-11-01",
+            "status": "open",
+            "date_opened": "2019-11-06",
+            "date_closed": "",
+            "id": 471,
+            "$$hashKey": "object:2092"
+        }
+    },
+    {
+        "flavour": {
+            "flavour": "Triple Chocolate Brownie",
+            "supplier": "Nestle",
+            "quantity": {
+                "value": 11.4,
+                "unit": "L"
+            },
+            "price": {
+                "value": "31.34",
+                "unit": "CAD"
+            },
+            "format": "tub",
+            "type": "ice cream",
+            "tubs": [
+                {
+                    "id": 31,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-02-04",
+                    "date_closed": "2019-02-11",
+                    "$$hashKey": "object:239"
+                },
+                {
+                    "id": 32,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-02-22",
+                    "date_closed": "2019-03-11",
+                    "$$hashKey": "object:240"
+                },
+                {
+                    "id": 33,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-03-11",
+                    "date_closed": "2019-03-15",
+                    "$$hashKey": "object:241"
+                },
+                {
+                    "id": 34,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-03-21",
+                    "date_closed": "2019-03-26",
+                    "$$hashKey": "object:242"
+                },
+                {
+                    "id": 35,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-04-09",
+                    "date_closed": "2019-04-11",
+                    "$$hashKey": "object:243"
+                },
+                {
+                    "id": 36,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-04-12",
+                    "date_closed": "2019-04-12",
+                    "$$hashKey": "object:244"
+                },
+                {
+                    "id": 37,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-05-07",
+                    "date_closed": "2019-05-15",
+                    "$$hashKey": "object:245"
+                },
+                {
+                    "date_received": "2019-06-27",
+                    "status": "finished",
+                    "date_opened": "2019-07-08",
+                    "date_closed": "2019-07-10",
+                    "id": 189,
+                    "$$hashKey": "object:246"
+                },
+                {
+                    "date_received": "2019-07-15",
+                    "status": "finished",
+                    "date_opened": "2019-07-23",
+                    "date_closed": "2019-07-30",
+                    "id": 228,
+                    "$$hashKey": "object:877"
+                },
+                {
+                    "date_received": "2019-07-23",
+                    "status": "finished",
+                    "date_opened": "2019-07-30",
+                    "date_closed": "2019-08-08",
+                    "id": 248,
+                    "$$hashKey": "object:1581"
+                },
+                {
+                    "date_received": "2019-08-12",
+                    "status": "finished",
+                    "date_opened": "2019-08-13",
+                    "date_closed": "2019-08-20",
+                    "id": 290,
+                    "$$hashKey": "object:804"
+                },
+                {
+                    "date_received": "2019-08-26",
+                    "status": "finished",
+                    "date_opened": "2019-08-26",
+                    "date_closed": "2019-09-09",
+                    "id": 328,
+                    "$$hashKey": "object:782"
+                },
+                {
+                    "date_received": "2019-08-26",
+                    "status": "finished",
+                    "date_opened": "2019-08-26",
+                    "date_closed": "2019-09-09",
+                    "id": 329,
+                    "$$hashKey": "object:794"
+                },
+                {
+                    "date_received": "2019-09-13",
+                    "status": "finished",
+                    "date_opened": "2019-09-13",
+                    "date_closed": "2019-09-17",
+                    "id": 361,
+                    "$$hashKey": "object:1535"
+                },
+                {
+                    "date_received": "2019-09-13",
+                    "status": "finished",
+                    "date_opened": "2019-09-18",
+                    "date_closed": "2019-09-23",
+                    "id": 362,
+                    "$$hashKey": "object:1595"
+                },
+                {
+                    "date_received": "2019-09-20",
+                    "status": "finished",
+                    "date_opened": "2019-09-23",
+                    "date_closed": "2019-10-08",
+                    "id": 386,
+                    "$$hashKey": "object:1114"
+                },
+                {
+                    "date_received": "2019-10-04",
+                    "status": "finished",
+                    "date_opened": "2019-10-08",
+                    "date_closed": "2019-10-11",
+                    "id": 403,
+                    "$$hashKey": "object:691"
+                },
+                {
+                    "date_received": "2019-10-04",
+                    "status": "finished",
+                    "date_opened": "2019-10-28",
+                    "date_closed": "2019-10-30",
+                    "id": 414,
+                    "$$hashKey": "object:1168"
                 },
                 {
                     "date_received": "2019-10-18",
                     "status": "open",
-                    "date_opened": "2019-10-28",
+                    "date_opened": "2019-11-06",
                     "date_closed": "",
-                    "id": 425,
-                    "$$hashKey": "object:2361"
+                    "id": 423,
+                    "$$hashKey": "object:2071"
                 }
             ],
-            "avgDaysOpen": 11,
-            "$$hashKey": "object:185"
+            "avgDaysOpen": 5,
+            "$$hashKey": "object:184"
         },
         "tub": {
             "date_received": "2019-10-18",
             "status": "open",
-            "date_opened": "2019-10-28",
+            "date_opened": "2019-11-06",
             "date_closed": "",
-            "id": 425,
-            "$$hashKey": "object:2361"
+            "id": 423,
+            "$$hashKey": "object:2071"
         }
     },
     {
@@ -728,16 +924,16 @@
                 },
                 {
                     "date_received": "2019-10-18",
-                    "status": "open",
+                    "status": "finished",
                     "date_opened": "2019-10-22",
-                    "date_closed": "",
+                    "date_closed": "2019-11-04",
                     "id": 422,
                     "$$hashKey": "object:1929"
                 },
                 {
                     "date_received": "2019-11-01",
-                    "status": "closed",
-                    "date_opened": "",
+                    "status": "open",
+                    "date_opened": "2019-11-06",
                     "date_closed": "",
                     "id": 470,
                     "$$hashKey": "object:1842"
@@ -747,12 +943,136 @@
             "$$hashKey": "object:187"
         },
         "tub": {
-            "date_received": "2019-10-18",
+            "date_received": "2019-11-01",
             "status": "open",
-            "date_opened": "2019-10-22",
+            "date_opened": "2019-11-06",
             "date_closed": "",
-            "id": 422,
-            "$$hashKey": "object:1929"
+            "id": 470,
+            "$$hashKey": "object:1842"
+        }
+    },
+    {
+        "flavour": {
+            "flavour": "Salted Caramel",
+            "supplier": "Nestle",
+            "quantity": {
+                "value": 11.4,
+                "unit": "L"
+            },
+            "price": {
+                "value": 31.34,
+                "unit": "CAD"
+            },
+            "format": "tub",
+            "type": "ice cream",
+            "tubs": [
+                {
+                    "id": 69,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-02-04",
+                    "date_closed": "2019-02-19",
+                    "$$hashKey": "object:308"
+                },
+                {
+                    "id": 70,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-02-19",
+                    "date_closed": "2019-03-28",
+                    "$$hashKey": "object:309"
+                },
+                {
+                    "id": 71,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-03-14",
+                    "date_closed": "2019-03-26",
+                    "$$hashKey": "object:310"
+                },
+                {
+                    "id": 72,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-04-02",
+                    "date_closed": "2019-04-12",
+                    "$$hashKey": "object:311"
+                },
+                {
+                    "id": 73,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-05-29",
+                    "date_closed": "2019-06-06",
+                    "$$hashKey": "object:312"
+                },
+                {
+                    "id": 74,
+                    "status": "finished",
+                    "date_received": "unknown",
+                    "date_opened": "2019-06-19",
+                    "date_closed": "2019-07-08",
+                    "$$hashKey": "object:313"
+                },
+                {
+                    "date_received": "2019-07-15",
+                    "status": "finished",
+                    "date_opened": "2019-08-08",
+                    "date_closed": "2019-08-15",
+                    "id": 225,
+                    "$$hashKey": "object:472"
+                },
+                {
+                    "date_received": "2019-07-23",
+                    "status": "finished",
+                    "date_opened": "2019-09-09",
+                    "date_closed": "2019-09-09",
+                    "id": 246,
+                    "$$hashKey": "object:1316"
+                },
+                {
+                    "date_received": "2019-08-26",
+                    "status": "finished",
+                    "date_opened": "2019-08-26",
+                    "date_closed": "2019-09-09",
+                    "id": 330,
+                    "$$hashKey": "object:818"
+                },
+                {
+                    "date_received": "2019-09-13",
+                    "status": "finished",
+                    "date_opened": "2019-09-13",
+                    "date_closed": "2019-10-08",
+                    "id": 359,
+                    "$$hashKey": "object:1293"
+                },
+                {
+                    "date_received": "2019-10-04",
+                    "status": "finished",
+                    "date_opened": "2019-10-18",
+                    "date_closed": "2019-10-28",
+                    "id": 420,
+                    "$$hashKey": "object:2206"
+                },
+                {
+                    "date_received": "2019-11-01",
+                    "status": "open",
+                    "date_opened": "2019-11-05",
+                    "date_closed": "",
+                    "id": 472,
+                    "$$hashKey": "object:2343"
+                }
+            ],
+            "avgDaysOpen": 13,
+            "$$hashKey": "object:189"
+        },
+        "tub": {
+            "date_received": "2019-11-01",
+            "status": "open",
+            "date_opened": "2019-11-05",
+            "date_closed": "",
+            "id": 472,
+            "$$hashKey": "object:2343"
         }
     },
     {
@@ -1384,16 +1704,16 @@
                 },
                 {
                     "date_received": "2019-10-28",
-                    "status": "open",
+                    "status": "finished",
                     "date_opened": "2019-10-28",
-                    "date_closed": "",
+                    "date_closed": "2019-11-04",
                     "id": 456,
                     "$$hashKey": "object:528"
                 },
                 {
                     "date_received": "2019-11-01",
-                    "status": "closed",
-                    "date_opened": "",
+                    "status": "open",
+                    "date_opened": "2019-11-06",
                     "date_closed": "",
                     "id": 469,
                     "$$hashKey": "object:1581"
@@ -1403,168 +1723,12 @@
             "$$hashKey": "object:194"
         },
         "tub": {
-            "date_received": "2019-10-28",
+            "date_received": "2019-11-01",
             "status": "open",
-            "date_opened": "2019-10-28",
+            "date_opened": "2019-11-06",
             "date_closed": "",
-            "id": 456,
-            "$$hashKey": "object:528"
-        }
-    },
-    {
-        "flavour": {
-            "flavour": "Black Cherry",
-            "supplier": "Nestle",
-            "quantity": {
-                "value": 11.4,
-                "unit": "L"
-            },
-            "price": {
-                "value": "31.34",
-                "unit": "CAD"
-            },
-            "format": "tub",
-            "type": "ice cream",
-            "tubs": [
-                {
-                    "id": 105,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-02-04",
-                    "date_closed": "2019-02-14",
-                    "$$hashKey": "object:236"
-                },
-                {
-                    "id": 106,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-02-14",
-                    "date_closed": "2019-02-14",
-                    "$$hashKey": "object:237"
-                },
-                {
-                    "id": 107,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-02-19",
-                    "date_closed": "2019-03-14",
-                    "$$hashKey": "object:238"
-                },
-                {
-                    "id": 108,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-03-14",
-                    "date_closed": "2019-04-01",
-                    "$$hashKey": "object:239"
-                },
-                {
-                    "id": 109,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-04-01",
-                    "date_closed": "2019-04-11",
-                    "$$hashKey": "object:240"
-                },
-                {
-                    "id": 110,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-04-12",
-                    "date_closed": "2019-04-12",
-                    "$$hashKey": "object:241"
-                },
-                {
-                    "id": 111,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-05-06",
-                    "date_closed": "2019-05-22",
-                    "$$hashKey": "object:242"
-                },
-                {
-                    "id": 112,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-06-07",
-                    "date_closed": "2019-06-18",
-                    "$$hashKey": "object:243"
-                },
-                {
-                    "date_received": "2019-06-27",
-                    "status": "finished",
-                    "date_opened": "2019-07-08",
-                    "date_closed": "2019-07-12",
-                    "id": 197,
-                    "$$hashKey": "object:244"
-                },
-                {
-                    "date_received": "2019-07-15",
-                    "status": "finished",
-                    "date_opened": "2019-07-15",
-                    "date_closed": "2019-07-23",
-                    "id": 233,
-                    "$$hashKey": "object:1618"
-                },
-                {
-                    "date_received": "2019-07-30",
-                    "status": "finished",
-                    "date_opened": "2019-08-01",
-                    "date_closed": "2019-08-13",
-                    "id": 262,
-                    "$$hashKey": "object:677"
-                },
-                {
-                    "date_received": "2019-08-19",
-                    "status": "finished",
-                    "date_opened": "2019-08-20",
-                    "date_closed": "2019-09-09",
-                    "id": 298,
-                    "$$hashKey": "object:362"
-                },
-                {
-                    "date_received": "2019-08-26",
-                    "status": "finished",
-                    "date_opened": "2019-09-09",
-                    "date_closed": "2019-09-18",
-                    "id": 309,
-                    "$$hashKey": "object:210"
-                },
-                {
-                    "date_received": "2019-08-26",
-                    "status": "finished",
-                    "date_opened": "2019-09-18",
-                    "date_closed": "2019-10-18",
-                    "id": 310,
-                    "$$hashKey": "object:226"
-                },
-                {
-                    "date_received": "2019-10-04",
-                    "status": "open",
-                    "date_opened": "2019-10-18",
-                    "date_closed": "",
-                    "id": 416,
-                    "$$hashKey": "object:1499"
-                },
-                {
-                    "date_received": "2019-11-01",
-                    "status": "closed",
-                    "date_opened": "",
-                    "date_closed": "",
-                    "id": 465,
-                    "$$hashKey": "object:512"
-                }
-            ],
-            "avgDaysOpen": 9,
-            "$$hashKey": "object:195"
-        },
-        "tub": {
-            "date_received": "2019-10-04",
-            "status": "open",
-            "date_opened": "2019-10-18",
-            "date_closed": "",
-            "id": 416,
-            "$$hashKey": "object:1499"
+            "id": 469,
+            "$$hashKey": "object:1581"
         }
     },
     {
@@ -1989,98 +2153,6 @@
     },
     {
         "flavour": {
-            "flavour": "Heavenly Hash",
-            "supplier": "Nestle",
-            "quantity": {
-                "value": 11.4,
-                "unit": "L"
-            },
-            "price": {
-                "value": "31.34",
-                "unit": "CAD"
-            },
-            "format": "tub",
-            "type": "ice cream",
-            "tubs": [
-                {
-                    "id": 133,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-03-26",
-                    "date_closed": "2019-04-04",
-                    "$$hashKey": "object:426"
-                },
-                {
-                    "id": 134,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-04-11",
-                    "date_closed": "2019-04-12",
-                    "$$hashKey": "object:427"
-                },
-                {
-                    "id": 135,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-06-11",
-                    "date_closed": "2019-07-08",
-                    "$$hashKey": "object:428"
-                },
-                {
-                    "date_received": "2019-06-27",
-                    "status": "finished",
-                    "date_opened": "2019-07-09",
-                    "date_closed": "2019-07-16",
-                    "id": 194,
-                    "$$hashKey": "object:429"
-                },
-                {
-                    "date_received": "2019-07-23",
-                    "status": "finished",
-                    "date_opened": "2019-08-08",
-                    "date_closed": "2019-08-20",
-                    "id": 244,
-                    "$$hashKey": "object:1070"
-                },
-                {
-                    "date_received": "2019-08-26",
-                    "status": "finished",
-                    "date_opened": "2019-09-12",
-                    "date_closed": "2019-09-18",
-                    "id": 336,
-                    "$$hashKey": "object:949"
-                },
-                {
-                    "date_received": "2019-09-20",
-                    "status": "finished",
-                    "date_opened": "2019-09-23",
-                    "date_closed": "2019-10-11",
-                    "id": 391,
-                    "$$hashKey": "object:1941"
-                },
-                {
-                    "date_received": "2019-10-04",
-                    "status": "open",
-                    "date_opened": "2019-10-16",
-                    "date_closed": "",
-                    "id": 417,
-                    "$$hashKey": "object:1666"
-                }
-            ],
-            "avgDaysOpen": 2,
-            "$$hashKey": "object:200"
-        },
-        "tub": {
-            "date_received": "2019-10-04",
-            "status": "open",
-            "date_opened": "2019-10-16",
-            "date_closed": "",
-            "id": 417,
-            "$$hashKey": "object:1666"
-        }
-    },
-    {
-        "flavour": {
             "flavour": "Caramel Cookie Blast",
             "supplier": "Nestle",
             "quantity": {
@@ -2197,7 +2269,7 @@
     },
     {
         "flavour": {
-            "flavour": "Lemon",
+            "flavour": "Strawberry (Ripples)",
             "supplier": "Ripples",
             "quantity": {
                 "value": 11.4,
@@ -2211,64 +2283,56 @@
             "type": "sorbet",
             "tubs": [
                 {
-                    "id": 158,
-                    "status": "finished",
-                    "date_received": "unknown",
-                    "date_opened": "2019-05-15",
-                    "date_closed": "2019-06-04",
-                    "$$hashKey": "object:475"
-                },
-                {
-                    "status": "finished",
                     "date_received": "2019-06-25",
-                    "date_opened": "2019-06-27",
-                    "date_closed": "2019-07-11",
-                    "id": 177,
-                    "$$hashKey": "object:476"
-                },
-                {
-                    "date_received": "2019-07-12",
                     "status": "finished",
-                    "date_opened": "2019-07-12",
-                    "date_closed": "2019-07-23",
-                    "id": 216,
-                    "$$hashKey": "object:696"
+                    "date_opened": "2019-06-25",
+                    "date_closed": "2019-07-09",
+                    "id": 178,
+                    "$$hashKey": "object:183"
                 },
                 {
                     "date_received": "2019-07-26",
                     "status": "finished",
-                    "date_opened": "2019-07-30",
+                    "date_opened": "2019-08-08",
                     "date_closed": "2019-08-08",
-                    "id": 254,
-                    "$$hashKey": "object:821"
+                    "id": 256,
+                    "$$hashKey": "object:1083"
                 },
                 {
-                    "date_received": "2019-10-18",
+                    "date_received": "2019-08-13",
+                    "status": "finished",
+                    "date_opened": "2019-08-13",
+                    "date_closed": "2019-08-22",
+                    "id": 297,
+                    "$$hashKey": "object:475"
+                },
+                {
+                    "date_received": "2019-11-01",
                     "status": "open",
-                    "date_opened": "2019-10-21",
+                    "date_opened": "2019-11-04",
                     "date_closed": "",
-                    "id": 452,
-                    "$$hashKey": "object:6025"
+                    "id": 475,
+                    "$$hashKey": "object:3116"
                 },
                 {
-                    "date_received": "2019-10-18",
+                    "date_received": "2019-11-01",
                     "status": "closed",
                     "date_opened": "",
                     "date_closed": "",
-                    "id": 453,
-                    "$$hashKey": "object:6149"
+                    "id": 476,
+                    "$$hashKey": "object:3246"
                 }
             ],
-            "avgDaysOpen": 10,
-            "$$hashKey": "object:210"
+            "avgDaysOpen": 0,
+            "$$hashKey": "object:213"
         },
         "tub": {
-            "date_received": "2019-10-18",
+            "date_received": "2019-11-01",
             "status": "open",
-            "date_opened": "2019-10-21",
+            "date_opened": "2019-11-04",
             "date_closed": "",
-            "id": 452,
-            "$$hashKey": "object:6025"
+            "id": 475,
+            "$$hashKey": "object:3116"
         }
     },
     {
