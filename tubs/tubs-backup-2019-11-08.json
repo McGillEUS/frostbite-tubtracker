@@ -982,8 +982,8 @@
             },
             {
                 "date_received": "2019-11-08",
-                "status": "open",
-                "date_opened": "2019-11-08",
+                "status": "closed",
+                "date_opened": "",
                 "date_closed": "",
                 "id": 488,
                 "$$hashKey": "object:2074"
