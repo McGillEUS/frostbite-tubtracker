@@ -3552,6 +3552,13 @@
                 "date_closed": "",
                 "id": 492,
                 "$$hashKey": "object:3012"
+            },
+            {
+                "date_received": "2019-11-29",
+                "status": "closed",
+                "date_opened": "",
+                "date_closed": "",
+                "id": 509
             }
         ],
         "avgDaysOpen": 14,
